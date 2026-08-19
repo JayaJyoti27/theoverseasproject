@@ -9,131 +9,86 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as PrivacypolicyRouteImport } from './routes/privacypolicy'
-import { Route as EmployersRouteImport } from './routes/employers'
-import { Route as EmployerRouteImport } from './routes/employer'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CandidateRouteImport } from './routes/candidate'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as ResetPasswordRouteImport } from './routes/ResetPassword'
-import { Route as LoginRouteImport } from './routes/Login'
-import { Route as HomeRouteImport } from './routes/Home'
-import { Route as ForCandidatesRouteImport } from './routes/For-Candidates'
-import { Route as AdminRouteImport } from './routes/Admin'
-import { Route as EmployerRouteRouteImport } from './routes/Employer/route'
-import { Route as CandidatesRouteRouteImport } from './routes/Candidates/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ServicesIndexRouteImport } from './routes/Services/index'
-import { Route as ServicesVisaRouteImport } from './routes/Services/Visa'
-import { Route as ServicesTrainingRouteImport } from './routes/Services/Training'
-import { Route as ServicesTechnicalRecRouteImport } from './routes/Services/Technical-rec'
-import { Route as ServicesPrometricCoachingRouteImport } from './routes/Services/Prometric-coaching'
-import { Route as ServicesParaMedicalTechRouteImport } from './routes/Services/ParaMedical-tech'
-import { Route as ServicesNursingRecRouteImport } from './routes/Services/Nursing-rec'
-import { Route as ServicesNursesRouteImport } from './routes/Services/Nurses'
-import { Route as ServicesMockInterviewsRouteImport } from './routes/Services/Mock-Interviews'
-import { Route as ServicesHealthcareRecRouteImport } from './routes/Services/Healthcare-rec'
-import { Route as ServicesGroomingRouteImport } from './routes/Services/Grooming'
-import { Route as ServicesDocumentationRouteImport } from './routes/Services/Documentation'
-import { Route as ServicesDoctorsRouteImport } from './routes/Services/Doctors'
-import { Route as EmployerSettingsRouteImport } from './routes/Employer/settings'
-import { Route as EmployerRegisterRouteImport } from './routes/Employer.register'
-import { Route as EmployerPendingApprovalRouteImport } from './routes/Employer.pending-approval'
-import { Route as EmployerNotificationsRouteImport } from './routes/Employer/notifications'
-import { Route as EmployerJobOrdersRouteImport } from './routes/Employer/job-orders'
-import { Route as EmployerInterviewsRouteImport } from './routes/Employer/interviews'
-import { Route as EmployerDeploymentRouteImport } from './routes/Employer/deployment'
-import { Route as EmployerDashboardRouteImport } from './routes/Employer/dashboard'
-import { Route as EmployerCompanyRouteImport } from './routes/Employer/company'
-import { Route as EmployerCandidatesRouteImport } from './routes/Employer/candidates'
-import { Route as CountryUAERouteImport } from './routes/Country/UAE'
-import { Route as CountrySaudiArabiaRouteImport } from './routes/Country/Saudi-Arabia'
-import { Route as CountryQatarRouteImport } from './routes/Country/Qatar'
-import { Route as CountryOmanRouteImport } from './routes/Country/Oman'
-import { Route as CountryKuwaitRouteImport } from './routes/Country/Kuwait'
-import { Route as CandidatesVisaRouteImport } from './routes/Candidates/visa'
-import { Route as CandidatesProfileRouteImport } from './routes/Candidates/profile'
-import { Route as CandidatesOffersRouteImport } from './routes/Candidates/offers'
-import { Route as CandidatesNotificationsRouteImport } from './routes/Candidates/notifications'
-import { Route as CandidatesMedicalRouteImport } from './routes/Candidates/medical'
-import { Route as CandidatesJobsRouteImport } from './routes/Candidates/jobs'
-import { Route as CandidatesInterviewsRouteImport } from './routes/Candidates/interviews'
-import { Route as CandidatesDocumentsRouteImport } from './routes/Candidates/documents'
-import { Route as CandidatesDeploymentRouteImport } from './routes/Candidates/deployment'
-import { Route as CandidatesDashboardRouteImport } from './routes/Candidates/dashboard'
-import { Route as CandidatesApplicationsRouteImport } from './routes/Candidates/applications'
+import { Route as AdminRouteImport } from './routes/Admin'
+import { Route as CandidatesRouteRouteImport } from './routes/Candidates/route'
+import { Route as EmployerRouteRouteImport } from './routes/Employer/route'
+import { Route as ForCandidatesRouteImport } from './routes/For-Candidates'
+import { Route as HomeRouteImport } from './routes/Home'
+import { Route as LoginRouteImport } from './routes/Login'
+import { Route as ResetPasswordRouteImport } from './routes/ResetPassword'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CandidateRouteImport } from './routes/candidate'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EmployerRouteImport } from './routes/employer'
+import { Route as EmployersRouteImport } from './routes/employers'
+import { Route as PrivacypolicyRouteImport } from './routes/privacypolicy'
 import { Route as AdminDashboardRouteImport } from './routes/Admin/dashboard'
-import { Route as EmployerJobOrdersIndexRouteImport } from './routes/Employer/job-orders.index'
-import { Route as AdminUsersIndexRouteImport } from './routes/Admin/users/index'
-import { Route as AdminSettingsIndexRouteImport } from './routes/Admin/settings/index'
-import { Route as AdminRequirementsIndexRouteImport } from './routes/Admin/requirements/index'
-import { Route as AdminReportsIndexRouteImport } from './routes/Admin/reports/index'
-import { Route as AdminNotificationsIndexRouteImport } from './routes/Admin/notifications/index'
-import { Route as AdminJobOrdersIndexRouteImport } from './routes/Admin/job-orders/index'
-import { Route as AdminEmployersIndexRouteImport } from './routes/Admin/employers/index'
-import { Route as AdminCandidatesIndexRouteImport } from './routes/Admin/candidates/index'
+import { Route as CandidatesApplicationsRouteImport } from './routes/Candidates/applications'
+import { Route as CandidatesDashboardRouteImport } from './routes/Candidates/dashboard'
+import { Route as CandidatesDeploymentRouteImport } from './routes/Candidates/deployment'
+import { Route as CandidatesDocumentsRouteImport } from './routes/Candidates/documents'
+import { Route as CandidatesInterviewsRouteImport } from './routes/Candidates/interviews'
+import { Route as CandidatesJobsRouteImport } from './routes/Candidates/jobs'
+import { Route as CandidatesMedicalRouteImport } from './routes/Candidates/medical'
+import { Route as CandidatesNotificationsRouteImport } from './routes/Candidates/notifications'
+import { Route as CandidatesOffersRouteImport } from './routes/Candidates/offers'
+import { Route as CandidatesProfileRouteImport } from './routes/Candidates/profile'
+import { Route as CandidatesVisaRouteImport } from './routes/Candidates/visa'
+import { Route as CountryKuwaitRouteImport } from './routes/Country/Kuwait'
+import { Route as CountryOmanRouteImport } from './routes/Country/Oman'
+import { Route as CountryQatarRouteImport } from './routes/Country/Qatar'
+import { Route as CountrySaudiArabiaRouteImport } from './routes/Country/Saudi-Arabia'
+import { Route as CountryUAERouteImport } from './routes/Country/UAE'
+import { Route as EmployerCandidatesRouteImport } from './routes/Employer/candidates'
+import { Route as EmployerCompanyRouteImport } from './routes/Employer/company'
+import { Route as EmployerDashboardRouteImport } from './routes/Employer/dashboard'
+import { Route as EmployerDeploymentRouteImport } from './routes/Employer/deployment'
+import { Route as EmployerInterviewsRouteImport } from './routes/Employer/interviews'
+import { Route as EmployerJobOrdersRouteImport } from './routes/Employer/job-orders'
+import { Route as EmployerNotificationsRouteImport } from './routes/Employer/notifications'
+import { Route as EmployerPendingApprovalRouteImport } from './routes/Employer.pending-approval'
+import { Route as EmployerRegisterRouteImport } from './routes/Employer.register'
+import { Route as EmployerSettingsRouteImport } from './routes/Employer/settings'
+import { Route as ServicesIndexRouteImport } from './routes/Services/index'
+import { Route as ServicesDoctorsRouteImport } from './routes/Services/Doctors'
+import { Route as ServicesDocumentationRouteImport } from './routes/Services/Documentation'
+import { Route as ServicesGroomingRouteImport } from './routes/Services/Grooming'
+import { Route as ServicesHealthcareRecRouteImport } from './routes/Services/Healthcare-rec'
+import { Route as ServicesMockInterviewsRouteImport } from './routes/Services/Mock-Interviews'
+import { Route as ServicesNursesRouteImport } from './routes/Services/Nurses'
+import { Route as ServicesNursingRecRouteImport } from './routes/Services/Nursing-rec'
+import { Route as ServicesParaMedicalTechRouteImport } from './routes/Services/ParaMedical-tech'
+import { Route as ServicesPrometricCoachingRouteImport } from './routes/Services/Prometric-coaching'
+import { Route as ServicesTechnicalRecRouteImport } from './routes/Services/Technical-rec'
+import { Route as ServicesTrainingRouteImport } from './routes/Services/Training'
+import { Route as ServicesVisaRouteImport } from './routes/Services/Visa'
 import { Route as AdminApplicationsIndexRouteImport } from './routes/Admin/applications/index'
-import { Route as EmployerJobOrdersNewRouteImport } from './routes/Employer/job-orders.new'
-import { Route as EmployerJobOrdersJobIdRouteImport } from './routes/Employer/job-orders.$jobId'
-import { Route as EmployerInterviewsInterviewIdRouteImport } from './routes/Employer/interviews.$interviewId'
-import { Route as EmployerDeploymentDeploymentIdRouteImport } from './routes/Employer/deployment.$deploymentId'
-import { Route as EmployerCandidatesCandidateIdRouteImport } from './routes/Employer/candidates.$candidateId'
-import { Route as CandidatesJobsIdRouteImport } from './routes/Candidates/jobs.$id'
-import { Route as CandidatesApplicationsIdRouteImport } from './routes/Candidates/applications.$id'
-import { Route as AdminRequirementsIdRouteImport } from './routes/Admin/requirements/$id'
-import { Route as AdminJobOrdersIdRouteImport } from './routes/Admin/job-orders/$id'
-import { Route as AdminEmployersIdRouteImport } from './routes/Admin/employers/$id'
-import { Route as AdminCandidatesIdRouteImport } from './routes/Admin/candidates/$id'
 import { Route as AdminApplicationsIdRouteImport } from './routes/Admin/applications/$id'
+import { Route as AdminCandidatesIndexRouteImport } from './routes/Admin/candidates/index'
+import { Route as AdminCandidatesIdRouteImport } from './routes/Admin/candidates/$id'
+import { Route as AdminEmployersIndexRouteImport } from './routes/Admin/employers/index'
+import { Route as AdminEmployersIdRouteImport } from './routes/Admin/employers/$id'
+import { Route as AdminJobOrdersIndexRouteImport } from './routes/Admin/job-orders/index'
+import { Route as AdminJobOrdersIdRouteImport } from './routes/Admin/job-orders/$id'
+import { Route as AdminNotificationsIndexRouteImport } from './routes/Admin/notifications/index'
+import { Route as AdminReportsIndexRouteImport } from './routes/Admin/reports/index'
+import { Route as AdminRequirementsIndexRouteImport } from './routes/Admin/requirements/index'
+import { Route as AdminRequirementsIdRouteImport } from './routes/Admin/requirements/$id'
+import { Route as AdminSettingsIndexRouteImport } from './routes/Admin/settings/index'
+import { Route as AdminUsersIndexRouteImport } from './routes/Admin/users/index'
+import { Route as CandidatesApplicationsIdRouteImport } from './routes/Candidates/applications.$id'
+import { Route as CandidatesJobsIdRouteImport } from './routes/Candidates/jobs.$id'
+import { Route as EmployerCandidatesCandidateIdRouteImport } from './routes/Employer/candidates.$candidateId'
+import { Route as EmployerDeploymentDeploymentIdRouteImport } from './routes/Employer/deployment.$deploymentId'
+import { Route as EmployerInterviewsInterviewIdRouteImport } from './routes/Employer/interviews.$interviewId'
+import { Route as EmployerJobOrdersIndexRouteImport } from './routes/Employer/job-orders.index'
+import { Route as EmployerJobOrdersJobIdRouteImport } from './routes/Employer/job-orders.$jobId'
+import { Route as EmployerJobOrdersNewRouteImport } from './routes/Employer/job-orders.new'
 
-const PrivacypolicyRoute = PrivacypolicyRouteImport.update({
-  id: '/privacypolicy',
-  path: '/privacypolicy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmployersRoute = EmployersRouteImport.update({
-  id: '/employers',
-  path: '/employers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmployerRoute = EmployerRouteImport.update({
-  id: '/employer',
-  path: '/employer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CandidateRoute = CandidateRouteImport.update({
-  id: '/candidate',
-  path: '/candidate',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResetPasswordRoute = ResetPasswordRouteImport.update({
-  id: '/ResetPassword',
-  path: '/ResetPassword',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/Login',
-  path: '/Login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HomeRoute = HomeRouteImport.update({
-  id: '/Home',
-  path: '/Home',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ForCandidatesRoute = ForCandidatesRouteImport.update({
-  id: '/For-Candidates',
-  path: '/For-Candidates',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -141,39 +96,244 @@ const AdminRoute = AdminRouteImport.update({
   path: '/Admin',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EmployerRouteRoute = EmployerRouteRouteImport.update({
-  id: '/Employer',
-  path: '/Employer',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const CandidatesRouteRoute = CandidatesRouteRouteImport.update({
   id: '/Candidates',
   path: '/Candidates',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const EmployerRouteRoute = EmployerRouteRouteImport.update({
+  id: '/Employer',
+  path: '/Employer',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ForCandidatesRoute = ForCandidatesRouteImport.update({
+  id: '/For-Candidates',
+  path: '/For-Candidates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/Home',
+  path: '/Home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/Login',
+  path: '/Login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/ResetPassword',
+  path: '/ResetPassword',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CandidateRoute = CandidateRouteImport.update({
+  id: '/candidate',
+  path: '/candidate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployerRoute = EmployerRouteImport.update({
+  id: '/employer',
+  path: '/employer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployersRoute = EmployersRouteImport.update({
+  id: '/employers',
+  path: '/employers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacypolicyRoute = PrivacypolicyRouteImport.update({
+  id: '/privacypolicy',
+  path: '/privacypolicy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AdminRoute,
+} as any)
+const CandidatesApplicationsRoute = CandidatesApplicationsRouteImport.update({
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesDashboardRoute = CandidatesDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesDeploymentRoute = CandidatesDeploymentRouteImport.update({
+  id: '/deployment',
+  path: '/deployment',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesDocumentsRoute = CandidatesDocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesInterviewsRoute = CandidatesInterviewsRouteImport.update({
+  id: '/interviews',
+  path: '/interviews',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesJobsRoute = CandidatesJobsRouteImport.update({
+  id: '/jobs',
+  path: '/jobs',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesMedicalRoute = CandidatesMedicalRouteImport.update({
+  id: '/medical',
+  path: '/medical',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesNotificationsRoute = CandidatesNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesOffersRoute = CandidatesOffersRouteImport.update({
+  id: '/offers',
+  path: '/offers',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesProfileRoute = CandidatesProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CandidatesVisaRoute = CandidatesVisaRouteImport.update({
+  id: '/visa',
+  path: '/visa',
+  getParentRoute: () => CandidatesRouteRoute,
+} as any)
+const CountryKuwaitRoute = CountryKuwaitRouteImport.update({
+  id: '/Country/Kuwait',
+  path: '/Country/Kuwait',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryOmanRoute = CountryOmanRouteImport.update({
+  id: '/Country/Oman',
+  path: '/Country/Oman',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryQatarRoute = CountryQatarRouteImport.update({
+  id: '/Country/Qatar',
+  path: '/Country/Qatar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountrySaudiArabiaRoute = CountrySaudiArabiaRouteImport.update({
+  id: '/Country/Saudi-Arabia',
+  path: '/Country/Saudi-Arabia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryUAERoute = CountryUAERouteImport.update({
+  id: '/Country/UAE',
+  path: '/Country/UAE',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployerCandidatesRoute = EmployerCandidatesRouteImport.update({
+  id: '/candidates',
+  path: '/candidates',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerCompanyRoute = EmployerCompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerDashboardRoute = EmployerDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerDeploymentRoute = EmployerDeploymentRouteImport.update({
+  id: '/deployment',
+  path: '/deployment',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerInterviewsRoute = EmployerInterviewsRouteImport.update({
+  id: '/interviews',
+  path: '/interviews',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerJobOrdersRoute = EmployerJobOrdersRouteImport.update({
+  id: '/job-orders',
+  path: '/job-orders',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerNotificationsRoute = EmployerNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerPendingApprovalRoute = EmployerPendingApprovalRouteImport.update({
+  id: '/pending-approval',
+  path: '/pending-approval',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerRegisterRoute = EmployerRegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => EmployerRouteRoute,
+} as any)
+const EmployerSettingsRoute = EmployerSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => EmployerRouteRoute,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/Services/',
   path: '/Services/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesVisaRoute = ServicesVisaRouteImport.update({
-  id: '/Services/Visa',
-  path: '/Services/Visa',
+const ServicesDoctorsRoute = ServicesDoctorsRouteImport.update({
+  id: '/Services/Doctors',
+  path: '/Services/Doctors',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesTrainingRoute = ServicesTrainingRouteImport.update({
-  id: '/Services/Training',
-  path: '/Services/Training',
+const ServicesDocumentationRoute = ServicesDocumentationRouteImport.update({
+  id: '/Services/Documentation',
+  path: '/Services/Documentation',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesTechnicalRecRoute = ServicesTechnicalRecRouteImport.update({
-  id: '/Services/Technical-rec',
-  path: '/Services/Technical-rec',
+const ServicesGroomingRoute = ServicesGroomingRouteImport.update({
+  id: '/Services/Grooming',
+  path: '/Services/Grooming',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesHealthcareRecRoute = ServicesHealthcareRecRouteImport.update({
+  id: '/Services/Healthcare-rec',
+  path: '/Services/Healthcare-rec',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesMockInterviewsRoute = ServicesMockInterviewsRouteImport.update({
+  id: '/Services/Mock-Interviews',
+  path: '/Services/Mock-Interviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesNursesRoute = ServicesNursesRouteImport.update({
+  id: '/Services/Nurses',
+  path: '/Services/Nurses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesNursingRecRoute = ServicesNursingRecRouteImport.update({
+  id: '/Services/Nursing-rec',
+  path: '/Services/Nursing-rec',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesParaMedicalTechRoute = ServicesParaMedicalTechRouteImport.update({
+  id: '/Services/ParaMedical-tech',
+  path: '/Services/ParaMedical-tech',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesPrometricCoachingRoute =
@@ -182,219 +342,29 @@ const ServicesPrometricCoachingRoute =
     path: '/Services/Prometric-coaching',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ServicesParaMedicalTechRoute = ServicesParaMedicalTechRouteImport.update({
-  id: '/Services/ParaMedical-tech',
-  path: '/Services/ParaMedical-tech',
+const ServicesTechnicalRecRoute = ServicesTechnicalRecRouteImport.update({
+  id: '/Services/Technical-rec',
+  path: '/Services/Technical-rec',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesNursingRecRoute = ServicesNursingRecRouteImport.update({
-  id: '/Services/Nursing-rec',
-  path: '/Services/Nursing-rec',
+const ServicesTrainingRoute = ServicesTrainingRouteImport.update({
+  id: '/Services/Training',
+  path: '/Services/Training',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesNursesRoute = ServicesNursesRouteImport.update({
-  id: '/Services/Nurses',
-  path: '/Services/Nurses',
+const ServicesVisaRoute = ServicesVisaRouteImport.update({
+  id: '/Services/Visa',
+  path: '/Services/Visa',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesMockInterviewsRoute = ServicesMockInterviewsRouteImport.update({
-  id: '/Services/Mock-Interviews',
-  path: '/Services/Mock-Interviews',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesHealthcareRecRoute = ServicesHealthcareRecRouteImport.update({
-  id: '/Services/Healthcare-rec',
-  path: '/Services/Healthcare-rec',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesGroomingRoute = ServicesGroomingRouteImport.update({
-  id: '/Services/Grooming',
-  path: '/Services/Grooming',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesDocumentationRoute = ServicesDocumentationRouteImport.update({
-  id: '/Services/Documentation',
-  path: '/Services/Documentation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesDoctorsRoute = ServicesDoctorsRouteImport.update({
-  id: '/Services/Doctors',
-  path: '/Services/Doctors',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmployerSettingsRoute = EmployerSettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerRegisterRoute = EmployerRegisterRouteImport.update({
-  id: '/register',
-  path: '/register',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerPendingApprovalRoute = EmployerPendingApprovalRouteImport.update({
-  id: '/pending-approval',
-  path: '/pending-approval',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerNotificationsRoute = EmployerNotificationsRouteImport.update({
-  id: '/notifications',
-  path: '/notifications',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerJobOrdersRoute = EmployerJobOrdersRouteImport.update({
-  id: '/job-orders',
-  path: '/job-orders',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerInterviewsRoute = EmployerInterviewsRouteImport.update({
-  id: '/interviews',
-  path: '/interviews',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerDeploymentRoute = EmployerDeploymentRouteImport.update({
-  id: '/deployment',
-  path: '/deployment',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerDashboardRoute = EmployerDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerCompanyRoute = EmployerCompanyRouteImport.update({
-  id: '/company',
-  path: '/company',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const EmployerCandidatesRoute = EmployerCandidatesRouteImport.update({
-  id: '/candidates',
-  path: '/candidates',
-  getParentRoute: () => EmployerRouteRoute,
-} as any)
-const CountryUAERoute = CountryUAERouteImport.update({
-  id: '/Country/UAE',
-  path: '/Country/UAE',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CountrySaudiArabiaRoute = CountrySaudiArabiaRouteImport.update({
-  id: '/Country/Saudi-Arabia',
-  path: '/Country/Saudi-Arabia',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CountryQatarRoute = CountryQatarRouteImport.update({
-  id: '/Country/Qatar',
-  path: '/Country/Qatar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CountryOmanRoute = CountryOmanRouteImport.update({
-  id: '/Country/Oman',
-  path: '/Country/Oman',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CountryKuwaitRoute = CountryKuwaitRouteImport.update({
-  id: '/Country/Kuwait',
-  path: '/Country/Kuwait',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CandidatesVisaRoute = CandidatesVisaRouteImport.update({
-  id: '/visa',
-  path: '/visa',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesProfileRoute = CandidatesProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesOffersRoute = CandidatesOffersRouteImport.update({
-  id: '/offers',
-  path: '/offers',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesNotificationsRoute = CandidatesNotificationsRouteImport.update({
-  id: '/notifications',
-  path: '/notifications',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesMedicalRoute = CandidatesMedicalRouteImport.update({
-  id: '/medical',
-  path: '/medical',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesJobsRoute = CandidatesJobsRouteImport.update({
-  id: '/jobs',
-  path: '/jobs',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesInterviewsRoute = CandidatesInterviewsRouteImport.update({
-  id: '/interviews',
-  path: '/interviews',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesDocumentsRoute = CandidatesDocumentsRouteImport.update({
-  id: '/documents',
-  path: '/documents',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesDeploymentRoute = CandidatesDeploymentRouteImport.update({
-  id: '/deployment',
-  path: '/deployment',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesDashboardRoute = CandidatesDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const CandidatesApplicationsRoute = CandidatesApplicationsRouteImport.update({
-  id: '/applications',
-  path: '/applications',
-  getParentRoute: () => CandidatesRouteRoute,
-} as any)
-const AdminDashboardRoute = AdminDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
+const AdminApplicationsIndexRoute = AdminApplicationsIndexRouteImport.update({
+  id: '/applications/',
+  path: '/applications/',
   getParentRoute: () => AdminRoute,
 } as any)
-const EmployerJobOrdersIndexRoute = EmployerJobOrdersIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => EmployerJobOrdersRoute,
-} as any)
-const AdminUsersIndexRoute = AdminUsersIndexRouteImport.update({
-  id: '/users/',
-  path: '/users/',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
-  id: '/settings/',
-  path: '/settings/',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminRequirementsIndexRoute = AdminRequirementsIndexRouteImport.update({
-  id: '/requirements/',
-  path: '/requirements/',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminReportsIndexRoute = AdminReportsIndexRouteImport.update({
-  id: '/reports/',
-  path: '/reports/',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminNotificationsIndexRoute = AdminNotificationsIndexRouteImport.update({
-  id: '/notifications/',
-  path: '/notifications/',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminJobOrdersIndexRoute = AdminJobOrdersIndexRouteImport.update({
-  id: '/job-orders/',
-  path: '/job-orders/',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminEmployersIndexRoute = AdminEmployersIndexRouteImport.update({
-  id: '/employers/',
-  path: '/employers/',
+const AdminApplicationsIdRoute = AdminApplicationsIdRouteImport.update({
+  id: '/applications/$id',
+  path: '/applications/$id',
   getParentRoute: () => AdminRoute,
 } as any)
 const AdminCandidatesIndexRoute = AdminCandidatesIndexRouteImport.update({
@@ -402,58 +372,14 @@ const AdminCandidatesIndexRoute = AdminCandidatesIndexRouteImport.update({
   path: '/candidates/',
   getParentRoute: () => AdminRoute,
 } as any)
-const AdminApplicationsIndexRoute = AdminApplicationsIndexRouteImport.update({
-  id: '/applications/',
-  path: '/applications/',
+const AdminCandidatesIdRoute = AdminCandidatesIdRouteImport.update({
+  id: '/candidates/$id',
+  path: '/candidates/$id',
   getParentRoute: () => AdminRoute,
 } as any)
-const EmployerJobOrdersNewRoute = EmployerJobOrdersNewRouteImport.update({
-  id: '/new',
-  path: '/new',
-  getParentRoute: () => EmployerJobOrdersRoute,
-} as any)
-const EmployerJobOrdersJobIdRoute = EmployerJobOrdersJobIdRouteImport.update({
-  id: '/$jobId',
-  path: '/$jobId',
-  getParentRoute: () => EmployerJobOrdersRoute,
-} as any)
-const EmployerInterviewsInterviewIdRoute =
-  EmployerInterviewsInterviewIdRouteImport.update({
-    id: '/$interviewId',
-    path: '/$interviewId',
-    getParentRoute: () => EmployerInterviewsRoute,
-  } as any)
-const EmployerDeploymentDeploymentIdRoute =
-  EmployerDeploymentDeploymentIdRouteImport.update({
-    id: '/$deploymentId',
-    path: '/$deploymentId',
-    getParentRoute: () => EmployerDeploymentRoute,
-  } as any)
-const EmployerCandidatesCandidateIdRoute =
-  EmployerCandidatesCandidateIdRouteImport.update({
-    id: '/$candidateId',
-    path: '/$candidateId',
-    getParentRoute: () => EmployerCandidatesRoute,
-  } as any)
-const CandidatesJobsIdRoute = CandidatesJobsIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => CandidatesJobsRoute,
-} as any)
-const CandidatesApplicationsIdRoute =
-  CandidatesApplicationsIdRouteImport.update({
-    id: '/$id',
-    path: '/$id',
-    getParentRoute: () => CandidatesApplicationsRoute,
-  } as any)
-const AdminRequirementsIdRoute = AdminRequirementsIdRouteImport.update({
-  id: '/requirements/$id',
-  path: '/requirements/$id',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminJobOrdersIdRoute = AdminJobOrdersIdRouteImport.update({
-  id: '/job-orders/$id',
-  path: '/job-orders/$id',
+const AdminEmployersIndexRoute = AdminEmployersIndexRouteImport.update({
+  id: '/employers/',
+  path: '/employers/',
   getParentRoute: () => AdminRoute,
 } as any)
 const AdminEmployersIdRoute = AdminEmployersIdRouteImport.update({
@@ -461,15 +387,89 @@ const AdminEmployersIdRoute = AdminEmployersIdRouteImport.update({
   path: '/employers/$id',
   getParentRoute: () => AdminRoute,
 } as any)
-const AdminCandidatesIdRoute = AdminCandidatesIdRouteImport.update({
-  id: '/candidates/$id',
-  path: '/candidates/$id',
+const AdminJobOrdersIndexRoute = AdminJobOrdersIndexRouteImport.update({
+  id: '/job-orders/',
+  path: '/job-orders/',
   getParentRoute: () => AdminRoute,
 } as any)
-const AdminApplicationsIdRoute = AdminApplicationsIdRouteImport.update({
-  id: '/applications/$id',
-  path: '/applications/$id',
+const AdminJobOrdersIdRoute = AdminJobOrdersIdRouteImport.update({
+  id: '/job-orders/$id',
+  path: '/job-orders/$id',
   getParentRoute: () => AdminRoute,
+} as any)
+const AdminNotificationsIndexRoute = AdminNotificationsIndexRouteImport.update({
+  id: '/notifications/',
+  path: '/notifications/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsIndexRoute = AdminReportsIndexRouteImport.update({
+  id: '/reports/',
+  path: '/reports/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminRequirementsIndexRoute = AdminRequirementsIndexRouteImport.update({
+  id: '/requirements/',
+  path: '/requirements/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminRequirementsIdRoute = AdminRequirementsIdRouteImport.update({
+  id: '/requirements/$id',
+  path: '/requirements/$id',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
+  id: '/settings/',
+  path: '/settings/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersIndexRoute = AdminUsersIndexRouteImport.update({
+  id: '/users/',
+  path: '/users/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const CandidatesApplicationsIdRoute =
+  CandidatesApplicationsIdRouteImport.update({
+    id: '/$id',
+    path: '/$id',
+    getParentRoute: () => CandidatesApplicationsRoute,
+  } as any)
+const CandidatesJobsIdRoute = CandidatesJobsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => CandidatesJobsRoute,
+} as any)
+const EmployerCandidatesCandidateIdRoute =
+  EmployerCandidatesCandidateIdRouteImport.update({
+    id: '/$candidateId',
+    path: '/$candidateId',
+    getParentRoute: () => EmployerCandidatesRoute,
+  } as any)
+const EmployerDeploymentDeploymentIdRoute =
+  EmployerDeploymentDeploymentIdRouteImport.update({
+    id: '/$deploymentId',
+    path: '/$deploymentId',
+    getParentRoute: () => EmployerDeploymentRoute,
+  } as any)
+const EmployerInterviewsInterviewIdRoute =
+  EmployerInterviewsInterviewIdRouteImport.update({
+    id: '/$interviewId',
+    path: '/$interviewId',
+    getParentRoute: () => EmployerInterviewsRoute,
+  } as any)
+const EmployerJobOrdersIndexRoute = EmployerJobOrdersIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EmployerJobOrdersRoute,
+} as any)
+const EmployerJobOrdersJobIdRoute = EmployerJobOrdersJobIdRouteImport.update({
+  id: '/$jobId',
+  path: '/$jobId',
+  getParentRoute: () => EmployerJobOrdersRoute,
+} as any)
+const EmployerJobOrdersNewRoute = EmployerJobOrdersNewRouteImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => EmployerJobOrdersRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -979,74 +979,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/privacypolicy': {
-      id: '/privacypolicy'
-      path: '/privacypolicy'
-      fullPath: '/privacypolicy'
-      preLoaderRoute: typeof PrivacypolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/employers': {
-      id: '/employers'
-      path: '/employers'
-      fullPath: '/employers'
-      preLoaderRoute: typeof EmployersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/employer': {
-      id: '/employer'
-      path: '/employer'
-      fullPath: '/employer'
-      preLoaderRoute: typeof EmployerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/candidate': {
-      id: '/candidate'
-      path: '/candidate'
-      fullPath: '/candidate'
-      preLoaderRoute: typeof CandidateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ResetPassword': {
-      id: '/ResetPassword'
-      path: '/ResetPassword'
-      fullPath: '/ResetPassword'
-      preLoaderRoute: typeof ResetPasswordRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Login': {
-      id: '/Login'
-      path: '/Login'
-      fullPath: '/Login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Home': {
-      id: '/Home'
-      path: '/Home'
-      fullPath: '/Home'
-      preLoaderRoute: typeof HomeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/For-Candidates': {
-      id: '/For-Candidates'
-      path: '/For-Candidates'
-      fullPath: '/For-Candidates'
-      preLoaderRoute: typeof ForCandidatesRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/Admin': {
@@ -1056,13 +993,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Employer': {
-      id: '/Employer'
-      path: '/Employer'
-      fullPath: '/Employer'
-      preLoaderRoute: typeof EmployerRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/Candidates': {
       id: '/Candidates'
       path: '/Candidates'
@@ -1070,270 +1000,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CandidatesRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/Employer': {
+      id: '/Employer'
+      path: '/Employer'
+      fullPath: '/Employer'
+      preLoaderRoute: typeof EmployerRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/': {
-      id: '/Services/'
-      path: '/Services'
-      fullPath: '/Services/'
-      preLoaderRoute: typeof ServicesIndexRouteImport
+    '/For-Candidates': {
+      id: '/For-Candidates'
+      path: '/For-Candidates'
+      fullPath: '/For-Candidates'
+      preLoaderRoute: typeof ForCandidatesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Visa': {
-      id: '/Services/Visa'
-      path: '/Services/Visa'
-      fullPath: '/Services/Visa'
-      preLoaderRoute: typeof ServicesVisaRouteImport
+    '/Home': {
+      id: '/Home'
+      path: '/Home'
+      fullPath: '/Home'
+      preLoaderRoute: typeof HomeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Training': {
-      id: '/Services/Training'
-      path: '/Services/Training'
-      fullPath: '/Services/Training'
-      preLoaderRoute: typeof ServicesTrainingRouteImport
+    '/Login': {
+      id: '/Login'
+      path: '/Login'
+      fullPath: '/Login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Technical-rec': {
-      id: '/Services/Technical-rec'
-      path: '/Services/Technical-rec'
-      fullPath: '/Services/Technical-rec'
-      preLoaderRoute: typeof ServicesTechnicalRecRouteImport
+    '/ResetPassword': {
+      id: '/ResetPassword'
+      path: '/ResetPassword'
+      fullPath: '/ResetPassword'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Prometric-coaching': {
-      id: '/Services/Prometric-coaching'
-      path: '/Services/Prometric-coaching'
-      fullPath: '/Services/Prometric-coaching'
-      preLoaderRoute: typeof ServicesPrometricCoachingRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/ParaMedical-tech': {
-      id: '/Services/ParaMedical-tech'
-      path: '/Services/ParaMedical-tech'
-      fullPath: '/Services/ParaMedical-tech'
-      preLoaderRoute: typeof ServicesParaMedicalTechRouteImport
+    '/candidate': {
+      id: '/candidate'
+      path: '/candidate'
+      fullPath: '/candidate'
+      preLoaderRoute: typeof CandidateRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Nursing-rec': {
-      id: '/Services/Nursing-rec'
-      path: '/Services/Nursing-rec'
-      fullPath: '/Services/Nursing-rec'
-      preLoaderRoute: typeof ServicesNursingRecRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Nurses': {
-      id: '/Services/Nurses'
-      path: '/Services/Nurses'
-      fullPath: '/Services/Nurses'
-      preLoaderRoute: typeof ServicesNursesRouteImport
+    '/employer': {
+      id: '/employer'
+      path: '/employer'
+      fullPath: '/employer'
+      preLoaderRoute: typeof EmployerRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Mock-Interviews': {
-      id: '/Services/Mock-Interviews'
-      path: '/Services/Mock-Interviews'
-      fullPath: '/Services/Mock-Interviews'
-      preLoaderRoute: typeof ServicesMockInterviewsRouteImport
+    '/employers': {
+      id: '/employers'
+      path: '/employers'
+      fullPath: '/employers'
+      preLoaderRoute: typeof EmployersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Healthcare-rec': {
-      id: '/Services/Healthcare-rec'
-      path: '/Services/Healthcare-rec'
-      fullPath: '/Services/Healthcare-rec'
-      preLoaderRoute: typeof ServicesHealthcareRecRouteImport
+    '/privacypolicy': {
+      id: '/privacypolicy'
+      path: '/privacypolicy'
+      fullPath: '/privacypolicy'
+      preLoaderRoute: typeof PrivacypolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Services/Grooming': {
-      id: '/Services/Grooming'
-      path: '/Services/Grooming'
-      fullPath: '/Services/Grooming'
-      preLoaderRoute: typeof ServicesGroomingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Services/Documentation': {
-      id: '/Services/Documentation'
-      path: '/Services/Documentation'
-      fullPath: '/Services/Documentation'
-      preLoaderRoute: typeof ServicesDocumentationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Services/Doctors': {
-      id: '/Services/Doctors'
-      path: '/Services/Doctors'
-      fullPath: '/Services/Doctors'
-      preLoaderRoute: typeof ServicesDoctorsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Employer/settings': {
-      id: '/Employer/settings'
-      path: '/settings'
-      fullPath: '/Employer/settings'
-      preLoaderRoute: typeof EmployerSettingsRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/register': {
-      id: '/Employer/register'
-      path: '/register'
-      fullPath: '/Employer/register'
-      preLoaderRoute: typeof EmployerRegisterRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/pending-approval': {
-      id: '/Employer/pending-approval'
-      path: '/pending-approval'
-      fullPath: '/Employer/pending-approval'
-      preLoaderRoute: typeof EmployerPendingApprovalRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/notifications': {
-      id: '/Employer/notifications'
-      path: '/notifications'
-      fullPath: '/Employer/notifications'
-      preLoaderRoute: typeof EmployerNotificationsRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/job-orders': {
-      id: '/Employer/job-orders'
-      path: '/job-orders'
-      fullPath: '/Employer/job-orders'
-      preLoaderRoute: typeof EmployerJobOrdersRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/interviews': {
-      id: '/Employer/interviews'
-      path: '/interviews'
-      fullPath: '/Employer/interviews'
-      preLoaderRoute: typeof EmployerInterviewsRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/deployment': {
-      id: '/Employer/deployment'
-      path: '/deployment'
-      fullPath: '/Employer/deployment'
-      preLoaderRoute: typeof EmployerDeploymentRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/dashboard': {
-      id: '/Employer/dashboard'
+    '/Admin/dashboard': {
+      id: '/Admin/dashboard'
       path: '/dashboard'
-      fullPath: '/Employer/dashboard'
-      preLoaderRoute: typeof EmployerDashboardRouteImport
-      parentRoute: typeof EmployerRouteRoute
+      fullPath: '/Admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof AdminRoute
     }
-    '/Employer/company': {
-      id: '/Employer/company'
-      path: '/company'
-      fullPath: '/Employer/company'
-      preLoaderRoute: typeof EmployerCompanyRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Employer/candidates': {
-      id: '/Employer/candidates'
-      path: '/candidates'
-      fullPath: '/Employer/candidates'
-      preLoaderRoute: typeof EmployerCandidatesRouteImport
-      parentRoute: typeof EmployerRouteRoute
-    }
-    '/Country/UAE': {
-      id: '/Country/UAE'
-      path: '/Country/UAE'
-      fullPath: '/Country/UAE'
-      preLoaderRoute: typeof CountryUAERouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Country/Saudi-Arabia': {
-      id: '/Country/Saudi-Arabia'
-      path: '/Country/Saudi-Arabia'
-      fullPath: '/Country/Saudi-Arabia'
-      preLoaderRoute: typeof CountrySaudiArabiaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Country/Qatar': {
-      id: '/Country/Qatar'
-      path: '/Country/Qatar'
-      fullPath: '/Country/Qatar'
-      preLoaderRoute: typeof CountryQatarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Country/Oman': {
-      id: '/Country/Oman'
-      path: '/Country/Oman'
-      fullPath: '/Country/Oman'
-      preLoaderRoute: typeof CountryOmanRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Country/Kuwait': {
-      id: '/Country/Kuwait'
-      path: '/Country/Kuwait'
-      fullPath: '/Country/Kuwait'
-      preLoaderRoute: typeof CountryKuwaitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Candidates/visa': {
-      id: '/Candidates/visa'
-      path: '/visa'
-      fullPath: '/Candidates/visa'
-      preLoaderRoute: typeof CandidatesVisaRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/profile': {
-      id: '/Candidates/profile'
-      path: '/profile'
-      fullPath: '/Candidates/profile'
-      preLoaderRoute: typeof CandidatesProfileRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/offers': {
-      id: '/Candidates/offers'
-      path: '/offers'
-      fullPath: '/Candidates/offers'
-      preLoaderRoute: typeof CandidatesOffersRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/notifications': {
-      id: '/Candidates/notifications'
-      path: '/notifications'
-      fullPath: '/Candidates/notifications'
-      preLoaderRoute: typeof CandidatesNotificationsRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/medical': {
-      id: '/Candidates/medical'
-      path: '/medical'
-      fullPath: '/Candidates/medical'
-      preLoaderRoute: typeof CandidatesMedicalRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/jobs': {
-      id: '/Candidates/jobs'
-      path: '/jobs'
-      fullPath: '/Candidates/jobs'
-      preLoaderRoute: typeof CandidatesJobsRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/interviews': {
-      id: '/Candidates/interviews'
-      path: '/interviews'
-      fullPath: '/Candidates/interviews'
-      preLoaderRoute: typeof CandidatesInterviewsRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/documents': {
-      id: '/Candidates/documents'
-      path: '/documents'
-      fullPath: '/Candidates/documents'
-      preLoaderRoute: typeof CandidatesDocumentsRouteImport
-      parentRoute: typeof CandidatesRouteRoute
-    }
-    '/Candidates/deployment': {
-      id: '/Candidates/deployment'
-      path: '/deployment'
-      fullPath: '/Candidates/deployment'
-      preLoaderRoute: typeof CandidatesDeploymentRouteImport
+    '/Candidates/applications': {
+      id: '/Candidates/applications'
+      path: '/applications'
+      fullPath: '/Candidates/applications'
+      preLoaderRoute: typeof CandidatesApplicationsRouteImport
       parentRoute: typeof CandidatesRouteRoute
     }
     '/Candidates/dashboard': {
@@ -1343,74 +1098,277 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CandidatesDashboardRouteImport
       parentRoute: typeof CandidatesRouteRoute
     }
-    '/Candidates/applications': {
-      id: '/Candidates/applications'
-      path: '/applications'
-      fullPath: '/Candidates/applications'
-      preLoaderRoute: typeof CandidatesApplicationsRouteImport
+    '/Candidates/deployment': {
+      id: '/Candidates/deployment'
+      path: '/deployment'
+      fullPath: '/Candidates/deployment'
+      preLoaderRoute: typeof CandidatesDeploymentRouteImport
       parentRoute: typeof CandidatesRouteRoute
     }
-    '/Admin/dashboard': {
-      id: '/Admin/dashboard'
-      path: '/dashboard'
-      fullPath: '/Admin/dashboard'
-      preLoaderRoute: typeof AdminDashboardRouteImport
-      parentRoute: typeof AdminRoute
+    '/Candidates/documents': {
+      id: '/Candidates/documents'
+      path: '/documents'
+      fullPath: '/Candidates/documents'
+      preLoaderRoute: typeof CandidatesDocumentsRouteImport
+      parentRoute: typeof CandidatesRouteRoute
     }
-    '/Employer/job-orders/': {
-      id: '/Employer/job-orders/'
-      path: '/'
-      fullPath: '/Employer/job-orders/'
-      preLoaderRoute: typeof EmployerJobOrdersIndexRouteImport
-      parentRoute: typeof EmployerJobOrdersRoute
+    '/Candidates/interviews': {
+      id: '/Candidates/interviews'
+      path: '/interviews'
+      fullPath: '/Candidates/interviews'
+      preLoaderRoute: typeof CandidatesInterviewsRouteImport
+      parentRoute: typeof CandidatesRouteRoute
     }
-    '/Admin/users/': {
-      id: '/Admin/users/'
-      path: '/users'
-      fullPath: '/Admin/users/'
-      preLoaderRoute: typeof AdminUsersIndexRouteImport
-      parentRoute: typeof AdminRoute
+    '/Candidates/jobs': {
+      id: '/Candidates/jobs'
+      path: '/jobs'
+      fullPath: '/Candidates/jobs'
+      preLoaderRoute: typeof CandidatesJobsRouteImport
+      parentRoute: typeof CandidatesRouteRoute
     }
-    '/Admin/settings/': {
-      id: '/Admin/settings/'
-      path: '/settings'
-      fullPath: '/Admin/settings/'
-      preLoaderRoute: typeof AdminSettingsIndexRouteImport
-      parentRoute: typeof AdminRoute
+    '/Candidates/medical': {
+      id: '/Candidates/medical'
+      path: '/medical'
+      fullPath: '/Candidates/medical'
+      preLoaderRoute: typeof CandidatesMedicalRouteImport
+      parentRoute: typeof CandidatesRouteRoute
     }
-    '/Admin/requirements/': {
-      id: '/Admin/requirements/'
-      path: '/requirements'
-      fullPath: '/Admin/requirements/'
-      preLoaderRoute: typeof AdminRequirementsIndexRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/Admin/reports/': {
-      id: '/Admin/reports/'
-      path: '/reports'
-      fullPath: '/Admin/reports/'
-      preLoaderRoute: typeof AdminReportsIndexRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/Admin/notifications/': {
-      id: '/Admin/notifications/'
+    '/Candidates/notifications': {
+      id: '/Candidates/notifications'
       path: '/notifications'
-      fullPath: '/Admin/notifications/'
-      preLoaderRoute: typeof AdminNotificationsIndexRouteImport
-      parentRoute: typeof AdminRoute
+      fullPath: '/Candidates/notifications'
+      preLoaderRoute: typeof CandidatesNotificationsRouteImport
+      parentRoute: typeof CandidatesRouteRoute
     }
-    '/Admin/job-orders/': {
-      id: '/Admin/job-orders/'
+    '/Candidates/offers': {
+      id: '/Candidates/offers'
+      path: '/offers'
+      fullPath: '/Candidates/offers'
+      preLoaderRoute: typeof CandidatesOffersRouteImport
+      parentRoute: typeof CandidatesRouteRoute
+    }
+    '/Candidates/profile': {
+      id: '/Candidates/profile'
+      path: '/profile'
+      fullPath: '/Candidates/profile'
+      preLoaderRoute: typeof CandidatesProfileRouteImport
+      parentRoute: typeof CandidatesRouteRoute
+    }
+    '/Candidates/visa': {
+      id: '/Candidates/visa'
+      path: '/visa'
+      fullPath: '/Candidates/visa'
+      preLoaderRoute: typeof CandidatesVisaRouteImport
+      parentRoute: typeof CandidatesRouteRoute
+    }
+    '/Country/Kuwait': {
+      id: '/Country/Kuwait'
+      path: '/Country/Kuwait'
+      fullPath: '/Country/Kuwait'
+      preLoaderRoute: typeof CountryKuwaitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Oman': {
+      id: '/Country/Oman'
+      path: '/Country/Oman'
+      fullPath: '/Country/Oman'
+      preLoaderRoute: typeof CountryOmanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Qatar': {
+      id: '/Country/Qatar'
+      path: '/Country/Qatar'
+      fullPath: '/Country/Qatar'
+      preLoaderRoute: typeof CountryQatarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Saudi-Arabia': {
+      id: '/Country/Saudi-Arabia'
+      path: '/Country/Saudi-Arabia'
+      fullPath: '/Country/Saudi-Arabia'
+      preLoaderRoute: typeof CountrySaudiArabiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/UAE': {
+      id: '/Country/UAE'
+      path: '/Country/UAE'
+      fullPath: '/Country/UAE'
+      preLoaderRoute: typeof CountryUAERouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Employer/candidates': {
+      id: '/Employer/candidates'
+      path: '/candidates'
+      fullPath: '/Employer/candidates'
+      preLoaderRoute: typeof EmployerCandidatesRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/company': {
+      id: '/Employer/company'
+      path: '/company'
+      fullPath: '/Employer/company'
+      preLoaderRoute: typeof EmployerCompanyRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/dashboard': {
+      id: '/Employer/dashboard'
+      path: '/dashboard'
+      fullPath: '/Employer/dashboard'
+      preLoaderRoute: typeof EmployerDashboardRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/deployment': {
+      id: '/Employer/deployment'
+      path: '/deployment'
+      fullPath: '/Employer/deployment'
+      preLoaderRoute: typeof EmployerDeploymentRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/interviews': {
+      id: '/Employer/interviews'
+      path: '/interviews'
+      fullPath: '/Employer/interviews'
+      preLoaderRoute: typeof EmployerInterviewsRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/job-orders': {
+      id: '/Employer/job-orders'
       path: '/job-orders'
-      fullPath: '/Admin/job-orders/'
-      preLoaderRoute: typeof AdminJobOrdersIndexRouteImport
+      fullPath: '/Employer/job-orders'
+      preLoaderRoute: typeof EmployerJobOrdersRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/notifications': {
+      id: '/Employer/notifications'
+      path: '/notifications'
+      fullPath: '/Employer/notifications'
+      preLoaderRoute: typeof EmployerNotificationsRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/pending-approval': {
+      id: '/Employer/pending-approval'
+      path: '/pending-approval'
+      fullPath: '/Employer/pending-approval'
+      preLoaderRoute: typeof EmployerPendingApprovalRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/register': {
+      id: '/Employer/register'
+      path: '/register'
+      fullPath: '/Employer/register'
+      preLoaderRoute: typeof EmployerRegisterRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Employer/settings': {
+      id: '/Employer/settings'
+      path: '/settings'
+      fullPath: '/Employer/settings'
+      preLoaderRoute: typeof EmployerSettingsRouteImport
+      parentRoute: typeof EmployerRouteRoute
+    }
+    '/Services/': {
+      id: '/Services/'
+      path: '/Services'
+      fullPath: '/Services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Doctors': {
+      id: '/Services/Doctors'
+      path: '/Services/Doctors'
+      fullPath: '/Services/Doctors'
+      preLoaderRoute: typeof ServicesDoctorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Documentation': {
+      id: '/Services/Documentation'
+      path: '/Services/Documentation'
+      fullPath: '/Services/Documentation'
+      preLoaderRoute: typeof ServicesDocumentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Grooming': {
+      id: '/Services/Grooming'
+      path: '/Services/Grooming'
+      fullPath: '/Services/Grooming'
+      preLoaderRoute: typeof ServicesGroomingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Healthcare-rec': {
+      id: '/Services/Healthcare-rec'
+      path: '/Services/Healthcare-rec'
+      fullPath: '/Services/Healthcare-rec'
+      preLoaderRoute: typeof ServicesHealthcareRecRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Mock-Interviews': {
+      id: '/Services/Mock-Interviews'
+      path: '/Services/Mock-Interviews'
+      fullPath: '/Services/Mock-Interviews'
+      preLoaderRoute: typeof ServicesMockInterviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Nurses': {
+      id: '/Services/Nurses'
+      path: '/Services/Nurses'
+      fullPath: '/Services/Nurses'
+      preLoaderRoute: typeof ServicesNursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Nursing-rec': {
+      id: '/Services/Nursing-rec'
+      path: '/Services/Nursing-rec'
+      fullPath: '/Services/Nursing-rec'
+      preLoaderRoute: typeof ServicesNursingRecRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/ParaMedical-tech': {
+      id: '/Services/ParaMedical-tech'
+      path: '/Services/ParaMedical-tech'
+      fullPath: '/Services/ParaMedical-tech'
+      preLoaderRoute: typeof ServicesParaMedicalTechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Prometric-coaching': {
+      id: '/Services/Prometric-coaching'
+      path: '/Services/Prometric-coaching'
+      fullPath: '/Services/Prometric-coaching'
+      preLoaderRoute: typeof ServicesPrometricCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Technical-rec': {
+      id: '/Services/Technical-rec'
+      path: '/Services/Technical-rec'
+      fullPath: '/Services/Technical-rec'
+      preLoaderRoute: typeof ServicesTechnicalRecRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Training': {
+      id: '/Services/Training'
+      path: '/Services/Training'
+      fullPath: '/Services/Training'
+      preLoaderRoute: typeof ServicesTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Services/Visa': {
+      id: '/Services/Visa'
+      path: '/Services/Visa'
+      fullPath: '/Services/Visa'
+      preLoaderRoute: typeof ServicesVisaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Admin/applications/': {
+      id: '/Admin/applications/'
+      path: '/applications'
+      fullPath: '/Admin/applications/'
+      preLoaderRoute: typeof AdminApplicationsIndexRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/Admin/employers/': {
-      id: '/Admin/employers/'
-      path: '/employers'
-      fullPath: '/Admin/employers/'
-      preLoaderRoute: typeof AdminEmployersIndexRouteImport
+    '/Admin/applications/$id': {
+      id: '/Admin/applications/$id'
+      path: '/applications/$id'
+      fullPath: '/Admin/applications/$id'
+      preLoaderRoute: typeof AdminApplicationsIdRouteImport
       parentRoute: typeof AdminRoute
     }
     '/Admin/candidates/': {
@@ -1420,74 +1378,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminCandidatesIndexRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/Admin/applications/': {
-      id: '/Admin/applications/'
-      path: '/applications'
-      fullPath: '/Admin/applications/'
-      preLoaderRoute: typeof AdminApplicationsIndexRouteImport
+    '/Admin/candidates/$id': {
+      id: '/Admin/candidates/$id'
+      path: '/candidates/$id'
+      fullPath: '/Admin/candidates/$id'
+      preLoaderRoute: typeof AdminCandidatesIdRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/Employer/job-orders/new': {
-      id: '/Employer/job-orders/new'
-      path: '/new'
-      fullPath: '/Employer/job-orders/new'
-      preLoaderRoute: typeof EmployerJobOrdersNewRouteImport
-      parentRoute: typeof EmployerJobOrdersRoute
-    }
-    '/Employer/job-orders/$jobId': {
-      id: '/Employer/job-orders/$jobId'
-      path: '/$jobId'
-      fullPath: '/Employer/job-orders/$jobId'
-      preLoaderRoute: typeof EmployerJobOrdersJobIdRouteImport
-      parentRoute: typeof EmployerJobOrdersRoute
-    }
-    '/Employer/interviews/$interviewId': {
-      id: '/Employer/interviews/$interviewId'
-      path: '/$interviewId'
-      fullPath: '/Employer/interviews/$interviewId'
-      preLoaderRoute: typeof EmployerInterviewsInterviewIdRouteImport
-      parentRoute: typeof EmployerInterviewsRoute
-    }
-    '/Employer/deployment/$deploymentId': {
-      id: '/Employer/deployment/$deploymentId'
-      path: '/$deploymentId'
-      fullPath: '/Employer/deployment/$deploymentId'
-      preLoaderRoute: typeof EmployerDeploymentDeploymentIdRouteImport
-      parentRoute: typeof EmployerDeploymentRoute
-    }
-    '/Employer/candidates/$candidateId': {
-      id: '/Employer/candidates/$candidateId'
-      path: '/$candidateId'
-      fullPath: '/Employer/candidates/$candidateId'
-      preLoaderRoute: typeof EmployerCandidatesCandidateIdRouteImport
-      parentRoute: typeof EmployerCandidatesRoute
-    }
-    '/Candidates/jobs/$id': {
-      id: '/Candidates/jobs/$id'
-      path: '/$id'
-      fullPath: '/Candidates/jobs/$id'
-      preLoaderRoute: typeof CandidatesJobsIdRouteImport
-      parentRoute: typeof CandidatesJobsRoute
-    }
-    '/Candidates/applications/$id': {
-      id: '/Candidates/applications/$id'
-      path: '/$id'
-      fullPath: '/Candidates/applications/$id'
-      preLoaderRoute: typeof CandidatesApplicationsIdRouteImport
-      parentRoute: typeof CandidatesApplicationsRoute
-    }
-    '/Admin/requirements/$id': {
-      id: '/Admin/requirements/$id'
-      path: '/requirements/$id'
-      fullPath: '/Admin/requirements/$id'
-      preLoaderRoute: typeof AdminRequirementsIdRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/Admin/job-orders/$id': {
-      id: '/Admin/job-orders/$id'
-      path: '/job-orders/$id'
-      fullPath: '/Admin/job-orders/$id'
-      preLoaderRoute: typeof AdminJobOrdersIdRouteImport
+    '/Admin/employers/': {
+      id: '/Admin/employers/'
+      path: '/employers'
+      fullPath: '/Admin/employers/'
+      preLoaderRoute: typeof AdminEmployersIndexRouteImport
       parentRoute: typeof AdminRoute
     }
     '/Admin/employers/$id': {
@@ -1497,19 +1399,117 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminEmployersIdRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/Admin/candidates/$id': {
-      id: '/Admin/candidates/$id'
-      path: '/candidates/$id'
-      fullPath: '/Admin/candidates/$id'
-      preLoaderRoute: typeof AdminCandidatesIdRouteImport
+    '/Admin/job-orders/': {
+      id: '/Admin/job-orders/'
+      path: '/job-orders'
+      fullPath: '/Admin/job-orders/'
+      preLoaderRoute: typeof AdminJobOrdersIndexRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/Admin/applications/$id': {
-      id: '/Admin/applications/$id'
-      path: '/applications/$id'
-      fullPath: '/Admin/applications/$id'
-      preLoaderRoute: typeof AdminApplicationsIdRouteImport
+    '/Admin/job-orders/$id': {
+      id: '/Admin/job-orders/$id'
+      path: '/job-orders/$id'
+      fullPath: '/Admin/job-orders/$id'
+      preLoaderRoute: typeof AdminJobOrdersIdRouteImport
       parentRoute: typeof AdminRoute
+    }
+    '/Admin/notifications/': {
+      id: '/Admin/notifications/'
+      path: '/notifications'
+      fullPath: '/Admin/notifications/'
+      preLoaderRoute: typeof AdminNotificationsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/Admin/reports/': {
+      id: '/Admin/reports/'
+      path: '/reports'
+      fullPath: '/Admin/reports/'
+      preLoaderRoute: typeof AdminReportsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/Admin/requirements/': {
+      id: '/Admin/requirements/'
+      path: '/requirements'
+      fullPath: '/Admin/requirements/'
+      preLoaderRoute: typeof AdminRequirementsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/Admin/requirements/$id': {
+      id: '/Admin/requirements/$id'
+      path: '/requirements/$id'
+      fullPath: '/Admin/requirements/$id'
+      preLoaderRoute: typeof AdminRequirementsIdRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/Admin/settings/': {
+      id: '/Admin/settings/'
+      path: '/settings'
+      fullPath: '/Admin/settings/'
+      preLoaderRoute: typeof AdminSettingsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/Admin/users/': {
+      id: '/Admin/users/'
+      path: '/users'
+      fullPath: '/Admin/users/'
+      preLoaderRoute: typeof AdminUsersIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/Candidates/applications/$id': {
+      id: '/Candidates/applications/$id'
+      path: '/$id'
+      fullPath: '/Candidates/applications/$id'
+      preLoaderRoute: typeof CandidatesApplicationsIdRouteImport
+      parentRoute: typeof CandidatesApplicationsRoute
+    }
+    '/Candidates/jobs/$id': {
+      id: '/Candidates/jobs/$id'
+      path: '/$id'
+      fullPath: '/Candidates/jobs/$id'
+      preLoaderRoute: typeof CandidatesJobsIdRouteImport
+      parentRoute: typeof CandidatesJobsRoute
+    }
+    '/Employer/candidates/$candidateId': {
+      id: '/Employer/candidates/$candidateId'
+      path: '/$candidateId'
+      fullPath: '/Employer/candidates/$candidateId'
+      preLoaderRoute: typeof EmployerCandidatesCandidateIdRouteImport
+      parentRoute: typeof EmployerCandidatesRoute
+    }
+    '/Employer/deployment/$deploymentId': {
+      id: '/Employer/deployment/$deploymentId'
+      path: '/$deploymentId'
+      fullPath: '/Employer/deployment/$deploymentId'
+      preLoaderRoute: typeof EmployerDeploymentDeploymentIdRouteImport
+      parentRoute: typeof EmployerDeploymentRoute
+    }
+    '/Employer/interviews/$interviewId': {
+      id: '/Employer/interviews/$interviewId'
+      path: '/$interviewId'
+      fullPath: '/Employer/interviews/$interviewId'
+      preLoaderRoute: typeof EmployerInterviewsInterviewIdRouteImport
+      parentRoute: typeof EmployerInterviewsRoute
+    }
+    '/Employer/job-orders/': {
+      id: '/Employer/job-orders/'
+      path: '/'
+      fullPath: '/Employer/job-orders/'
+      preLoaderRoute: typeof EmployerJobOrdersIndexRouteImport
+      parentRoute: typeof EmployerJobOrdersRoute
+    }
+    '/Employer/job-orders/$jobId': {
+      id: '/Employer/job-orders/$jobId'
+      path: '/$jobId'
+      fullPath: '/Employer/job-orders/$jobId'
+      preLoaderRoute: typeof EmployerJobOrdersJobIdRouteImport
+      parentRoute: typeof EmployerJobOrdersRoute
+    }
+    '/Employer/job-orders/new': {
+      id: '/Employer/job-orders/new'
+      path: '/new'
+      fullPath: '/Employer/job-orders/new'
+      preLoaderRoute: typeof EmployerJobOrdersNewRouteImport
+      parentRoute: typeof EmployerJobOrdersRoute
     }
   }
 }
