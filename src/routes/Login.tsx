@@ -34,8 +34,8 @@ const DotGrid = ({ className = "" }: { className?: string }) => (
 // Explicit email -> dashboard overrides for known staff accounts.
 // Falls back to roleHomePath(profile.role) for any email not listed here.
 const EMAIL_ROLE_OVERRIDES: Record<string, string> = {
-  "itsupport@ozonetravel.in": "/Admin/dashboard",
-  "heads.ops@ozoneoverseas.in": "/Employer/dashboard",
+  "itsupport@ozonetravel.in": "/Employer/dashboard",
+  "heads.ops@ozoneoverseas.in": "/Admin/dashboard",
   "applications@ozoneoverseas.in": "/Candidates/dashboard",
 };
 
