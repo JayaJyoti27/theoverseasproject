@@ -260,7 +260,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         eyebrow: "For Paramedical Candidates",
-        heading: "Your GCC Career Starts Here",
+        heading: "Your Global Career Starts Here",
         desc: "Browse open roles for biomedical, lab, and radiology technicians across the GCC.",
         cta: "Browse Roles",
         photo: P.paramedic,
@@ -330,7 +330,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         eyebrow: "For Doctors",
-        heading: "Your GCC Practice Awaits",
+        heading: "Your Global Practice Awaits",
         desc: "Browse verified medical roles across Saudi Arabia, UAE, Qatar, and beyond.",
         cta: "Browse Medical Roles",
         photo: P.doctor,
@@ -401,7 +401,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         eyebrow: "For Technical Candidates",
-        heading: "Your GCC Engineering Career",
+        heading: "Your Global Engineering Career",
         desc: "Browse open roles in construction, oil & gas, and facilities across the GCC.",
         cta: "Browse Technical Roles",
         photo: P.engineer,
@@ -620,10 +620,10 @@ export const services: Record<string, ServiceData> = {
       { value: "₹0", label: "Candidate Fees" },
       { value: "94%", label: "Visa Success Rate" },
     ],
-    badge: "₹0 Candidate Fees · Ever",
+    badge: "Candidate Support · Ever",
     photo: P.nurseAbroad,
     photoAlt: "Nurse in professional setting abroad",
-    includedHeading: "One Coordinator. Zero Fees. Every Support.",
+    includedHeading: "One Coordinator. Transparent Support. Every Step.",
     includedSubline:
       "Everything you need to nurse abroad — coaching, docs, visa — packaged and free.",
     features: [

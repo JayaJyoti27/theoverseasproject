@@ -214,7 +214,7 @@ export function Header() {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-navy text-navy-foreground text-sm">
               O
             </span>
-            Ozone <span className="text-blue ml-1">Overseas</span>
+            Ozone <span className="text-blue ml-1">Overseas Consultants</span>
           </Link>
 
           <nav className="hidden items-center gap-0.5 lg:flex">

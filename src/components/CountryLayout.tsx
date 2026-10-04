@@ -103,8 +103,8 @@ export function CountryPageLayout({ country }: { country: Country }) {
     "@graph": country.jobCategories.map((job) => ({
       "@type": "JobPosting",
       title: `${job.title} — ${country.name}`,
-      description: `${job.title} opportunities in ${country.name} via Ozone Overseas, MEA-licensed recruitment.`,
-      hiringOrganization: { "@type": "Organization", name: "Ozone Overseas" },
+      description: `${job.title} opportunities in ${country.name} via Ozone Overseas Consultants, MEA-licensed recruitment.`,
+      hiringOrganization: { "@type": "Organization", name: "Ozone Overseas Consultants" },
       jobLocation: {
         "@type": "Place",
         address: { "@type": "PostalAddress", addressCountry: country.name },
@@ -175,7 +175,7 @@ function Hero({ country }: { country: Country }) {
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] text-navy md:text-5xl lg:text-6xl">
             {country.name} Recruitment
             <br />
-            <span className="text-blue">Agency — Ozone Overseas</span>
+            <span className="text-blue">Agency — Ozone Overseas Consultants</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">{country.tagline}</p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink/80">{country.intro}</p>
@@ -576,7 +576,7 @@ function WhyOzone() {
       <Blob className="absolute -right-28 bottom-0 h-72 w-72 opacity-40" color="var(--blue-wash)" />
       <div className="relative mx-auto max-w-6xl">
         <SectionHeader
-          eyebrow="Why Ozone Overseas"
+          eyebrow="Why Ozone Overseas Consultants"
           title="A recruiter you can hold accountable"
           subtitle="Four reasons candidates and employers keep coming back."
         />

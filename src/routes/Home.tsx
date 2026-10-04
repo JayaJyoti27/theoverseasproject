@@ -29,14 +29,14 @@ import vertical3 from "@/assets/vertical-3.jpg";
 export const Route = createFileRoute("/Home")({
   head: () => ({
     meta: [
-      { title: "For Candidates — Ozone Overseas | Free Applications, MEA-Licensed" },
+      { title: "For Candidates — Ozone Overseas Consultants | Free Applications, MEA-Licensed" },
       {
         name: "description",
         content:
           "Your career abroad starts here. Free candidate applications, licensed visa & documentation handling, one coordinator from apply to landing across 10 GCC countries.",
       },
-      { property: "og:title", content: "For Candidates — Ozone Overseas" },
-      { name: "twitter:title", content: "For Candidates — Ozone Overseas" },
+      { property: "og:title", content: "For Candidates — Ozone Overseas Consultants" },
+      { name: "twitter:title", content: "For Candidates — Ozone Overseas Consultants" },
       {
         property: "og:description",
         content:
@@ -300,7 +300,7 @@ function Hero() {
                 <span className="grid h-6 w-6 place-items-center rounded-full bg-gold/15 text-gold">
                   <Wallet className="h-3.5 w-3.5" />
                 </span>
-                <span className="text-[11px] font-semibold text-navy">₹0 Candidate Fees</span>
+                <span className="text-[11px] font-semibold text-navy">Candidate Support</span>
               </div>
             </div>
             <div className="absolute -right-3 -bottom-4 rounded-full bg-white px-3.5 py-2 shadow-lg ring-1 ring-border">
@@ -322,7 +322,7 @@ function Hero() {
 function TrustStats() {
   const stats = [
     { icon: Users, l: "Candidates Placed", n: "5,000+" },
-    { icon: Wallet, l: "Candidate Fees Ever", n: "₹0" },
+    { icon: Wallet, l: "Candidate Support", n: "₹0" },
     { icon: BadgeCheck, l: "Visa Success Rate 2024", n: "94%" },
   ];
   return (
@@ -453,8 +453,8 @@ function Services() {
       n: "02",
       variant: "blue" as const,
       icon: Wallet,
-      t: "Zero Candidate Fees",
-      d: "Employers pay us — not you. Our zero-fee clause is written directly into your offer letter, so it is contractual, not a promise.",
+      t: "Candidate-Focused Support",
+      d: "Employers pay us — not you. Our candidate support policy is written directly into your offer letter, so it is contractual, not a promise.",
     },
     {
       n: "03",
@@ -669,7 +669,7 @@ function Stories() {
     {
       img: vertical1,
       role: "Welder → Doha",
-      q: "Zero fees, and every document handled. I still work with the same employer three years on.",
+      q: " Every document handled. I still work with the same employer three years on.",
       n: "Anand P.",
       meta: "9 weeks · Qatar deployment",
     },
@@ -842,7 +842,7 @@ function Destinations() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {[
             "MOH / DHA / SCFHS Approved · Direct portal access",
-            "Govt. Licensed · RA-PB1238/KER/2014",
+            "Govt. Licensed · B-1934/KER/PART/1000+/5/10386/2023",
             "Ethical Recruitment · IRIS Signatory",
           ].map((t) => (
             <div
@@ -864,10 +864,6 @@ function Destinations() {
 /* ---------- 9. FAQ ---------- */
 function FAQ() {
   const qs = [
-    {
-      q: "Do I really pay nothing at any point?",
-      a: "Correct. Employers cover our fee, and that zero-candidate-fee clause is written into your offer letter — so if anyone in the chain asks you for money, you have contractual grounds to refuse.",
-    },
     {
       q: "How long does the full process usually take?",
       a: "Most placements land between 8 and 14 weeks, depending on country and licensing exam calendars. Your tracker gives you a week-by-week ETA the day you apply.",
@@ -971,10 +967,11 @@ function FinalCTA() {
           </div>
           <div className="mt-8 flex flex-wrap gap-6 text-sm text-navy">
             <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-blue" /> +91 80 4567 8900
+              <Phone className="h-4 w-4 text-blue" />
+              +91 4843513302, 8086066611
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-blue" /> apply@ozoneoverseas.in
+              <Mail className="h-4 w-4 text-blue" /> info@ozoneoverseas.in
             </div>
           </div>
         </div>
@@ -1043,7 +1040,7 @@ function Footer() {
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-blue-soft/70">
           <div>MEA License No. B-0123/MUM/PER/1000+/5/8525/2009 — Government of India.</div>
-          <div>© {new Date().getFullYear()} Ozone Overseas. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Ozone Overseas Consultants. All rights reserved.</div>
         </div>
       </div>
     </footer>

@@ -21,7 +21,7 @@ dotenv.config();
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
-const FROM_NAME = process.env.RESEND_FROM_NAME ?? "Ozone Overseas";
+const FROM_NAME = process.env.RESEND_FROM_NAME ?? "Ozone Overseas Consultants";
 
 interface SendEmailOptions {
   to: string;
@@ -119,7 +119,7 @@ function renderTemplate({
           <tr>
             <td style="background:#0b1f3a; padding:20px 32px;">
               <span style="color:#ffffff; font-size:16px; font-weight:700; letter-spacing:0.02em;">
-                Ozone Overseas
+                Ozone Overseas Consultants
               </span>
             </td>
           </tr>
@@ -137,7 +137,7 @@ function renderTemplate({
           <tr>
             <td style="padding:24px 32px 28px;">
               <p style="margin:0; font-size:12px; color:#9aa5b1;">
-                This is an automated message from Ozone Overseas. Please do not reply to this email.
+                This is an automated message from Ozone Overseas Consultants. Please do not reply to this email.
               </p>
             </td>
           </tr>

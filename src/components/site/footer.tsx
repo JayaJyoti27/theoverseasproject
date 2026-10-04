@@ -47,18 +47,18 @@ const columns: { title: string; links: { label: string; to?: string }[] }[] = [
 // TODO: replace with real company details
 const CONTACT = {
   addressLines: [
-    "Ozone Overseas Consultants Pvt. Ltd.",
-    "1st Floor, Metro Tower,",
-    "MG Road, Kochi, Kerala 682001, India",
+    "Ozone Overseas Consultants",
+    "40/1223-A, Praveen Chandran Building, Near Palarivattam Flyover, Pipeline Jn, Palarivattam, Edappally P.O, Ernakulam - 682 024, Kerala, India",
   ],
-  emails: ["info@ozoneoverseas.com", "careers@ozoneoverseas.com"],
-  phones: ["+91 484 123 4567", "+91 484 765 4321"],
-  whatsapp: { display: "+91 98765 43210", href: "https://wa.me/919876543210" },
-  linkedin: "https://linkedin.com/company/ozoneoverseas",
-  facebook: "https://facebook.com/ozoneoverseas",
-  mapsEmbedUrl: "https://www.google.com/maps?q=MG+Road+Kochi+Kerala&output=embed",
-  mapsLinkUrl: "https://maps.google.com/?q=MG+Road+Kochi+Kerala",
-  licenseNo: "B-0123/KER/PER/1000+/5/8888/2009",
+  emails: ["info@ozoneoverseas.in"],
+  phones: ["+91 4843513302, 8086066611"],
+  whatsapp: { display: "+91 4843513302", href: "https://wa.me/919876543210" },
+  mapsEmbedUrl:
+    "https://www.google.com/maps?q=40%2F1223-A%2C+Praveen+Chandran+Building%2C+Near+Palarivattam+Flyover%2C+Pipeline+Jn%2C+Palarivattam%2C+Edappally%2C+Ernakulam+682024%2C+Kerala%2C+India&output=embed",
+
+  mapsLinkUrl:
+    "https://www.google.com/maps/search/?api=1&query=40%2F1223-A%2C+Praveen+Chandran+Building%2C+Near+Palarivattam+Flyover%2C+Pipeline+Jn%2C+Palarivattam%2C+Edappally%2C+Ernakulam+682024%2C+Kerala%2C+India",
+  licenseNo: "B-1934/KER/PART/1000+/5/10386/2023",
 };
 
 export function Footer() {
@@ -81,12 +81,12 @@ export function Footer() {
                 O
               </span>
               <div className="font-[family-name:var(--font-display)] text-lg font-bold">
-                Ozone Overseas
+                Ozone Overseas Consultants
               </div>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-white/70">
               Verified overseas talent for healthcare, construction, and technical sectors across
-              the GCC and beyond.
+              the globe.
             </p>
 
             {/* Contact details */}
@@ -144,27 +144,6 @@ export function Footer() {
                   WhatsApp: {CONTACT.whatsapp.display}
                 </a>
               </div>
-            </div>
-
-            <div className="mt-6 flex gap-3">
-              <a
-                href={CONTACT.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
-              >
-                <Linkedin size={15} />
-              </a>
-              <a
-                href={CONTACT.facebook}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
-              >
-                <Facebook size={15} />
-              </a>
             </div>
           </div>
 

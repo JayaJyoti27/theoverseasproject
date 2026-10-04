@@ -13,7 +13,7 @@ import {
 import { completeEmployerSignup } from "@/lib/employer/api";
 
 export const Route = createFileRoute("/employer")({
-  head: () => ({ meta: [{ title: "Employer Sign In — Ozone Overseas" }] }),
+  head: () => ({ meta: [{ title: "Employer Sign In — Ozone Overseas Consultants" }] }),
   component: EmployerAuthPage,
 });
 

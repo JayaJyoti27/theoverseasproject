@@ -24,7 +24,7 @@ export const Route = createFileRoute("/candidate")({
     redirect: isSafeRedirect(search.redirect) ? search.redirect : undefined,
   }),
   head: () => ({
-    meta: [{ title: "Candidate Login — Ozone Overseas" }],
+    meta: [{ title: "Candidate Login — Ozone Overseas Consultants" }],
   }),
   component: CandidateAuthPage,
 });

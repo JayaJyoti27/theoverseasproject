@@ -7,7 +7,7 @@ import { updatePassword } from "@/lib/supabase";
 
 export const Route = createFileRoute("/ResetPassword")({
   head: () => ({
-    meta: [{ title: "Reset Password — Ozone Overseas" }],
+    meta: [{ title: "Reset Password — Ozone Overseas Consultants" }],
   }),
   component: ResetPasswordPage,
 });

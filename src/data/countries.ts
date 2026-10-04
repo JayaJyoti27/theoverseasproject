@@ -105,7 +105,7 @@ export const countries: Country[] = [
   {
     slug: "kuwait",
     name: "Kuwait",
-    metaTitle: "Kuwait Recruitment Agency — Ozone Overseas",
+    metaTitle: "Kuwait Recruitment Agency — Ozone Overseas Consultants",
     metaDescription:
       "MEA-licensed ethical recruitment for Kuwait. End-to-end placements in nursing, caregiving, and skilled construction roles.",
     heroImageKeywords: "Kuwait City skyline",
@@ -113,7 +113,7 @@ export const countries: Country[] = [
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1600&q=80",
     tagline: "Ethical. Compliant. End-to-end recruitment to Kuwait.",
     intro:
-      "Kuwait remains one of the highest-paying Gulf destinations for Indian nurses, caregivers, and skilled construction talent. Ozone Overseas has been placing candidates with Kuwaiti hospitals, ministries, and infrastructure contractors under the MEA e-Migrate framework — with every contract MOFA-attested and every candidate briefed before they board.",
+      "Kuwait remains one of the highest-paying Gulf destinations for Indian nurses, caregivers, and skilled construction talent. Ozone Overseas Consultants has been placing candidates with Kuwaiti hospitals, ministries, and infrastructure contractors under the MEA e-Migrate framework — with every contract MOFA-attested and every candidate briefed before they board.",
     jobCategories: [
       { title: "Registered Nurses", icon: "Stethoscope" },
       { title: "Staff Nurses", icon: "HeartPulse" },
@@ -169,7 +169,7 @@ export const countries: Country[] = [
       },
     ],
     visaNotes:
-      "Ozone Overseas manages the full Kuwaiti work-visa cycle under the Kafala framework — from initial NOC coordination with the sponsoring employer through visa stamping at the Kuwait Consulate. Every step is documented and traceable, in line with MEA e-Migrate protocols.",
+      "Ozone Overseas Consultants manages the full Kuwaiti work-visa cycle under the Kafala framework — from initial NOC coordination with the sponsoring employer through visa stamping at the Kuwait Consulate. Every step is documented and traceable, in line with MEA e-Migrate protocols.",
     visaHandled: [
       "Employer NOC and demand-letter verification",
       "MOFA and Kuwait Embassy attestation of certificates",
@@ -214,7 +214,7 @@ export const countries: Country[] = [
         a: "From offer to boarding, most healthcare placements complete in 8–12 weeks. Construction and technical categories vary with GAMCA slot availability.",
       },
       {
-        q: "Do I pay any fees to Ozone Overseas?",
+        q: "Do I pay any fees to Ozone Overseas Consultants?",
         a: "For employer-sponsored roles, our service charges are governed by the MEA fee ceiling. You will receive a written receipt for every rupee — no cash, no informal payments.",
       },
     ],
@@ -222,7 +222,7 @@ export const countries: Country[] = [
   {
     slug: "saudi-arabia",
     name: "Saudi Arabia",
-    metaTitle: "Saudi Arabia Recruitment Agency — Ozone Overseas",
+    metaTitle: "Saudi Arabia Recruitment Agency — Ozone Overseas Consultants",
     metaDescription:
       "MEA-licensed recruitment to the Kingdom of Saudi Arabia. Nurses, doctors, engineers, hospitality staff, and skilled technicians placed under Nitaqat-compliant contracts.",
     heroImageKeywords: "Riyadh skyline Kingdom Tower",
@@ -230,7 +230,7 @@ export const countries: Country[] = [
       "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1600&q=80",
     tagline: "Ethical. Compliant. End-to-end recruitment to Saudi Arabia.",
     intro:
-      "Saudi Arabia's Vision 2030 build-out has opened thousands of roles for Indian professionals across MoH hospitals, NEOM, Aramco contractors, and hospitality groups. Ozone Overseas places candidates only with Green and Platinum Nitaqat-tier employers — the tiers with the strongest track record on wage protection and Iqama processing.",
+      "Saudi Arabia's Vision 2030 build-out has opened thousands of roles for Indian professionals across MoH hospitals, NEOM, Aramco contractors, and hospitality groups. Ozone Overseas Consultants places candidates only with Green and Platinum Nitaqat-tier employers — the tiers with the strongest track record on wage protection and Iqama processing.",
     jobCategories: [
       { title: "Nurses", icon: "Stethoscope" },
       { title: "Doctors", icon: "HeartPulse" },
@@ -241,7 +241,7 @@ export const countries: Country[] = [
     stats: [
       { value: "3,400+", label: "KSA placements to date" },
       { value: "70+", label: "SCFHS-verified hospitals partnered" },
-      { value: "10–14 wks", label: "Typical time from offer to Iqama" },
+      { value: "6-12 wks", label: "Typical time from offer to Iqama" },
       { value: "24/7", label: "Riyadh liaison desk support" },
     ],
     salaryTable: [
@@ -345,7 +345,7 @@ export const countries: Country[] = [
   {
     slug: "qatar",
     name: "Qatar",
-    metaTitle: "Qatar Recruitment Agency — Ozone Overseas",
+    metaTitle: "Qatar Recruitment Agency — Ozone Overseas Consultants",
     metaDescription:
       "MEA-licensed recruitment to Qatar for nurses, electricians, HVAC technicians, and hotel staff. Ethical, contract-transparent placements to Doha and beyond.",
     heroImageKeywords: "Doha Corniche skyline Qatar",
@@ -462,46 +462,41 @@ export const countries: Country[] = [
   {
     slug: "oman",
     name: "Oman",
-    metaTitle: "Oman Recruitment Agency — Ozone Overseas",
+    metaTitle: "Oman Recruitment Agency — Ozone Overseas Consultants",
     metaDescription:
       "MEA-licensed placements to the Sultanate of Oman. Nurses, industrial workers, and mechanical technicians recruited under transparent, ethical contracts.",
     heroImageKeywords: "Muscat harbour Sultan Qaboos mosque",
     heroImageUrl:
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80",
+      "https://unsplash.com/photos/al-lawatiya-mosque-in-muscat-oman-dZd4XWMiM9g?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
     tagline: "Ethical. Compliant. End-to-end recruitment to Oman.",
     intro:
-      "Oman's oil, gas, and downstream manufacturing sectors — anchored around Sohar, Duqm, and Salalah — need thousands of skilled Indian technicians every year. Ozone Overseas is one of the few Indian recruiters with a permanent Muscat coordination presence, giving candidates a real handhold after arrival.",
+      "Oman's oil, gas, and downstream manufacturing sectors — anchored around Sohar, Duqm, and Salalah — need thousands of skilled Indian technicians every year. Ozone Overseas Consultants is one of the few Indian recruiters with a permanent Muscat coordination presence, giving candidates a real handhold after arrival.",
     jobCategories: [
       { title: "Nurses", icon: "Stethoscope" },
       { title: "Industrial Workers", icon: "Factory" },
       { title: "Mechanical Technicians", icon: "Cog" },
     ],
     stats: [
-      { value: "600+", label: "Oman deployments since 2016" },
+      { value: "3000+", label: "Oman deployments since 2016" },
       { value: "Sohar · Duqm", label: "Active industrial corridors" },
-      { value: "H2S / BOSIET", label: "Safety training partnerships" },
+      { value: "3-12 Wks", label: "Deployment Timeline" },
       { value: "48 hrs", label: "Post-arrival check-in window" },
     ],
     salaryTable: [
       {
         role: "Registered Nurse (MoH / Royal Hospital)",
-        range: "OMR 380 – 620 / month",
+        range: "OMR 4,500 – 6,500 / month",
         benefits: "Accommodation, transport, ticket, medical",
       },
       {
-        role: "Mechanical Technician (oil & gas)",
-        range: "OMR 320 – 550 / month",
+        role: "HVAC Technician ",
+        range: "OMR 2,000 - 4,000 / month",
         benefits: "Camp, food, PPE, overtime, rotation ticket",
       },
       {
-        role: "Industrial Worker (Sohar / Duqm)",
-        range: "OMR 180 – 300 / month",
+        role: "Electrical Technician",
+        range: "OMR 1,500 - 3,000 / month",
         benefits: "Camp accommodation, meals, transport",
-      },
-      {
-        role: "Welder / Fitter (certified)",
-        range: "OMR 260 – 480 / month",
-        benefits: "Camp, PPE, overtime, ticket",
       },
     ],
     lifeInCountry:
@@ -578,7 +573,7 @@ export const countries: Country[] = [
   {
     slug: "uae",
     name: "UAE (Dubai & Abu Dhabi)",
-    metaTitle: "UAE Recruitment Agency (Dubai & Abu Dhabi) — Ozone Overseas",
+    metaTitle: "UAE Recruitment Agency (Dubai & Abu Dhabi) — Ozone Overseas Consultants",
     metaDescription:
       "MEA-licensed recruitment to the UAE. Healthcare, hospitality, retail, drivers, engineers, and skilled trades placed across Dubai and Abu Dhabi.",
     heroImageKeywords: "Dubai skyline Burj Khalifa",
@@ -586,7 +581,7 @@ export const countries: Country[] = [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
     tagline: "Ethical. Compliant. End-to-end recruitment to the UAE.",
     intro:
-      "The UAE remains India's single largest overseas jobs corridor — from DHA hospitals in Dubai to DOH clinics in Abu Dhabi, Expo City projects, and the retail and hospitality boom across the emirates. Ozone Overseas maps each candidate to the right emirate, regulator, and free-zone or mainland pathway before we even quote a job.",
+      "The UAE remains India's single largest overseas jobs corridor — from DHA hospitals in Dubai to DOH clinics in Abu Dhabi, Expo City projects, and the retail and hospitality boom across the emirates. Ozone Overseas Consultants maps each candidate to the right emirate, regulator, and free-zone or mainland pathway before we even quote a job.",
     jobCategories: [
       { title: "Healthcare Professionals", icon: "Stethoscope" },
       { title: "Hospitality Staff", icon: "UtensilsCrossed" },
@@ -596,7 +591,7 @@ export const countries: Country[] = [
       { title: "Skilled Trades", icon: "Hammer" },
     ],
     stats: [
-      { value: "5,000+", label: "UAE placements to date" },
+      { value: "3,000+", label: "UAE placements to date" },
       { value: "DHA · DOH · MOH", label: "All three healthcare regulators" },
       { value: "12+", label: "Free-zone employer partners" },
       { value: "2 yrs", label: "Standard MOHRE contract" },

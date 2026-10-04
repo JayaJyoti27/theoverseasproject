@@ -14,10 +14,12 @@ export default function WelcomeBanner() {
           </div>
 
           <div>
-            <h2 className="font-display text-xl font-bold">Welcome to Ozone Overseas!</h2>
+            <h2 className="font-display text-xl font-bold">
+              Welcome to Ozone Overseas Consultants!
+            </h2>
             <p className="mt-1 max-w-md text-sm text-white/80">
-              You're all signed up. Complete your profile and upload your documents so
-              employers can see you're ready to be shortlisted.
+              You're all signed up. Complete your profile and upload your documents so employers can
+              see you're ready to be shortlisted.
             </p>
           </div>
         </div>
@@ -30,7 +32,11 @@ export default function WelcomeBanner() {
             </Link>
           </Button>
 
-          <Button asChild variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
+          <Button
+            asChild
+            variant="outline"
+            className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+          >
             <Link to="/Candidates/documents">
               <FileUp className="mr-2 h-4 w-4" />
               Upload Documents

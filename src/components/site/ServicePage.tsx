@@ -100,7 +100,7 @@ const DEFAULT_FAQS: FAQ[] = [
     a: "Yes. Every candidate goes through credential verification, skills assessment, and interview rounds before being shortlisted for an employer.",
   },
   {
-    q: "Is Ozone Overseas licensed for overseas recruitment?",
+    q: "Is Ozone Overseas Consultants licensed for overseas recruitment?",
     a: "Yes, we are an MEA-licensed recruitment agency with 15+ years of experience placing healthcare and technical professionals into the GCC.",
   },
   {
