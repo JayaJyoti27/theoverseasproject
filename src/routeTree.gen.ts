@@ -63,6 +63,8 @@ import { Route as ServicesPrometricCoachingRouteImport } from './routes/Services
 import { Route as ServicesTechnicalRecRouteImport } from './routes/Services/Technical-rec'
 import { Route as ServicesTrainingRouteImport } from './routes/Services/Training'
 import { Route as ServicesVisaRouteImport } from './routes/Services/Visa'
+import { Route as JobsIndexRouteImport } from './routes/jobs.index'
+import { Route as JobsIdRouteImport } from './routes/jobs.$id'
 import { Route as AdminApplicationsIndexRouteImport } from './routes/Admin/applications/index'
 import { Route as AdminApplicationsIdRouteImport } from './routes/Admin/applications/$id'
 import { Route as AdminCandidatesIndexRouteImport } from './routes/Admin/candidates/index'
@@ -357,6 +359,16 @@ const ServicesVisaRoute = ServicesVisaRouteImport.update({
   path: '/Services/Visa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JobsIndexRoute = JobsIndexRouteImport.update({
+  id: '/jobs/',
+  path: '/jobs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JobsIdRoute = JobsIdRouteImport.update({
+  id: '/jobs/$id',
+  path: '/jobs/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminApplicationsIndexRoute = AdminApplicationsIndexRouteImport.update({
   id: '/applications/',
   path: '/applications/',
@@ -526,7 +538,9 @@ export interface FileRoutesByFullPath {
   '/Services/Technical-rec': typeof ServicesTechnicalRecRoute
   '/Services/Training': typeof ServicesTrainingRoute
   '/Services/Visa': typeof ServicesVisaRoute
+  '/jobs/$id': typeof JobsIdRoute
   '/Services/': typeof ServicesIndexRoute
+  '/jobs/': typeof JobsIndexRoute
   '/Admin/applications/$id': typeof AdminApplicationsIdRoute
   '/Admin/candidates/$id': typeof AdminCandidatesIdRoute
   '/Admin/employers/$id': typeof AdminEmployersIdRoute
@@ -603,7 +617,9 @@ export interface FileRoutesByTo {
   '/Services/Technical-rec': typeof ServicesTechnicalRecRoute
   '/Services/Training': typeof ServicesTrainingRoute
   '/Services/Visa': typeof ServicesVisaRoute
+  '/jobs/$id': typeof JobsIdRoute
   '/Services': typeof ServicesIndexRoute
+  '/jobs': typeof JobsIndexRoute
   '/Admin/applications/$id': typeof AdminApplicationsIdRoute
   '/Admin/candidates/$id': typeof AdminCandidatesIdRoute
   '/Admin/employers/$id': typeof AdminEmployersIdRoute
@@ -682,7 +698,9 @@ export interface FileRoutesById {
   '/Services/Technical-rec': typeof ServicesTechnicalRecRoute
   '/Services/Training': typeof ServicesTrainingRoute
   '/Services/Visa': typeof ServicesVisaRoute
+  '/jobs/$id': typeof JobsIdRoute
   '/Services/': typeof ServicesIndexRoute
+  '/jobs/': typeof JobsIndexRoute
   '/Admin/applications/$id': typeof AdminApplicationsIdRoute
   '/Admin/candidates/$id': typeof AdminCandidatesIdRoute
   '/Admin/employers/$id': typeof AdminEmployersIdRoute
@@ -762,7 +780,9 @@ export interface FileRouteTypes {
     | '/Services/Technical-rec'
     | '/Services/Training'
     | '/Services/Visa'
+    | '/jobs/$id'
     | '/Services/'
+    | '/jobs/'
     | '/Admin/applications/$id'
     | '/Admin/candidates/$id'
     | '/Admin/employers/$id'
@@ -839,7 +859,9 @@ export interface FileRouteTypes {
     | '/Services/Technical-rec'
     | '/Services/Training'
     | '/Services/Visa'
+    | '/jobs/$id'
     | '/Services'
+    | '/jobs'
     | '/Admin/applications/$id'
     | '/Admin/candidates/$id'
     | '/Admin/employers/$id'
@@ -917,7 +939,9 @@ export interface FileRouteTypes {
     | '/Services/Technical-rec'
     | '/Services/Training'
     | '/Services/Visa'
+    | '/jobs/$id'
     | '/Services/'
+    | '/jobs/'
     | '/Admin/applications/$id'
     | '/Admin/candidates/$id'
     | '/Admin/employers/$id'
@@ -974,7 +998,9 @@ export interface RootRouteChildren {
   ServicesTechnicalRecRoute: typeof ServicesTechnicalRecRoute
   ServicesTrainingRoute: typeof ServicesTrainingRoute
   ServicesVisaRoute: typeof ServicesVisaRoute
+  JobsIdRoute: typeof JobsIdRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
+  JobsIndexRoute: typeof JobsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1357,6 +1383,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesVisaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jobs/': {
+      id: '/jobs/'
+      path: '/jobs'
+      fullPath: '/jobs/'
+      preLoaderRoute: typeof JobsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jobs/$id': {
+      id: '/jobs/$id'
+      path: '/jobs/$id'
+      fullPath: '/jobs/$id'
+      preLoaderRoute: typeof JobsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Admin/applications/': {
       id: '/Admin/applications/'
       path: '/applications'
@@ -1720,7 +1760,9 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesTechnicalRecRoute: ServicesTechnicalRecRoute,
   ServicesTrainingRoute: ServicesTrainingRoute,
   ServicesVisaRoute: ServicesVisaRoute,
+  JobsIdRoute: JobsIdRoute,
   ServicesIndexRoute: ServicesIndexRoute,
+  JobsIndexRoute: JobsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

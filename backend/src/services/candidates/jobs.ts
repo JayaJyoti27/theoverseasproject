@@ -77,11 +77,45 @@ export async function getJobOrderDetails(jobOrderId: string | null | undefined) 
 
 /*
 |--------------------------------------------------------------------------
+| Guest helpers
+|--------------------------------------------------------------------------
+| The public job board is open to everyone, but employer contact details
+| are only for logged-in candidates.
+|--------------------------------------------------------------------------
+*/
+
+async function getCandidateJobFlags(candidateId: string, jobIds: string[]) {
+  if (!jobIds.length) return { applications: [], savedJobs: [] };
+
+  const [{ data: applications }, { data: savedJobs }] = await Promise.all([
+    supabase
+      .from("applications")
+      .select("job_id")
+      .eq("candidate_id", candidateId)
+      .in("job_id", jobIds),
+    supabase
+      .from("saved_jobs")
+      .select("job_id")
+      .eq("candidate_id", candidateId)
+      .in("job_id", jobIds),
+  ]);
+
+  return { applications: applications ?? [], savedJobs: savedJobs ?? [] };
+}
+
+function stripEmployerContact<T extends { contact_email?: unknown; contact_phone?: unknown }>(
+  job: T,
+): T {
+  return { ...job, contact_email: null, contact_phone: null };
+}
+
+/*
+|--------------------------------------------------------------------------
 | Browse Jobs
 |--------------------------------------------------------------------------
 */
 
-export async function getCandidateJobs(candidateId: string, filters: JobFilters) {
+export async function getCandidateJobs(candidateId: string | undefined, filters: JobFilters) {
   const page = filters.page ?? 1;
   const limit = filters.limit ?? 20;
 
@@ -118,26 +152,24 @@ export async function getCandidateJobs(candidateId: string, filters: JobFilters)
 
   const jobIds = data?.map((job) => job.id) ?? [];
 
-  const { data: applications } = await supabase
-    .from("applications")
-    .select("job_id")
-    .eq("candidate_id", candidateId)
-    .in("job_id", jobIds);
-
-  const { data: savedJobs } = await supabase
-    .from("saved_jobs")
-    .select("job_id")
-    .eq("candidate_id", candidateId)
-    .in("job_id", jobIds);
+  // Guests (no candidateId) can browse, but have no applications/saved jobs.
+  const { applications, savedJobs } = candidateId
+    ? await getCandidateJobFlags(candidateId, jobIds)
+    : { applications: [], savedJobs: [] };
 
   const withCompany = await attachCompanyNames(data ?? []);
 
   return {
-    jobs: withCompany.map((job) => ({
-      ...job,
-      applied: applications?.some((a) => a.job_id === job.id) ?? false,
-      saved: savedJobs?.some((s) => s.job_id === job.id) ?? false,
-    })),
+    jobs: withCompany.map((job) => {
+      const flags = {
+        applied: applications.some((a) => a.job_id === job.id),
+        saved: savedJobs.some((s) => s.job_id === job.id),
+      };
+
+      return candidateId
+        ? { ...job, ...flags }
+        : { ...stripEmployerContact(job), ...flags };
+    }),
     pagination: {
       page,
       limit,
@@ -153,8 +185,17 @@ export async function getCandidateJobs(candidateId: string, filters: JobFilters)
 |--------------------------------------------------------------------------
 */
 
-export async function getCandidateJob(candidateId: string, jobId: string) {
-  const { data, error } = await supabase.from("jobs").select("*").eq("id", jobId).single();
+export async function getCandidateJob(candidateId: string | undefined, jobId: string) {
+  let jobQuery = supabase.from("jobs").select("*").eq("id", jobId);
+
+  // Guests can only see jobs that are actually live on the board. A logged-in
+  // candidate keeps access to jobs they've already applied to / saved even if
+  // the listing has since closed.
+  if (!candidateId) {
+    jobQuery = jobQuery.eq("status", "active");
+  }
+
+  const { data, error } = await jobQuery.single();
 
   if (error || !data) {
     throw new NotFoundError("Job not found.");
@@ -166,6 +207,19 @@ export async function getCandidateJob(candidateId: string, jobId: string) {
   // accommodation/transport/food, benefits, and qualifications only exist
   // on the source job_orders row the employer actually filled out.
   const jobOrder = await getJobOrderDetails(data.job_order_id);
+
+  if (!candidateId) {
+    // Guest view: no per-candidate state, no employer contact, no internal remarks.
+    const { remarks: _remarks, ...publicJobOrder } = (jobOrder ?? {}) as Record<string, unknown>;
+
+    return {
+      ...stripEmployerContact(withCompany),
+      job_order: jobOrder ? publicJobOrder : null,
+      applied: false,
+      application: null,
+      saved: false,
+    };
+  }
 
   const { data: application } = await supabase
     .from("applications")

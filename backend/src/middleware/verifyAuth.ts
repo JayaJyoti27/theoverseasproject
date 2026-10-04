@@ -99,6 +99,42 @@ export async function verifyAuth(req: Request, res: Response, next: NextFunction
   }
 }
 
+/**
+ * For public endpoints that behave slightly differently when a candidate is
+ * logged in (e.g. the job board returns applied/saved flags). Never blocks:
+ * a missing, invalid or expired token — or a non-candidate account — simply
+ * means the request is treated as a guest (req.candidateId stays undefined).
+ */
+export async function optionalAuth(req: Request, _res: Response, next: NextFunction) {
+  try {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith("Bearer ")) return next();
+
+    const token = authHeader.split(" ")[1];
+
+    const { data: userData, error } = await supabase.auth.getUser(token);
+
+    if (error || !userData.user) return next();
+
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("id, role")
+      .eq("id", userData.user.id)
+      .maybeSingle();
+
+    if (profile?.role === "candidate") {
+      req.authUserId = userData.user.id;
+      req.userRole = "candidate";
+      req.candidateId = profile.id;
+    }
+  } catch {
+    // Treat any failure as "guest" — public pages must never break on auth.
+  }
+
+  return next();
+}
+
 /** Use after verifyAuth to lock a route group to a specific role. */
 export function requireRole(role: "admin" | "employer" | "candidate") {
   return (req: Request, res: Response, next: NextFunction) => {

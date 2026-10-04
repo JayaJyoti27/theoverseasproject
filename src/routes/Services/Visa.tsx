@@ -7,9 +7,9 @@ const data = services["visa-services"];
 export const Route = createFileRoute("/Services/Visa")({
   head: () => ({
     meta: [
-      { title: `${data.serviceName} — Ozone Overseas` },
+      { title: `${data.serviceName} — Ozone Overseas Consultants` },
       { name: "description", content: data.subtext },
-      { property: "og:title", content: `${data.serviceName} — Ozone Overseas` },
+      { property: "og:title", content: `${data.serviceName} — Ozone Overseas Consultants` },
       { property: "og:description", content: data.subtext },
       { property: "og:image", content: data.photo },
       { name: "twitter:image", content: data.photo },

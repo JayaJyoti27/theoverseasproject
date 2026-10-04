@@ -13,9 +13,9 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Ozone Overseas. Candidates and employers reach the right coordinator — we respond within one business day.",
+          "Get in touch with Ozone Overseas Consultants. Candidates and employers reach the right coordinator — we respond within one business day.",
       },
-      { property: "og:title", content: "Contact Ozone Overseas" },
+      { property: "og:title", content: "Contact Ozone Overseas Consultants" },
       {
         property: "og:description",
         content: "One message gets you to the right person. We respond within one business day.",
@@ -156,14 +156,14 @@ function ContactPage() {
               <ContactRow
                 icon={<Phone className="h-5 w-5" />}
                 label="Hotline"
-                href="tel:+914840000000"
-                detail="+91 484 000 0000"
+                href="+91 4843513302, 8086066611"
+                detail="+91 4843513302, 8086066611"
               />
               <GoldDivider />
               <ContactRow
                 icon={<MessageCircle className="h-5 w-5" />}
                 label="WhatsApp"
-                href="https://wa.me/914840000000"
+                href="https://wa.me/4843513302"
                 detail="Chat with a coordinator"
                 whatsapp
               />
@@ -171,21 +171,21 @@ function ContactPage() {
               <ContactRow
                 icon={<Mail className="h-5 w-5" />}
                 label="Email"
-                href="mailto:hello@ozoneoverseas.com"
-                detail="hello@ozoneoverseas.com"
+                href="mailto:info@ozoneoverseas.in"
+                detail="info@ozoneoverseas.in"
               />
               <GoldDivider />
               <ContactRow
                 icon={<MapPin className="h-5 w-5" />}
                 label="Office"
-                detail="Ozone Overseas Consultants Pvt. Ltd., 123 Recruitment House, MG Road, Kochi, Kerala 682016, India"
+                detail="40/1223-A, Praveen Chandran Building, Near Palarivattam Flyover, Pipeline Jn, Palarivattam, Edappally P.O, Ernakulam - 682 024, Kerala, India"
               />
             </div>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-border">
               <iframe
-                title="Ozone Overseas office location"
-                src="https://www.google.com/maps?q=MG+Road,+Kochi,+Kerala+682016&output=embed"
+                title="Ozone Overseas Consultants office location"
+                src="https://www.google.com/maps/search/?api=1&query=40%2F1223-A%2C+Praveen+Chandran+Building%2C+Near+Palarivattam+Flyover%2C+Pipeline+Jn%2C+Palarivattam%2C+Edappally%2C+Ernakulam+682024%2C+Kerala%2C+India"
                 className="h-56 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -195,7 +195,7 @@ function ContactPage() {
             <div className="mt-6 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-gold" />
               <p className="text-xs text-muted-foreground">
-                MEA License No. B-0123/KER/PER/1000+/5/8888/2009
+                MEA License No. B-1934/KER/PART/1000+/5/10386/2023
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ function ContactPage() {
               title="I'm a Candidate"
               body="Browse open roles or submit your CV. Free to apply, coordinator assigned within 24 hours."
               cta="Browse Roles"
-              href="/for-candidates"
+              href="/jobs"
               buttonStyle="gold"
             />
             <CtaCard
@@ -273,7 +273,7 @@ function ConfirmationState() {
       <h3 className="mt-5 font-display text-xl font-bold text-brand-navy">Message received.</h3>
       <p className="mt-2 text-sm text-brand-slate">We'll be back within one business day.</p>
       <a
-        href="/for-candidates"
+        href="/jobs"
         className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:text-brand-navy"
       >
         In the meantime, browse open roles

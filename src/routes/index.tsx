@@ -53,13 +53,13 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ozone Overseas — MEA-Licensed International Recruitment, India ↔ GCC" },
+      { title: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC" },
       {
         name: "description",
         content:
           "Connecting verified Indian talent with leading employers across the GCC. 5,000+ placements, 200+ employers, 48-hour shortlisting.",
       },
-      { property: "og:title", content: "Ozone Overseas — India ↔ GCC Recruitment" },
+      { property: "og:title", content: "Ozone Overseas Consultants — India ↔ GCC Recruitment" },
       {
         property: "og:description",
         content: "MEA-licensed bridge between top Indian talent and verified GCC employers.",
@@ -136,7 +136,11 @@ function Home() {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Sweeping wave background (JobBox-style) */}
+      {/* Sweeping wave background (
+      
+      
+    
+    Box-style) */}
       <svg
         aria-hidden
         viewBox="0 0 1440 900"
@@ -173,9 +177,9 @@ function Hero() {
             <span className="text-blue">International Recruitment</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">
-            Ozone Overseas is a Government of India MEA-licensed recruitment partner delivering
-            end-to-end workforce solutions — sourcing, screening, documentation, visa and deployment
-            — for verified employers across the GCC.
+            Ozone Overseas Consultants is a Government of India MEA-licensed recruitment partner
+            delivering end-to-end workforce solutions — sourcing, screening, documentation, visa and
+            deployment — for verified employers across the GCC.
           </p>
 
           {/* USP row */}
@@ -202,7 +206,7 @@ function Hero() {
               Hire Talent <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/For-Candidates"
+              href="/jobs"
               className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue hover:bg-blue hover:text-white transition"
             >
               Apply for Jobs <ArrowRight className="h-4 w-4" />
@@ -222,7 +226,7 @@ function Hero() {
           <div className="absolute left-2 top-6 h-[360px] w-[78%] overflow-hidden rounded-[28px] ring-4 ring-blue/30 shadow-[0_30px_60px_-20px_rgba(30,77,140,0.55)]">
             <img
               src={hero}
-              alt="Ozone Overseas recruitment consultant"
+              alt="Ozone Overseas Consultants recruitment consultant"
               className="h-full w-full object-cover"
               width={800}
               height={960}
@@ -265,6 +269,9 @@ function TrustedStrip() {
     "Mediclinic",
     "SEHA",
     "KIMS",
+    "Avicen",
+    "Al Salam Hospital",
+    "Alorf Hospital",
   ];
   return (
     <section className="px-6">
@@ -287,7 +294,7 @@ function TrustedStrip() {
             />
           </svg>
           <p className="relative text-center text-sm font-semibold uppercase tracking-widest text-blue">
-            Trusted by Leading Employers Across the GCC
+            Trusted by Leading Employers Across the Globe
           </p>
           <div className="relative mt-6 grid grid-cols-2 items-center gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((l) => (
@@ -536,7 +543,7 @@ function LiveJobs() {
               Live <span className="text-blue">Openings</span>, Updated Weekly
             </h2>
           </div>
-          <a href="/Login" className="text-sm font-semibold text-blue hover:text-navy">
+          <a href="/jobs" className="text-sm font-semibold text-blue hover:text-navy">
             View all roles →
           </a>
         </div>
@@ -560,7 +567,7 @@ function LiveJobs() {
                   {j.emp}
                 </div>
                 <a
-                  href="/Login"
+                  href="/jobs"
                   className="mt-5 flex items-center justify-between text-sm font-semibold text-navy hover:text-blue"
                 >
                   View Role <ArrowRight className="h-4 w-4" />
@@ -765,12 +772,17 @@ function MatchEngine() {
           </p>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {[
-              { t: "Hire Talent", d: "Shortlisted candidates in 48 hours", icon: Briefcase },
-              { t: "Find Jobs", d: "Vacancies across 10+ countries", icon: Plane },
-            ].map(({ t, d, icon: Icon }) => (
+              {
+                t: "Hire Talent",
+                d: "Shortlisted candidates in 48 hours",
+                icon: Briefcase,
+                href: "#",
+              },
+              { t: "Find Jobs", d: "Vacancies across 10+ countries", icon: Plane, href: "/jobs" },
+            ].map(({ t, d, icon: Icon, href }) => (
               <a
                 key={t}
-                href="#"
+                href={href}
                 className="group rounded-2xl border border-border bg-white p-5 hover:border-blue transition"
               >
                 <div className="flex items-center justify-between">
@@ -1134,7 +1146,7 @@ function CTA() {
               Hire Talent <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/For-Candidates"
+              href="/jobs"
               className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue hover:bg-blue hover:text-white transition"
             >
               Apply Now <ArrowRight className="h-4 w-4" />
@@ -1142,10 +1154,10 @@ function CTA() {
           </div>
           <div className="mt-8 flex flex-wrap gap-6 text-sm text-navy">
             <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-blue" /> +91 80 4567 8900
+              <Phone className="h-4 w-4 text-blue" /> +91 4843513302, 8086066611
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-blue" /> hello@ozoneoverseas.in
+              <Mail className="h-4 w-4 text-blue" /> info@ozoneoverseas.in
             </div>
           </div>
         </div>
@@ -1162,10 +1174,12 @@ function TrustCredibility() {
   const stats = [
     { icon: Landmark, n: "MEA", l: "Govt. of India Licensed", sub: "Recruitment Licence" },
     { icon: Award, n: "15+", l: "Years of Experience", sub: "Since 2009" },
-    { icon: MapPin, n: "10+", l: "Countries Served", sub: "GCC & beyond" },
-    { icon: Users, n: "5,000+", l: "Candidates Deployed", sub: "Successfully placed" },
+
+    { icon: MapPin, n: "20+", l: "Countries Served Across the Globe", sub: "Global Markets" },
+    { icon: Users, n: "10,000+", l: "Candidates Deployed", sub: "Successfully placed" },
+
     { icon: Building2, n: "200+", l: "Global Employer Network", sub: "Verified partners" },
-    { icon: Briefcase, n: "12+", l: "Industry Sectors Served", sub: "Healthcare to Energy" },
+    { icon: Briefcase, n: "25+", l: "Sectors Served", sub: "Healthcare to Engineering" },
   ];
   return (
     <section className="relative overflow-hidden px-6 py-20">
@@ -1244,7 +1258,7 @@ function QualityAssurance() {
     {
       icon: Languages,
       t: "Language Training Support",
-      d: "English and Arabic support for client-facing roles.",
+      d: "English, Arabic and German language training support for client-facing roles.",
     },
     {
       icon: GraduationCap,
@@ -1264,7 +1278,7 @@ function QualityAssurance() {
     {
       icon: Scale,
       t: "Government Compliance & Ethical Practice",
-      d: "MEA-compliant contracts, zero-fee ethical recruitment for candidates.",
+      d: "MEA-compliant contracts, ethical recruitment for candidates.",
     },
     {
       icon: Plane,

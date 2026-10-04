@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 
 const CANDIDATE_SERVICES = [
   { label: "For Candidates", to: "/For-Candidates", desc: "Overview & how it works" },
-  { label: "Browse Jobs", to: "/candidate", desc: "42+ live roles across 17 countries" },
+  { label: "Browse Jobs", to: "/jobs", desc: "42+ live roles across 17 countries" },
   { label: "My Dashboard", to: "/candidate", desc: "Track applications & profile" },
   { label: "Nursing Careers", to: "/Services/Nursing-rec", desc: "ICU, OT, Staff Nurse & more" },
   {
@@ -214,7 +214,7 @@ export function Header() {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-navy text-navy-foreground text-sm">
               O
             </span>
-            Ozone <span className="text-blue ml-1">Overseas</span>
+            Ozone <span className="text-blue ml-1">Overseas Consultants</span>
           </Link>
 
           <nav className="hidden items-center gap-0.5 lg:flex">

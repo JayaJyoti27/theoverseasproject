@@ -33,13 +33,15 @@ import corporateOffice from "@/assets/corporate-office.jpg";
 export const Route = createFileRoute("/employers")({
   head: () => ({
     meta: [
-      { title: "For Employers — Ozone Overseas | Hire Verified GCC Talent in 48 Hours" },
+      {
+        title: "For Employers — Ozone Overseas Consultants | Hire Verified GCC Talent in 48 Hours",
+      },
       {
         name: "description",
         content:
-          "Submit a requirement and receive your first pre-screened candidate in 48 hours. 200+ hospitals and companies trust Ozone Overseas for compliant, verified hiring across the GCC.",
+          "Submit a requirement and receive your first pre-screened candidate in 48 hours. 200+ hospitals and companies trust Ozone Overseas Consultants for compliant, verified hiring across the GCC.",
       },
-      { property: "og:title", content: "For Employers — Ozone Overseas" },
+      { property: "og:title", content: "For Employers — Ozone Overseas Consultants" },
       {
         property: "og:description",
         content:
@@ -91,7 +93,7 @@ function Hero() {
           <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-[color:var(--muted-foreground)]">
             Submit a requirement, get your first pre-screened candidate in{" "}
             <span className="font-semibold text-[color:var(--navy)]">48 hours</span>. 200+ hospitals
-            and companies trust Ozone for compliant, verified hiring across the GCC and beyond.
+            and companies trust Ozone for compliant, verified hiring across the Globe.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

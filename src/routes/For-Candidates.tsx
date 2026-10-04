@@ -58,20 +58,24 @@ import { Footer } from "@/components/site/footer";
 export const Route = createFileRoute("/For-Candidates")({
   head: () => ({
     meta: [
-      { title: "Work Abroad with Ozone Overseas — International Jobs for Indian Professionals" },
+      {
+        title:
+          "Work Abroad with Ozone Overseas Consultants — International Jobs for Indian Professionals",
+      },
       {
         name: "description",
         content:
-          "Government of India MEA-licensed recruitment consultancy. Healthcare, engineering, construction and technical roles across 17 countries. Zero candidate fees. Apply free.",
+          "Government of India MEA-licensed recruitment consultancy. Healthcare, engineering, construction and technical roles across 17 countries. ",
       },
       {
         property: "og:title",
-        content: "Work Abroad with Ozone Overseas — International Jobs for Indian Professionals",
+        content:
+          "Work Abroad with Ozone Overseas Consultants — International Jobs for Indian Professionals",
       },
       {
         property: "og:description",
         content:
-          "MEA-licensed recruitment consultancy placing Indian professionals abroad. 17 countries, zero candidate fees, end-to-end support.",
+          "MEA-licensed recruitment consultancy placing Indian professionals abroad. 17 countries, transparent candidate support, end-to-end support.",
       },
       { property: "og:url", content: "/for-candidates" },
     ],
@@ -243,22 +247,23 @@ function Hero() {
             <span className="block text-blue">Recruitment Partner.</span>
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink sm:text-base">
-            Ozone Overseas is a Government-licensed international recruitment consultancy placing
-            Indian professionals into verified roles across 17 countries — with full compliance,
-            ethical practices, and end-to-end support from registration to post-arrival.
+            Ozone Overseas Consultants is a Government-licensed international recruitment
+            consultancy placing Indian professionals into verified roles across 17 countries — with
+            full compliance, ethical practices, and end-to-end support from registration to
+            post-arrival.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <BtnSolid href="/candidate">
+            <BtnSolid href="/jobs">
               Browse Open Roles <ArrowRight className="h-4 w-4" />
             </BtnSolid>
-            <BtnSolidBlue href="#apply">
+            <BtnSolidBlue href="/candidate">
               Apply Now <ArrowRight className="h-4 w-4" />
             </BtnSolidBlue>
             <BtnOutline href="#contact">Contact Us</BtnOutline>
           </div>
           <div className="mt-4 text-xs text-ink/70">
-            ₹0 Candidate Fees · MEA License No. RA-PB1238/KER/2014 · IRIS Ethical Recruitment
-            Signatory
+            Candidate Support · MEA License No. B-1934/KER/PART/1000+/5/10386/2023 · IRIS Ethical
+            Recruitment Signatory
           </div>
         </div>
 
@@ -275,7 +280,7 @@ function Hero() {
             <div className="relative overflow-hidden rounded-2xl border border-border bg-white shadow-[0_20px_60px_-30px_rgba(11,31,58,0.35)]">
               <img
                 src={IMG.hero}
-                alt="Ozone Overseas recruitment counsellor meeting with a candidate in the Kochi office"
+                alt="Ozone Overseas Consultants recruitment counsellor meeting with a candidate in the Kochi office"
                 className="aspect-[5/4] w-full object-cover"
                 loading="eager"
               />
@@ -291,7 +296,9 @@ function Hero() {
                   Govt. of India MEA Licensed
                 </div>
               </div>
-              <div className="mt-1 text-[10px] text-ink/70">License No. RA-PB1238/KER/2014</div>
+              <div className="mt-1 text-[10px] text-ink/70">
+                License No. B-1934/KER/PART/1000+/5/10386/2023
+              </div>
             </div>
           </div>
         </div>
@@ -301,12 +308,10 @@ function Hero() {
       <div className="relative border-t border-border bg-blue-wash">
         <div className="mx-auto grid max-w-7xl grid-cols-3 gap-y-3 divide-blue/20 px-4 py-3 sm:grid-cols-6 sm:px-6 lg:divide-x lg:px-8 lg:py-4">
           {[
-            { icon: BadgeCheck, big: "₹0", small: "Candidate Fees" },
             { icon: Users, big: "5,000+", small: "Deployed" },
             { icon: Globe2, big: "17", small: "Countries" },
             { icon: Calendar, big: "15+", small: "Years" },
             { icon: ShieldCheck, big: "MEA", small: "Licensed" },
-            { icon: Scale, big: "IRIS", small: "Signatory" },
           ].map(({ icon: Icon, big, small }) => (
             <div key={small} className="flex items-center gap-2 px-2 text-navy lg:gap-3 lg:px-3">
               <Icon className="h-4 w-4 shrink-0 text-blue lg:h-5 lg:w-5" />
@@ -327,10 +332,6 @@ function Hero() {
 /* ---------- 2. WHY ---------- */
 function WhyOzone() {
   const rows = [
-    {
-      t: "Zero Candidate Fees",
-      d: "Employers pay our fees. You never pay us a placement, registration, or documentation fee — in writing.",
-    },
     {
       t: "End-to-End Support",
       d: "From first application to first week on site, one coordinator handles everything.",
@@ -374,7 +375,7 @@ function WhyOzone() {
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-blue" />
               <div className="font-display text-sm font-semibold text-navy">
-                ₹0 Candidate Fees · Ever
+                Candidate Support · Ever
               </div>
             </div>
           </div>
@@ -385,7 +386,7 @@ function WhyOzone() {
           <SectionHeading
             eyebrow="Why Ozone"
             lines={["We Don't Just Place You.", "We Prepare You", "for Everything."]}
-            sub="A premium recruitment consultancy — not a manpower agency. Every stage is coordinator-led, compliance-first, and cost-free to you."
+            sub="A premium recruitment consultancy — not a manpower agency. Every stage is coordinator-led and compliance-first."
           />
           <div className="mt-8 divide-y divide-border rounded-2xl border border-border bg-white shadow-[0_12px_40px_-28px_rgba(11,31,58,0.3)]">
             {rows.map((r) => (
@@ -458,7 +459,7 @@ const JOURNEY_PHASES: {
       {
         icon: Languages,
         t: "Language Training",
-        d: "English proficiency support arranged where applicable.",
+        d: "English, Arabic and German language training support for destination roles.",
       },
       {
         icon: Award,
@@ -606,11 +607,11 @@ function Journey() {
                 Ready to Start? Register in Under 2 Minutes.
               </div>
               <div className="text-sm text-ink/70">
-                No fee, no format, no chase — coordinator assigned within 24 hours.
+                No complicated process, no chase — coordinator assigned within 24 hours.
               </div>
             </div>
             <BtnSolid href="/candidate">
-              Apply Free <ArrowRight className="h-4 w-4" />
+              Apply Now <ArrowRight className="h-4 w-4" />
             </BtnSolid>
           </div>
         </div>
@@ -714,7 +715,7 @@ function JobsByCountry() {
                 {active} · Coordinator assigned within 24 hours
               </div>
               <a
-                href="#apply"
+                href=""
                 className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue hover:text-navy"
               >
                 View Roles <ArrowRight className="h-3.5 w-3.5" />
@@ -769,7 +770,7 @@ function QualityAssurance() {
     {
       i: BookOpen,
       t: "Language Training Support",
-      d: "English proficiency support for destination roles.",
+      d: "English, Arabic and German language training support for destination roles.",
     },
     {
       i: BookOpenCheck,
@@ -896,7 +897,7 @@ function QualityAssurance() {
           </div>
           <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs">
             <ShieldCheck className="h-4 w-4 text-blue-soft" /> Govt. of India MEA Licensed ·
-            RA-PB1238/KER/2014
+            B-1934/KER/PART/1000+/5/10386/2023
           </div>
         </div>
       </div>
@@ -1022,7 +1023,7 @@ function Testimonials() {
     },
     {
       photo: IMG.t3,
-      quote: "Zero fees, in writing. Even my flight was booked before I asked.",
+      quote: "Clear terms, in writing. Even my flight was booked before I asked.",
       name: "Sneha M.",
       meta: "OT Nurse → Abu Dhabi · Cleveland Clinic",
     },
@@ -1112,13 +1113,13 @@ function FinalCTA() {
         <div>
           <SectionHeading
             eyebrow="Get Started"
-            lines={["Ready to Work Abroad?", "Register free.", "We handle everything."]}
-            sub="From your first application to your first day on site — one coordinator, zero fees, full compliance."
+            lines={["Ready to Work Abroad?", "Register Now.", "We handle everything."]}
+            sub="From your first application to your first day on site — one coordinator, full compliance."
             light
           />
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#apply-form"
+              href="/candidate"
               className="inline-flex items-center gap-2 rounded-full bg-blue px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-navy transition"
             >
               Apply for Jobs <ArrowRight className="h-4 w-4" />
@@ -1134,10 +1135,13 @@ function FinalCTA() {
 
         <div className="grid gap-3">
           {[
-            { i: Phone, t: "24×7 Hotline", d: "+91 484 000 0000" },
-            { i: MessageCircle, t: "WhatsApp", d: "wa.me/914840000000" },
-            { i: Mail, t: "Email", d: "hello@ozoneoverseas.com" },
-            { i: Building2, t: "Head Office", d: "MG Road, Kochi, Kerala 682016" },
+            { i: Phone, t: "24×7 Hotline", d: "+91 4843513302, 8086066611" },
+            { i: Mail, t: "Email", d: "info@ozoneoverseas.in" },
+            {
+              i: Building2,
+              t: "Head Office",
+              d: "40/1223-A, Praveen Chandran Building, Near Palarivattam Flyover, Pipeline Jn, Palarivattam, Edappally P.O, Ernakulam - 682 024, Kerala, India",
+            },
           ].map((c) => {
             const Icon = c.i;
             return (
