@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, useRouter } from "@tanstack/react-router";
 import { useState, FormEvent, useEffect, useRef } from "react";
 import { ShieldCheck, ArrowRight, Mail, Lock, Loader2 } from "lucide-react";
 import { Header } from "@/components/site/Header";
@@ -11,8 +11,18 @@ import {
   supabase,
 } from "@/lib/supabase";
 import { completeCandidateSignup } from "@/lib/candidate/api";
+import {
+  isSafeRedirect,
+  savePostLoginRedirect,
+  takePostLoginRedirect,
+} from "@/lib/candidate/postLoginRedirect";
 
 export const Route = createFileRoute("/candidate")({
+  // /candidate?redirect=/jobs/<id> — where to send the person after login/signup
+  // (set when a guest clicks Apply on the public job board).
+  validateSearch: (search: Record<string, unknown>): { redirect?: string } => ({
+    redirect: isSafeRedirect(search.redirect) ? search.redirect : undefined,
+  }),
   head: () => ({
     meta: [{ title: "Candidate Login — Ozone Overseas" }],
   }),
@@ -49,6 +59,8 @@ type Step = Mode | "confirm" | "finishing";
 
 function CandidateAuthPage() {
   const navigate = useNavigate();
+  const router = useRouter();
+  const { redirect: redirectAfterLogin } = Route.useSearch();
   const [step, setStep] = useState<Step>("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,15 +79,31 @@ function CandidateAuthPage() {
     setStep("finishing");
     try {
       const { isNewProfile } = await completeCandidateSignup();
-      navigate({
-        to: isNewProfile ? "/Candidates/profile" : "/Candidates/dashboard",
-      });
+
+      // Where the guest was headed before being asked to log in (e.g. the job
+      // they clicked Apply on). Always cleared so it's only used once.
+      const returnTo = takePostLoginRedirect();
+
+      if (isNewProfile) {
+        // Brand-new accounts finish their profile first.
+        navigate({ to: "/Candidates/profile" });
+      } else if (returnTo) {
+        router.history.push(returnTo);
+      } else {
+        navigate({ to: "/Candidates/dashboard" });
+      }
     } catch (err) {
       finishing.current = false;
       setStep("signin");
       setError(err instanceof Error ? err.message : "Something went wrong finishing sign in.");
     }
   }
+
+  // Remember the return path. It's kept in localStorage (not just the URL)
+  // because the signup confirmation email link lands back here without it.
+  useEffect(() => {
+    if (redirectAfterLogin) savePostLoginRedirect(redirectAfterLogin);
+  }, [redirectAfterLogin]);
 
   // Already logged in (either from before, or just landed back from the
   // email confirmation link after signup).

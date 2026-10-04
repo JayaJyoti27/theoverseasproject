@@ -5,6 +5,7 @@ import { Bookmark, BookmarkCheck, Briefcase, Share2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useApply, useRemoveSavedJob, useSaveJob } from "@/lib/candidate/hooks";
+import { useRequireCandidate } from "@/lib/candidate/useCandidateSession";
 import type { CandidateJob } from "@/lib/candidate/types";
 
 interface Props {
@@ -15,10 +16,14 @@ export default function JobActions({ job }: Props) {
   const save = useSaveJob();
   const remove = useRemoveSavedJob();
   const apply = useApply();
+  const requireCandidate = useRequireCandidate();
 
   const [saved, setSaved] = useState(job.saved);
 
   async function toggleSave() {
+    // Guests can browse, but saving needs an account.
+    if (!(await requireCandidate())) return;
+
     if (saved) {
       await remove.mutateAsync(job.id);
       setSaved(false);
@@ -33,6 +38,9 @@ export default function JobActions({ job }: Props) {
       console.error("JobActions: refusing to apply — job.id is missing.", job);
       return;
     }
+
+    // Guests are sent to login/signup and brought back to this job afterwards.
+    if (!(await requireCandidate())) return;
 
     await apply.mutateAsync(job.id);
   }

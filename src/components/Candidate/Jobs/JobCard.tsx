@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 
 import {
   Bookmark,
@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { Button } from "@/components/ui/button";
 import { useApply, useRemoveSavedJob, useSaveJob } from "@/lib/candidate/hooks";
+import { useRequireCandidate } from "@/lib/candidate/useCandidateSession";
 import { formatJobSalary } from "@/lib/candidate/formatJobSalary";
 import type { CandidateJob } from "@/lib/candidate/types";
 
@@ -27,6 +28,12 @@ interface Props {
 
 export default function JobCard({ job }: Props) {
   const navigate = useNavigate();
+
+  // The same card is used on the public /jobs board and inside the candidate
+  // portal, so details links stay in whichever area the visitor is in.
+  const inPortal = useLocation().pathname.startsWith("/Candidates");
+
+  const requireCandidate = useRequireCandidate();
 
   const save = useSaveJob();
 
@@ -39,11 +46,18 @@ export default function JobCard({ job }: Props) {
   const salary = formatJobSalary(job);
 
   function openDetails() {
-    navigate({ to: "/Candidates/jobs/$id", params: { id: job.id } });
+    if (inPortal) {
+      navigate({ to: "/Candidates/jobs/$id", params: { id: job.id } });
+    } else {
+      navigate({ to: "/jobs/$id", params: { id: job.id } });
+    }
   }
 
   async function toggleSave(e: React.MouseEvent) {
     e.stopPropagation();
+
+    // Guests can browse, but saving needs an account.
+    if (!(await requireCandidate())) return;
 
     if (saved) {
       await remove.mutateAsync(job.id);
@@ -63,6 +77,9 @@ export default function JobCard({ job }: Props) {
       console.error("JobCard: refusing to apply — job.id is missing.", job);
       return;
     }
+
+    // Guests are sent to login/signup and brought back to this page afterwards.
+    if (!(await requireCandidate())) return;
 
     await apply.mutateAsync(job.id);
   }
@@ -133,15 +150,17 @@ export default function JobCard({ job }: Props) {
         </Button>
 
         <Button variant="outline" asChild onClick={(e) => e.stopPropagation()}>
-          <Link
-            to="/Candidates/jobs/$id"
-            params={{
-              id: job.id,
-            }}
-          >
-            View Details
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          {inPortal ? (
+            <Link to="/Candidates/jobs/$id" params={{ id: job.id }}>
+              View Details
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          ) : (
+            <Link to="/jobs/$id" params={{ id: job.id }}>
+              View Details
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          )}
         </Button>
       </div>
     </Card>

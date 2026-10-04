@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 
 import { ArrowRight } from "lucide-react";
 
@@ -9,6 +9,7 @@ import { useJobs } from "@/lib/candidate/hooks";
 
 export default function SimilarJobs() {
   const { data } = useJobs();
+  const inPortal = useLocation().pathname.startsWith("/Candidates");
 
   if (!data?.length) return null;
 
@@ -24,10 +25,17 @@ export default function SimilarJobs() {
             <p className="text-sm text-muted-foreground">{job.company}</p>
 
             <Button variant="link" asChild className="mt-2 p-0">
-              <Link to="/Candidates/jobs/$id" params={{ id: job.id }}>
-                View Job
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              {inPortal ? (
+                <Link to="/Candidates/jobs/$id" params={{ id: job.id }}>
+                  View Job
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              ) : (
+                <Link to="/jobs/$id" params={{ id: job.id }}>
+                  View Job
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </Button>
           </div>
         ))}

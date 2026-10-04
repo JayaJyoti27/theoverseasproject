@@ -76,7 +76,9 @@ export const updateProfile = async (payload: any) => {
 ========================================================= */
 
 export const getJob = async (jobId: string) => {
-  const { data } = await api.get(`/candidate/jobs/${jobId}`);
+  // Public endpoint: works for guests, and adds applied/saved flags when a
+  // candidate session token is attached by the request interceptor.
+  const { data } = await api.get(`/public/jobs/${jobId}`);
   return data.data ?? null;
 };
 
@@ -246,7 +248,7 @@ export const replaceDocument = async (id: string, formData: FormData) => {
   return data;
 };
 export const getJobs = async (params?: any) => {
-  const { data } = await api.get("/candidate/jobs", { params });
+  const { data } = await api.get("/public/jobs", { params });
   return data.jobs ?? []; // was returning the whole response body — fixed
 };
 

@@ -9,6 +9,7 @@ import employerRoutes from "./employer";
 import recruitmentRoutes from "./recruitment";
 
 import jobsRoutes from "./jobs";
+import publicJobsRoutes from "./publicJobs";
 import documentsRoutes from "./documents";
 import interviewRoutes from "./interview";
 import medicalRoutes from "./medical";
@@ -27,6 +28,7 @@ const router = Router();
 */
 
 router.use("/jobs", jobsRoutes);
+router.use("/public/jobs", publicJobsRoutes);
 router.use("/settings", settingsRoutes);
 /*
 |--------------------------------------------------------------------------
