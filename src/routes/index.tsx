@@ -536,7 +536,7 @@ function LiveJobs() {
               Live <span className="text-blue">Openings</span>, Updated Weekly
             </h2>
           </div>
-          <a href="/Login" className="text-sm font-semibold text-blue hover:text-navy">
+          <a href="/jobs" className="text-sm font-semibold text-blue hover:text-navy">
             View all roles →
           </a>
         </div>
@@ -560,7 +560,7 @@ function LiveJobs() {
                   {j.emp}
                 </div>
                 <a
-                  href="/Login"
+                  href="/jobs"
                   className="mt-5 flex items-center justify-between text-sm font-semibold text-navy hover:text-blue"
                 >
                   View Role <ArrowRight className="h-4 w-4" />
@@ -765,7 +765,12 @@ function MatchEngine() {
           </p>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {[
-              { t: "Hire Talent", d: "Shortlisted candidates in 48 hours", icon: Briefcase, href: "#" },
+              {
+                t: "Hire Talent",
+                d: "Shortlisted candidates in 48 hours",
+                icon: Briefcase,
+                href: "#",
+              },
               { t: "Find Jobs", d: "Vacancies across 10+ countries", icon: Plane, href: "/jobs" },
             ].map(({ t, d, icon: Icon, href }) => (
               <a
@@ -1134,7 +1139,7 @@ function CTA() {
               Hire Talent <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/For-Candidates"
+              href="/jobs"
               className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue hover:bg-blue hover:text-white transition"
             >
               Apply Now <ArrowRight className="h-4 w-4" />
