@@ -182,7 +182,7 @@ function Hero({ country }: { country: Country }) {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="/For-Candidates"
+              href="/jobs"
               className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-blue transition"
             >
               Apply for Jobs in {country.name} <ArrowRight className="h-4 w-4" />
@@ -713,7 +713,7 @@ function CTA({ country }: { country: Country }) {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
-            to="/For-Candidates"
+            to="/jobs"
             className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-blue transition"
           >
             Apply for Jobs in {country.name} <ArrowRight className="h-4 w-4" />

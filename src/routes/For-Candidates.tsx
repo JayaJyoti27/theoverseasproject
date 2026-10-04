@@ -248,7 +248,7 @@ function Hero() {
             ethical practices, and end-to-end support from registration to post-arrival.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <BtnSolid href="/candidate">
+            <BtnSolid href="/jobs">
               Browse Open Roles <ArrowRight className="h-4 w-4" />
             </BtnSolid>
             <BtnSolidBlue href="#apply">

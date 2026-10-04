@@ -202,7 +202,7 @@ function Hero() {
               Hire Talent <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/For-Candidates"
+              href="/jobs"
               className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue hover:bg-blue hover:text-white transition"
             >
               Apply for Jobs <ArrowRight className="h-4 w-4" />
@@ -765,12 +765,12 @@ function MatchEngine() {
           </p>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {[
-              { t: "Hire Talent", d: "Shortlisted candidates in 48 hours", icon: Briefcase },
-              { t: "Find Jobs", d: "Vacancies across 10+ countries", icon: Plane },
-            ].map(({ t, d, icon: Icon }) => (
+              { t: "Hire Talent", d: "Shortlisted candidates in 48 hours", icon: Briefcase, href: "#" },
+              { t: "Find Jobs", d: "Vacancies across 10+ countries", icon: Plane, href: "/jobs" },
+            ].map(({ t, d, icon: Icon, href }) => (
               <a
                 key={t}
-                href="#"
+                href={href}
                 className="group rounded-2xl border border-border bg-white p-5 hover:border-blue transition"
               >
                 <div className="flex items-center justify-between">

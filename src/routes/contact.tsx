@@ -216,7 +216,7 @@ function ContactPage() {
               title="I'm a Candidate"
               body="Browse open roles or submit your CV. Free to apply, coordinator assigned within 24 hours."
               cta="Browse Roles"
-              href="/for-candidates"
+              href="/jobs"
               buttonStyle="gold"
             />
             <CtaCard
@@ -273,7 +273,7 @@ function ConfirmationState() {
       <h3 className="mt-5 font-display text-xl font-bold text-brand-navy">Message received.</h3>
       <p className="mt-2 text-sm text-brand-slate">We'll be back within one business day.</p>
       <a
-        href="/for-candidates"
+        href="/jobs"
         className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:text-brand-navy"
       >
         In the meantime, browse open roles
