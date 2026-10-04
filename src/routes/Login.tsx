@@ -7,7 +7,7 @@ import { loginWithPassword, roleHomePath, requestPasswordReset } from "@/lib/sup
 
 export const Route = createFileRoute("/Login")({
   head: () => ({
-    meta: [{ title: "Sign In — Ozone Overseas" }],
+    meta: [{ title: "Sign In — Ozone Overseas Consultants" }],
   }),
   component: LoginPage,
 });

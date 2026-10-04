@@ -57,12 +57,12 @@ function Index() {
               </span>
             </div>
             <h1 className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl leading-[1.02] text-navy">
-              Verified Talent for the GCC.
+              Verified Talent Across the Globe.
               <br />
               <span className="text-blue">One Licensed Partner.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-              Ozone Overseas places pre-screened healthcare and technical professionals from India
+              Ozone Overseas Consultants places pre-screened healthcare and technical professionals from India
               into GCC hospitals and employers — end-to-end, compliant, in 6–8 weeks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">

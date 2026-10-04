@@ -26,7 +26,7 @@ function JobOrdersPage() {
           <h1 className="text-3xl font-bold">Job Orders</h1>
 
           <p className="text-muted-foreground">
-            Manage all recruitment requests submitted to Ozone Overseas.
+            Manage all recruitment requests submitted to Ozone Overseas Consultants.
           </p>
         </div>
         <Button

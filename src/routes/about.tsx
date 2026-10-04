@@ -51,17 +51,17 @@ import { Footer } from "@/components/site/footer";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Ozone Overseas — 15 Years of Ethical Recruitment" },
+      { title: "About Ozone Overseas Consultants — 15 Years of Ethical Recruitment" },
       {
         name: "description",
         content:
           "MEA-licensed since 2009. 5,000+ placements across 17 countries. Zero sub-agents, direct employer relationships, and coordinators who put candidates first.",
       },
-      { property: "og:title", content: "About Ozone Overseas" },
+      { property: "og:title", content: "About Ozone Overseas Consultants" },
       {
         property: "og:description",
         content:
-          "Founded in Kochi in 2009. 15 years of building careers that last — MEA licensed, IRIS-signatory, ethical recruitment.",
+          "Founded in 2009. 15 years of building careers that last — MEA licensed,ethical recruitment.",
       },
     ],
   }),
@@ -163,7 +163,7 @@ function Hero() {
         {/* Left */}
         <div className="relative flex flex-col justify-center">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-[color:var(--blue-soft)] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[color:var(--blue)]">
-            <Sparkles className="h-3.5 w-3.5" /> About Ozone Overseas
+            <Sparkles className="h-3.5 w-3.5" /> About Ozone Overseas Consultants
           </span>
           <h1 className="mt-5 font-display text-5xl font-bold leading-[1.05] text-[color:var(--navy)] md:text-[64px]">
             15 Years of Placing
@@ -186,7 +186,7 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-2.5">
             <Pill icon={ShieldCheck}>MEA License Verified</Pill>
             <Pill icon={BadgeCheck}>Est. 2009</Pill>
-            <Pill icon={MapPin}>Kochi, Kerala</Pill>
+            <Pill icon={MapPin}>Kerala</Pill>
           </div>
         </div>
 
@@ -201,7 +201,7 @@ function Hero() {
           >
             <img
               src={heroTeam}
-              alt="Ozone Overseas team at work in the Kochi office"
+              alt="Ozone Overseas Consultants team at work"
               className="h-full w-full object-cover"
               width={1024}
               height={1024}
@@ -237,7 +237,7 @@ function Hero() {
                 MEA Licensed Since 2009
               </div>
               <div className="mt-0.5 text-[10.5px] text-[color:var(--muted-foreground)]">
-                RA-PB1238/KER/2014
+                B-1934/KER/PART/1000+/5/10386/2023
               </div>
             </div>
           </motion.div>
@@ -256,7 +256,7 @@ const achievements = [
     suffix: "",
     display: "MEA",
     label: "Govt. of India Recruitment Licence",
-    sub: "RA-PB1238/KER/2014",
+    sub: "B-1934/KER/PART/1000+/5/10386/2023",
   },
   { icon: Award, value: 15, suffix: "+", label: "Years of Industry Experience" },
   { icon: Globe2, value: 17, suffix: "", label: "Countries Served" },
@@ -324,14 +324,14 @@ const milestones = [
   {
     year: "2009",
     icon: Award,
-    title: "Founded in Kochi",
-    body: "MEA license obtained. First 12 placements in Saudi Arabia lay the foundation for a candidate-first model.",
+    title: "Founded in Kerala",
+    body: "First 12 placements in Saudi Arabia lay the foundation for a candidate-first model.",
   },
   {
     year: "2012",
     icon: Building2,
     title: "GCC Expansion",
-    body: "Expanded operations to the UAE and Qatar. Signed our first multi-year hospital network partnership.",
+    body: "Expanded operations to the UAE and Kuwait. Signed our first multi-year hospital network partnership.",
   },
   {
     year: "2015",
@@ -343,7 +343,7 @@ const milestones = [
     year: "2018",
     icon: GraduationCap,
     title: "Free Prometric Coaching",
-    body: "Launched free Prometric coaching for healthcare candidates. Over 1,000 candidates coached to date.",
+    body: "Launched free Prometric coaching for English, German and Arabic. Over 1,000 candidates coached to date.",
   },
   {
     year: "2021",
@@ -369,7 +369,7 @@ function StoryTimeline() {
             Our Story
           </span>
           <h2 className="mt-4 font-display text-4xl font-bold text-[color:var(--navy)] md:text-5xl">
-            From Kochi to the GCC — and Beyond.
+            From India to the Globe.
           </h2>
           <p className="mt-4 text-[color:var(--muted-foreground)]">
             One office. One license. 15 years of showing up for candidates and employers the same
@@ -548,7 +548,7 @@ function WhyWeExist() {
   const points = [
     {
       title: "Ethical Recruitment",
-      body: "Direct employer relationships — zero sub-agents, zero candidate fees.",
+      body: "Direct employer relationships — zero sub-agents, transparent candidate support.",
       icon: Handshake,
     },
     {
@@ -558,7 +558,7 @@ function WhyWeExist() {
     },
     {
       title: "Regulatory Compliance",
-      body: "MEA-licensed and IRIS-signatory, operating strictly within Govt. of India norms.",
+      body: "MEA-licensed, operating strictly within Govt. of India norms.",
       icon: ShieldCheck,
     },
     {
@@ -592,7 +592,7 @@ function WhyWeExist() {
           <div className="absolute -bottom-2 right-2 h-56 w-56 overflow-hidden rounded-[22px] border-[6px] border-white shadow-[0_20px_45px_-20px_rgba(11,31,58,0.35)]">
             <img
               src={teamMeetingImg}
-              alt="Ozone team meeting in the Kochi office"
+              alt="Ozone team meeting"
               className="h-full w-full object-cover"
               loading="lazy"
               width={1024}
@@ -711,8 +711,9 @@ function QualityAssurance() {
 
         <div className="mt-10 rounded-[24px] bg-[color:var(--navy)] px-6 py-6 text-center md:px-10">
           <p className="text-sm font-medium leading-relaxed text-white/85 md:text-base">
-            This is how Ozone Overseas delivers qualified, compliant, deployment-ready candidates —
-            while holding the highest standards of ethical recruitment and client service.
+            This is how Ozone Overseas Consultants delivers qualified, compliant, deployment-ready
+            candidates — while holding the highest standards of ethical recruitment and client
+            service.
           </p>
         </div>
       </div>
@@ -802,8 +803,8 @@ function Credentials() {
               Government of India — MEA Licensed
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/75">
-              License No. RA-PB1238/KER/2014, first issued 2009, renewed annually. Direct access to
-              the eMigrate portal.
+              License No. B-1934/KER/PART/1000+/5/10386/2023, first issued 2009, renewed annually.
+              Direct access to the eMigrate portal.
             </p>
           </article>
 
@@ -813,12 +814,10 @@ function Credentials() {
               02
             </div>
             <ShieldCheck className="mt-6 h-10 w-10 text-[color:var(--blue)]" />
-            <h3 className="mt-6 font-display text-xl font-bold">
-              IRIS Ethical Recruitment Signatory
-            </h3>
+            <h3 className="mt-6 font-display text-xl font-bold">Ethical Recruitment Signatory</h3>
             <p className="mt-3 text-sm leading-relaxed text-[color:var(--muted-foreground)]">
-              Committed to zero candidate fees, transparent policy in writing, and no sub-agent
-              networks — verified by the IRIS framework.
+              Committed to transparent candidate support, transparent policy in writing, and no
+              sub-agent networks.
             </p>
           </article>
 
@@ -987,9 +986,10 @@ function ContactCTA() {
                     Office
                   </div>
                   <div className="mt-1 text-sm text-[color:var(--navy)]">
-                    Ozone Overseas Consultants Pvt. Ltd.
+                    Ozone Overseas Consultants
                     <br />
-                    123 Recruitment House, MG Road, Kochi, Kerala 682016
+                    40/1223-A, Praveen Chandran Building, Near Palarivattam Flyover, Pipeline Jn,
+                    Palarivattam, Edappally P.O, Ernakulam - 682 024, Kerala, India
                   </div>
                 </div>
               </div>
@@ -1001,7 +1001,9 @@ function ContactCTA() {
                   <div className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--blue)]">
                     Hotline
                   </div>
-                  <div className="mt-1 text-sm text-[color:var(--navy)]">+91 484 000 0000</div>
+                  <div className="mt-1 text-sm text-[color:var(--navy)]">
+                    +91 4843513302, 8086066611
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -1012,9 +1014,7 @@ function ContactCTA() {
                   <div className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--blue)]">
                     Email
                   </div>
-                  <div className="mt-1 text-sm text-[color:var(--navy)]">
-                    careers@ozoneoverseas.in
-                  </div>
+                  <div className="mt-1 text-sm text-[color:var(--navy)]">info@ozoneoverseas.in</div>
                 </div>
               </div>
             </div>

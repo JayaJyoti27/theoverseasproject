@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ozone Overseas — MEA-Licensed International Recruitment, India ↔ GCC" },
+      { title: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC" },
       {
         name: "description",
         content:
@@ -86,11 +86,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:title",
-        content: "Ozone Overseas — MEA-Licensed International Recruitment, India ↔ GCC",
+        content: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC",
       },
       {
         name: "twitter:title",
-        content: "Ozone Overseas — MEA-Licensed International Recruitment, India ↔ GCC",
+        content: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC",
       },
       {
         property: "og:description",

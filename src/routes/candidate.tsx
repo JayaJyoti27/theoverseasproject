@@ -14,7 +14,7 @@ import { completeCandidateSignup } from "@/lib/candidate/api";
 
 export const Route = createFileRoute("/candidate")({
   head: () => ({
-    meta: [{ title: "Candidate Login — Ozone Overseas" }],
+    meta: [{ title: "Candidate Login — Ozone Overseas Consultants" }],
   }),
   component: CandidateAuthPage,
 });
