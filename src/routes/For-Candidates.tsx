@@ -48,7 +48,6 @@ import {
   PlaneTakeoff,
   Ticket,
   PlaneLanding,
-  HeartHandshake,
   Syringe,
 } from "lucide-react";
 import { useRef, useState } from "react";
@@ -414,8 +413,8 @@ const JOURNEY_PHASES: {
   steps: { icon: typeof FileEdit; t: string; d: string }[];
 }[] = [
   {
-    phase: "Apply & Get Selected",
-    tag: "Phase 01",
+    phase: "Apply",
+    tag: "Day 1",
     color: "var(--color-blue)",
     steps: [
       {
@@ -433,26 +432,11 @@ const JOURNEY_PHASES: {
         t: "Pre-Screening & Verification",
         d: "Certificates, licenses, and experience authenticated.",
       },
-      {
-        icon: Video,
-        t: "Interview Preparation",
-        d: "Mock interviews, presentation coaching, professional readiness.",
-      },
-      {
-        icon: Handshake,
-        t: "Employer Interview",
-        d: "Introduction to a verified employer, coordinator-facilitated.",
-      },
-      {
-        icon: FileSignature,
-        t: "Selection",
-        d: "Offer letter issued, terms confirmed in writing.",
-      },
     ],
   },
   {
-    phase: "Train & Get Certified",
-    tag: "Phase 02",
+    phase: "Prometric",
+    tag: "Week 1–4",
     color: "var(--color-navy)",
     steps: [
       {
@@ -462,9 +446,38 @@ const JOURNEY_PHASES: {
       },
       {
         icon: Award,
-        t: "Licensing Training",
-        d: "Prometric coaching — DHA / HAAD / SCFHS / QCHP.",
+        t: "Prometric Coaching & Exam",
+        d: "Online Prometric coaching — DHA / HAAD / SCFHS / QCHP.",
       },
+    ],
+  },
+  {
+    phase: "Interview & Offer",
+    tag: "Week 4–6",
+    color: "var(--color-blue)",
+    steps: [
+      {
+        icon: Video,
+        t: "Interview Preparation",
+        d: "Mock interviews for healthcare, engineering and technical candidates.",
+      },
+      {
+        icon: Handshake,
+        t: "Employer Interview",
+        d: "Introduction to a verified employer, coordinator-facilitated.",
+      },
+      {
+        icon: FileSignature,
+        t: "Selection & Offer",
+        d: "Offer letter issued, terms confirmed in writing.",
+      },
+    ],
+  },
+  {
+    phase: "Documentation & Visa",
+    tag: "Week 6–12",
+    color: "var(--color-navy)",
+    steps: [
       {
         icon: Syringe,
         t: "Medical Examination",
@@ -475,13 +488,6 @@ const JOURNEY_PHASES: {
         t: "Documentation & Attestation",
         d: "Dataflow, certificate attestation, MEA compliance.",
       },
-    ],
-  },
-  {
-    phase: "Process & Depart",
-    tag: "Phase 03",
-    color: "var(--color-blue)",
-    steps: [
       {
         icon: Stamp,
         t: "Visa Processing",
@@ -499,20 +505,8 @@ const JOURNEY_PHASES: {
       },
       {
         icon: PlaneLanding,
-        t: "Airport Departure",
-        d: "Departure support, coordinator on call on travel day.",
-      },
-    ],
-  },
-  {
-    phase: "Arrive & Settle In",
-    tag: "Phase 04",
-    color: "var(--color-navy)",
-    steps: [
-      {
-        icon: HeartHandshake,
-        t: "Post-Arrival Support",
-        d: "First-week check-in, accommodation confirmed, coordinator on call.",
+        t: "Departure & Post-Arrival Support",
+        d: "Departure support, first-week check-in, coordinator on call.",
       },
     ],
   },
@@ -537,7 +531,7 @@ function Journey() {
         <SectionHeading
           eyebrow="Complete Recruitment Journey"
           lines={[
-            "From Registration to Post-Arrival Support.",
+            "From Day 1 Application to Visa and Departure.",
             "One Coordinator.",
             "Zero Surprises.",
           ]}

@@ -317,13 +317,19 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              href="https://wa.me/919847000000"
+              href="https://wa.me/918086066611"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border-2 border-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp transition-colors hover:bg-whatsapp hover:text-white"
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp
+            </a>
+            <a
+              href="/candidate"
+              className="flex items-center gap-2 rounded-full bg-blue px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy"
+            >
+              Sign Up
             </a>
           </div>
 
@@ -438,13 +444,19 @@ export function Header() {
 
             <div className="border-t border-blue/10 p-4 space-y-2.5">
               <a
-                href="https://wa.me/919847000000"
+                href="https://wa.me/918086066611"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-full border-2 border-whatsapp px-4 py-2.5 text-sm font-semibold text-whatsapp"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
+              </a>
+              <a
+                href="/candidate"
+                className="flex items-center justify-center gap-2 rounded-full bg-blue px-4 py-2.5 text-sm font-semibold text-white"
+              >
+                Sign Up / Register
               </a>
             </div>
           </div>

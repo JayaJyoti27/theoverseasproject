@@ -349,7 +349,7 @@ const milestones = [
     year: "2021",
     icon: Globe2,
     title: "Into Europe & Canada",
-    body: "Extended reach to Canada, the UK, and Germany. Crossed 3,000 total placements across all destinations.",
+    body: "Extended reach to Canada, the UK, and Germany. Crossed 5,000 total placements across all destinations.",
   },
   {
     year: "2024",

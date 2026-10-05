@@ -189,14 +189,14 @@ function ContactPage() {
               <ContactRow
                 icon={<Phone className="h-5 w-5" />}
                 label="Hotline"
-                href="+91 4843513302, 8086066611"
+                href="tel:+914843513302"
                 detail="+91 4843513302, 8086066611"
               />
               <GoldDivider />
               <ContactRow
                 icon={<MessageCircle className="h-5 w-5" />}
                 label="WhatsApp"
-                href="https://wa.me/4843513302"
+                href="https://wa.me/918086066611"
                 detail="Chat with a coordinator"
                 whatsapp
               />

@@ -74,7 +74,7 @@ const CONTACT = {
   ],
   emails: ["info@ozoneoverseas.in"],
   phones: ["+91 4843513302, 8086066611"],
-  whatsapp: { display: "+91 4843513302", href: "https://wa.me/919876543210" },
+  whatsapp: { display: "+91 8086066611", href: "https://wa.me/918086066611" },
   mapsEmbedUrl:
     "https://www.google.com/maps?q=40%2F1223-A%2C+Praveen+Chandran+Building%2C+Near+Palarivattam+Flyover%2C+Pipeline+Jn%2C+Palarivattam%2C+Edappally%2C+Ernakulam+682024%2C+Kerala%2C+India&output=embed",
 
