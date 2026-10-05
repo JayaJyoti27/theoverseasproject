@@ -103,8 +103,8 @@ export function CountryPageLayout({ country }: { country: Country }) {
     "@graph": country.jobCategories.map((job) => ({
       "@type": "JobPosting",
       title: `${job.title} — ${country.name}`,
-      description: `${job.title} opportunities in ${country.name} via Ozone Overseas Consultants, MEA-licensed recruitment.`,
-      hiringOrganization: { "@type": "Organization", name: "Ozone Overseas Consultants" },
+      description: `${job.title} opportunities in ${country.name} via Ozone Overseas, MEA-licensed recruitment.`,
+      hiringOrganization: { "@type": "Organization", name: "Ozone Overseas" },
       jobLocation: {
         "@type": "Place",
         address: { "@type": "PostalAddress", addressCountry: country.name },
@@ -122,15 +122,15 @@ export function CountryPageLayout({ country }: { country: Country }) {
       <Header />
       <Hero country={country} />
       <LicenseBar country={country} />
-      <Stats country={country} />
+      {country.stats?.length ? <Stats country={country} /> : null}
       <Jobs country={country} />
-      <SalaryBenefits country={country} />
+      {country.salaryTable?.length ? <SalaryBenefits country={country} /> : null}
       <ProcessTimeline />
       <Visa country={country} />
       <Documentation country={country} />
       <LifeInCountry country={country} />
       <WhyOzone />
-      <Testimonials country={country} />
+      {country.testimonials?.length ? <Testimonials country={country} /> : null}
       <FAQ country={country} />
       <CTA country={country} />
       <Footer />
@@ -175,7 +175,7 @@ function Hero({ country }: { country: Country }) {
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] text-navy md:text-5xl lg:text-6xl">
             {country.name} Recruitment
             <br />
-            <span className="text-blue">Agency — Ozone Overseas Consultants</span>
+            <span className="text-blue">Agency — Ozone Overseas</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">{country.tagline}</p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink/80">{country.intro}</p>
@@ -199,12 +199,23 @@ function Hero({ country }: { country: Country }) {
         <div className="relative mx-auto h-[380px] w-full max-w-[480px] lg:h-[440px]">
           <DotGrid className="absolute top-0 right-0 h-20 w-20" />
           <div className="absolute left-2 top-4 h-full w-[86%] overflow-hidden rounded-[28px] ring-4 ring-blue/25 shadow-[0_30px_60px_-20px_rgba(30,77,140,0.5)]">
-            <img
-              src={country.heroImageUrl}
-              alt={`${country.name} — ${country.heroImageKeywords}`}
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
+            {country.heroImageUrl ? (
+              <img
+                src={country.heroImageUrl}
+                alt={`${country.name} — ${country.heroImageKeywords}`}
+                className="h-full w-full object-cover"
+                loading="eager"
+              />
+            ) : (
+              <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy to-blue p-8 text-center">
+                <div>
+                  <MapPin className="mx-auto h-10 w-10 text-blue-soft" />
+                  <div className="mt-3 font-display text-3xl font-bold text-white">
+                    {country.name}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <DotGrid className="absolute -bottom-2 -left-2 h-16 w-16 opacity-80" />
         </div>
@@ -249,7 +260,7 @@ function Stats({ country }: { country: Country }) {
     <section className="relative overflow-hidden px-6 py-20">
       <Blob className="absolute -left-24 top-0 h-72 w-72 opacity-50" color="var(--blue-wash)" />
       <div className="relative mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {country.stats.map((s, i) => (
+        {country.stats!.map((s, i) => (
           <div
             key={s.label}
             className="relative overflow-hidden rounded-[20px] border border-border bg-white p-6 text-center shadow-[0_12px_40px_-28px_rgba(11,31,58,0.35)]"
@@ -344,7 +355,7 @@ function SalaryBenefits({ country }: { country: Country }) {
             <div>Standard benefits</div>
           </div>
           <ul className="divide-y divide-border">
-            {country.salaryTable.map((row) => (
+            {country.salaryTable!.map((row) => (
               <li
                 key={row.role}
                 className="grid gap-2 px-6 py-5 md:grid-cols-[1.4fr_1fr_1.6fr] md:items-center md:gap-4"
@@ -550,7 +561,7 @@ function LifeInCountry({ country }: { country: Country }) {
             <p className="mt-5 text-ink">{country.lifeInCountry}</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {country.gallery.map((img, idx) => (
+            {(country.gallery ?? []).map((img, idx) => (
               <img
                 key={img.url + idx}
                 src={img.url}
@@ -619,7 +630,7 @@ function Testimonials({ country }: { country: Country }) {
       <div className="relative mx-auto max-w-6xl">
         <SectionHeader eyebrow="Candidate voices" title={`Placed by Ozone in ${country.name}`} />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {country.testimonials.map((t) => (
+          {country.testimonials!.map((t) => (
             <figure
               key={t.name}
               className="relative rounded-[24px] bg-white p-7 shadow-[0_20px_60px_-30px_rgba(11,31,58,0.3)]"

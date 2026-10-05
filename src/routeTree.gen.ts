@@ -35,11 +35,27 @@ import { Route as CandidatesNotificationsRouteImport } from './routes/Candidates
 import { Route as CandidatesOffersRouteImport } from './routes/Candidates/offers'
 import { Route as CandidatesProfileRouteImport } from './routes/Candidates/profile'
 import { Route as CandidatesVisaRouteImport } from './routes/Candidates/visa'
+import { Route as CountryAfricaRouteImport } from './routes/Country/Africa'
+import { Route as CountryAustraliaRouteImport } from './routes/Country/Australia'
+import { Route as CountryCanadaRouteImport } from './routes/Country/Canada'
+import { Route as CountryCroatiaRouteImport } from './routes/Country/Croatia'
+import { Route as CountryGermanyRouteImport } from './routes/Country/Germany'
+import { Route as CountryHungaryRouteImport } from './routes/Country/Hungary'
+import { Route as CountryIraqRouteImport } from './routes/Country/Iraq'
+import { Route as CountryIsraelRouteImport } from './routes/Country/Israel'
+import { Route as CountryItalyRouteImport } from './routes/Country/Italy'
 import { Route as CountryKuwaitRouteImport } from './routes/Country/Kuwait'
+import { Route as CountryLatviaRouteImport } from './routes/Country/Latvia'
+import { Route as CountryMalaysiaRouteImport } from './routes/Country/Malaysia'
+import { Route as CountryMaldivesRouteImport } from './routes/Country/Maldives'
 import { Route as CountryOmanRouteImport } from './routes/Country/Oman'
 import { Route as CountryQatarRouteImport } from './routes/Country/Qatar'
+import { Route as CountryRomaniaRouteImport } from './routes/Country/Romania'
+import { Route as CountryRussiaRouteImport } from './routes/Country/Russia'
 import { Route as CountrySaudiArabiaRouteImport } from './routes/Country/Saudi-Arabia'
+import { Route as CountrySingaporeRouteImport } from './routes/Country/Singapore'
 import { Route as CountryUAERouteImport } from './routes/Country/UAE'
+import { Route as CountryUKRouteImport } from './routes/Country/UK'
 import { Route as EmployerCandidatesRouteImport } from './routes/Employer/candidates'
 import { Route as EmployerCompanyRouteImport } from './routes/Employer/company'
 import { Route as EmployerDashboardRouteImport } from './routes/Employer/dashboard'
@@ -218,9 +234,69 @@ const CandidatesVisaRoute = CandidatesVisaRouteImport.update({
   path: '/visa',
   getParentRoute: () => CandidatesRouteRoute,
 } as any)
+const CountryAfricaRoute = CountryAfricaRouteImport.update({
+  id: '/Country/Africa',
+  path: '/Country/Africa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryAustraliaRoute = CountryAustraliaRouteImport.update({
+  id: '/Country/Australia',
+  path: '/Country/Australia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryCanadaRoute = CountryCanadaRouteImport.update({
+  id: '/Country/Canada',
+  path: '/Country/Canada',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryCroatiaRoute = CountryCroatiaRouteImport.update({
+  id: '/Country/Croatia',
+  path: '/Country/Croatia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryGermanyRoute = CountryGermanyRouteImport.update({
+  id: '/Country/Germany',
+  path: '/Country/Germany',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryHungaryRoute = CountryHungaryRouteImport.update({
+  id: '/Country/Hungary',
+  path: '/Country/Hungary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryIraqRoute = CountryIraqRouteImport.update({
+  id: '/Country/Iraq',
+  path: '/Country/Iraq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryIsraelRoute = CountryIsraelRouteImport.update({
+  id: '/Country/Israel',
+  path: '/Country/Israel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryItalyRoute = CountryItalyRouteImport.update({
+  id: '/Country/Italy',
+  path: '/Country/Italy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CountryKuwaitRoute = CountryKuwaitRouteImport.update({
   id: '/Country/Kuwait',
   path: '/Country/Kuwait',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryLatviaRoute = CountryLatviaRouteImport.update({
+  id: '/Country/Latvia',
+  path: '/Country/Latvia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryMalaysiaRoute = CountryMalaysiaRouteImport.update({
+  id: '/Country/Malaysia',
+  path: '/Country/Malaysia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryMaldivesRoute = CountryMaldivesRouteImport.update({
+  id: '/Country/Maldives',
+  path: '/Country/Maldives',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CountryOmanRoute = CountryOmanRouteImport.update({
@@ -233,14 +309,34 @@ const CountryQatarRoute = CountryQatarRouteImport.update({
   path: '/Country/Qatar',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CountryRomaniaRoute = CountryRomaniaRouteImport.update({
+  id: '/Country/Romania',
+  path: '/Country/Romania',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryRussiaRoute = CountryRussiaRouteImport.update({
+  id: '/Country/Russia',
+  path: '/Country/Russia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CountrySaudiArabiaRoute = CountrySaudiArabiaRouteImport.update({
   id: '/Country/Saudi-Arabia',
   path: '/Country/Saudi-Arabia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CountrySingaporeRoute = CountrySingaporeRouteImport.update({
+  id: '/Country/Singapore',
+  path: '/Country/Singapore',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CountryUAERoute = CountryUAERouteImport.update({
   id: '/Country/UAE',
   path: '/Country/UAE',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountryUKRoute = CountryUKRouteImport.update({
+  id: '/Country/UK',
+  path: '/Country/UK',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EmployerCandidatesRoute = EmployerCandidatesRouteImport.update({
@@ -511,11 +607,27 @@ export interface FileRoutesByFullPath {
   '/Candidates/offers': typeof CandidatesOffersRoute
   '/Candidates/profile': typeof CandidatesProfileRoute
   '/Candidates/visa': typeof CandidatesVisaRoute
+  '/Country/Africa': typeof CountryAfricaRoute
+  '/Country/Australia': typeof CountryAustraliaRoute
+  '/Country/Canada': typeof CountryCanadaRoute
+  '/Country/Croatia': typeof CountryCroatiaRoute
+  '/Country/Germany': typeof CountryGermanyRoute
+  '/Country/Hungary': typeof CountryHungaryRoute
+  '/Country/Iraq': typeof CountryIraqRoute
+  '/Country/Israel': typeof CountryIsraelRoute
+  '/Country/Italy': typeof CountryItalyRoute
   '/Country/Kuwait': typeof CountryKuwaitRoute
+  '/Country/Latvia': typeof CountryLatviaRoute
+  '/Country/Malaysia': typeof CountryMalaysiaRoute
+  '/Country/Maldives': typeof CountryMaldivesRoute
   '/Country/Oman': typeof CountryOmanRoute
   '/Country/Qatar': typeof CountryQatarRoute
+  '/Country/Romania': typeof CountryRomaniaRoute
+  '/Country/Russia': typeof CountryRussiaRoute
   '/Country/Saudi-Arabia': typeof CountrySaudiArabiaRoute
+  '/Country/Singapore': typeof CountrySingaporeRoute
   '/Country/UAE': typeof CountryUAERoute
+  '/Country/UK': typeof CountryUKRoute
   '/Employer/candidates': typeof EmployerCandidatesRouteWithChildren
   '/Employer/company': typeof EmployerCompanyRoute
   '/Employer/dashboard': typeof EmployerDashboardRoute
@@ -591,11 +703,27 @@ export interface FileRoutesByTo {
   '/Candidates/offers': typeof CandidatesOffersRoute
   '/Candidates/profile': typeof CandidatesProfileRoute
   '/Candidates/visa': typeof CandidatesVisaRoute
+  '/Country/Africa': typeof CountryAfricaRoute
+  '/Country/Australia': typeof CountryAustraliaRoute
+  '/Country/Canada': typeof CountryCanadaRoute
+  '/Country/Croatia': typeof CountryCroatiaRoute
+  '/Country/Germany': typeof CountryGermanyRoute
+  '/Country/Hungary': typeof CountryHungaryRoute
+  '/Country/Iraq': typeof CountryIraqRoute
+  '/Country/Israel': typeof CountryIsraelRoute
+  '/Country/Italy': typeof CountryItalyRoute
   '/Country/Kuwait': typeof CountryKuwaitRoute
+  '/Country/Latvia': typeof CountryLatviaRoute
+  '/Country/Malaysia': typeof CountryMalaysiaRoute
+  '/Country/Maldives': typeof CountryMaldivesRoute
   '/Country/Oman': typeof CountryOmanRoute
   '/Country/Qatar': typeof CountryQatarRoute
+  '/Country/Romania': typeof CountryRomaniaRoute
+  '/Country/Russia': typeof CountryRussiaRoute
   '/Country/Saudi-Arabia': typeof CountrySaudiArabiaRoute
+  '/Country/Singapore': typeof CountrySingaporeRoute
   '/Country/UAE': typeof CountryUAERoute
+  '/Country/UK': typeof CountryUKRoute
   '/Employer/candidates': typeof EmployerCandidatesRouteWithChildren
   '/Employer/company': typeof EmployerCompanyRoute
   '/Employer/dashboard': typeof EmployerDashboardRoute
@@ -671,11 +799,27 @@ export interface FileRoutesById {
   '/Candidates/offers': typeof CandidatesOffersRoute
   '/Candidates/profile': typeof CandidatesProfileRoute
   '/Candidates/visa': typeof CandidatesVisaRoute
+  '/Country/Africa': typeof CountryAfricaRoute
+  '/Country/Australia': typeof CountryAustraliaRoute
+  '/Country/Canada': typeof CountryCanadaRoute
+  '/Country/Croatia': typeof CountryCroatiaRoute
+  '/Country/Germany': typeof CountryGermanyRoute
+  '/Country/Hungary': typeof CountryHungaryRoute
+  '/Country/Iraq': typeof CountryIraqRoute
+  '/Country/Israel': typeof CountryIsraelRoute
+  '/Country/Italy': typeof CountryItalyRoute
   '/Country/Kuwait': typeof CountryKuwaitRoute
+  '/Country/Latvia': typeof CountryLatviaRoute
+  '/Country/Malaysia': typeof CountryMalaysiaRoute
+  '/Country/Maldives': typeof CountryMaldivesRoute
   '/Country/Oman': typeof CountryOmanRoute
   '/Country/Qatar': typeof CountryQatarRoute
+  '/Country/Romania': typeof CountryRomaniaRoute
+  '/Country/Russia': typeof CountryRussiaRoute
   '/Country/Saudi-Arabia': typeof CountrySaudiArabiaRoute
+  '/Country/Singapore': typeof CountrySingaporeRoute
   '/Country/UAE': typeof CountryUAERoute
+  '/Country/UK': typeof CountryUKRoute
   '/Employer/candidates': typeof EmployerCandidatesRouteWithChildren
   '/Employer/company': typeof EmployerCompanyRoute
   '/Employer/dashboard': typeof EmployerDashboardRoute
@@ -753,11 +897,27 @@ export interface FileRouteTypes {
     | '/Candidates/offers'
     | '/Candidates/profile'
     | '/Candidates/visa'
+    | '/Country/Africa'
+    | '/Country/Australia'
+    | '/Country/Canada'
+    | '/Country/Croatia'
+    | '/Country/Germany'
+    | '/Country/Hungary'
+    | '/Country/Iraq'
+    | '/Country/Israel'
+    | '/Country/Italy'
     | '/Country/Kuwait'
+    | '/Country/Latvia'
+    | '/Country/Malaysia'
+    | '/Country/Maldives'
     | '/Country/Oman'
     | '/Country/Qatar'
+    | '/Country/Romania'
+    | '/Country/Russia'
     | '/Country/Saudi-Arabia'
+    | '/Country/Singapore'
     | '/Country/UAE'
+    | '/Country/UK'
     | '/Employer/candidates'
     | '/Employer/company'
     | '/Employer/dashboard'
@@ -833,11 +993,27 @@ export interface FileRouteTypes {
     | '/Candidates/offers'
     | '/Candidates/profile'
     | '/Candidates/visa'
+    | '/Country/Africa'
+    | '/Country/Australia'
+    | '/Country/Canada'
+    | '/Country/Croatia'
+    | '/Country/Germany'
+    | '/Country/Hungary'
+    | '/Country/Iraq'
+    | '/Country/Israel'
+    | '/Country/Italy'
     | '/Country/Kuwait'
+    | '/Country/Latvia'
+    | '/Country/Malaysia'
+    | '/Country/Maldives'
     | '/Country/Oman'
     | '/Country/Qatar'
+    | '/Country/Romania'
+    | '/Country/Russia'
     | '/Country/Saudi-Arabia'
+    | '/Country/Singapore'
     | '/Country/UAE'
+    | '/Country/UK'
     | '/Employer/candidates'
     | '/Employer/company'
     | '/Employer/dashboard'
@@ -912,11 +1088,27 @@ export interface FileRouteTypes {
     | '/Candidates/offers'
     | '/Candidates/profile'
     | '/Candidates/visa'
+    | '/Country/Africa'
+    | '/Country/Australia'
+    | '/Country/Canada'
+    | '/Country/Croatia'
+    | '/Country/Germany'
+    | '/Country/Hungary'
+    | '/Country/Iraq'
+    | '/Country/Israel'
+    | '/Country/Italy'
     | '/Country/Kuwait'
+    | '/Country/Latvia'
+    | '/Country/Malaysia'
+    | '/Country/Maldives'
     | '/Country/Oman'
     | '/Country/Qatar'
+    | '/Country/Romania'
+    | '/Country/Russia'
     | '/Country/Saudi-Arabia'
+    | '/Country/Singapore'
     | '/Country/UAE'
+    | '/Country/UK'
     | '/Employer/candidates'
     | '/Employer/company'
     | '/Employer/dashboard'
@@ -981,11 +1173,27 @@ export interface RootRouteChildren {
   EmployerRoute: typeof EmployerRoute
   EmployersRoute: typeof EmployersRoute
   PrivacypolicyRoute: typeof PrivacypolicyRoute
+  CountryAfricaRoute: typeof CountryAfricaRoute
+  CountryAustraliaRoute: typeof CountryAustraliaRoute
+  CountryCanadaRoute: typeof CountryCanadaRoute
+  CountryCroatiaRoute: typeof CountryCroatiaRoute
+  CountryGermanyRoute: typeof CountryGermanyRoute
+  CountryHungaryRoute: typeof CountryHungaryRoute
+  CountryIraqRoute: typeof CountryIraqRoute
+  CountryIsraelRoute: typeof CountryIsraelRoute
+  CountryItalyRoute: typeof CountryItalyRoute
   CountryKuwaitRoute: typeof CountryKuwaitRoute
+  CountryLatviaRoute: typeof CountryLatviaRoute
+  CountryMalaysiaRoute: typeof CountryMalaysiaRoute
+  CountryMaldivesRoute: typeof CountryMaldivesRoute
   CountryOmanRoute: typeof CountryOmanRoute
   CountryQatarRoute: typeof CountryQatarRoute
+  CountryRomaniaRoute: typeof CountryRomaniaRoute
+  CountryRussiaRoute: typeof CountryRussiaRoute
   CountrySaudiArabiaRoute: typeof CountrySaudiArabiaRoute
+  CountrySingaporeRoute: typeof CountrySingaporeRoute
   CountryUAERoute: typeof CountryUAERoute
+  CountryUKRoute: typeof CountryUKRoute
   ServicesDoctorsRoute: typeof ServicesDoctorsRoute
   ServicesDocumentationRoute: typeof ServicesDocumentationRoute
   ServicesGroomingRoute: typeof ServicesGroomingRoute
@@ -1187,11 +1395,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CandidatesVisaRouteImport
       parentRoute: typeof CandidatesRouteRoute
     }
+    '/Country/Africa': {
+      id: '/Country/Africa'
+      path: '/Country/Africa'
+      fullPath: '/Country/Africa'
+      preLoaderRoute: typeof CountryAfricaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Australia': {
+      id: '/Country/Australia'
+      path: '/Country/Australia'
+      fullPath: '/Country/Australia'
+      preLoaderRoute: typeof CountryAustraliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Canada': {
+      id: '/Country/Canada'
+      path: '/Country/Canada'
+      fullPath: '/Country/Canada'
+      preLoaderRoute: typeof CountryCanadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Croatia': {
+      id: '/Country/Croatia'
+      path: '/Country/Croatia'
+      fullPath: '/Country/Croatia'
+      preLoaderRoute: typeof CountryCroatiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Germany': {
+      id: '/Country/Germany'
+      path: '/Country/Germany'
+      fullPath: '/Country/Germany'
+      preLoaderRoute: typeof CountryGermanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Hungary': {
+      id: '/Country/Hungary'
+      path: '/Country/Hungary'
+      fullPath: '/Country/Hungary'
+      preLoaderRoute: typeof CountryHungaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Iraq': {
+      id: '/Country/Iraq'
+      path: '/Country/Iraq'
+      fullPath: '/Country/Iraq'
+      preLoaderRoute: typeof CountryIraqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Israel': {
+      id: '/Country/Israel'
+      path: '/Country/Israel'
+      fullPath: '/Country/Israel'
+      preLoaderRoute: typeof CountryIsraelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Italy': {
+      id: '/Country/Italy'
+      path: '/Country/Italy'
+      fullPath: '/Country/Italy'
+      preLoaderRoute: typeof CountryItalyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Country/Kuwait': {
       id: '/Country/Kuwait'
       path: '/Country/Kuwait'
       fullPath: '/Country/Kuwait'
       preLoaderRoute: typeof CountryKuwaitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Latvia': {
+      id: '/Country/Latvia'
+      path: '/Country/Latvia'
+      fullPath: '/Country/Latvia'
+      preLoaderRoute: typeof CountryLatviaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Malaysia': {
+      id: '/Country/Malaysia'
+      path: '/Country/Malaysia'
+      fullPath: '/Country/Malaysia'
+      preLoaderRoute: typeof CountryMalaysiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Maldives': {
+      id: '/Country/Maldives'
+      path: '/Country/Maldives'
+      fullPath: '/Country/Maldives'
+      preLoaderRoute: typeof CountryMaldivesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/Country/Oman': {
@@ -1208,6 +1500,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CountryQatarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Country/Romania': {
+      id: '/Country/Romania'
+      path: '/Country/Romania'
+      fullPath: '/Country/Romania'
+      preLoaderRoute: typeof CountryRomaniaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/Russia': {
+      id: '/Country/Russia'
+      path: '/Country/Russia'
+      fullPath: '/Country/Russia'
+      preLoaderRoute: typeof CountryRussiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Country/Saudi-Arabia': {
       id: '/Country/Saudi-Arabia'
       path: '/Country/Saudi-Arabia'
@@ -1215,11 +1521,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CountrySaudiArabiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Country/Singapore': {
+      id: '/Country/Singapore'
+      path: '/Country/Singapore'
+      fullPath: '/Country/Singapore'
+      preLoaderRoute: typeof CountrySingaporeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Country/UAE': {
       id: '/Country/UAE'
       path: '/Country/UAE'
       fullPath: '/Country/UAE'
       preLoaderRoute: typeof CountryUAERouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Country/UK': {
+      id: '/Country/UK'
+      path: '/Country/UK'
+      fullPath: '/Country/UK'
+      preLoaderRoute: typeof CountryUKRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/Employer/candidates': {
@@ -1743,11 +2063,27 @@ const rootRouteChildren: RootRouteChildren = {
   EmployerRoute: EmployerRoute,
   EmployersRoute: EmployersRoute,
   PrivacypolicyRoute: PrivacypolicyRoute,
+  CountryAfricaRoute: CountryAfricaRoute,
+  CountryAustraliaRoute: CountryAustraliaRoute,
+  CountryCanadaRoute: CountryCanadaRoute,
+  CountryCroatiaRoute: CountryCroatiaRoute,
+  CountryGermanyRoute: CountryGermanyRoute,
+  CountryHungaryRoute: CountryHungaryRoute,
+  CountryIraqRoute: CountryIraqRoute,
+  CountryIsraelRoute: CountryIsraelRoute,
+  CountryItalyRoute: CountryItalyRoute,
   CountryKuwaitRoute: CountryKuwaitRoute,
+  CountryLatviaRoute: CountryLatviaRoute,
+  CountryMalaysiaRoute: CountryMalaysiaRoute,
+  CountryMaldivesRoute: CountryMaldivesRoute,
   CountryOmanRoute: CountryOmanRoute,
   CountryQatarRoute: CountryQatarRoute,
+  CountryRomaniaRoute: CountryRomaniaRoute,
+  CountryRussiaRoute: CountryRussiaRoute,
   CountrySaudiArabiaRoute: CountrySaudiArabiaRoute,
+  CountrySingaporeRoute: CountrySingaporeRoute,
   CountryUAERoute: CountryUAERoute,
+  CountryUKRoute: CountryUKRoute,
   ServicesDoctorsRoute: ServicesDoctorsRoute,
   ServicesDocumentationRoute: ServicesDocumentationRoute,
   ServicesGroomingRoute: ServicesGroomingRoute,
