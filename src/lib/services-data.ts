@@ -44,7 +44,7 @@ const healthcareProcess: ServiceData["steps"] = [
   {
     title: "Submit Requirement",
     desc: "Tell us the role, location, and headcount. Takes under 5 minutes.",
-    tag: "Same Day · Free",
+    tag: "Same Day",
   },
   {
     title: "Receive Shortlist",
@@ -171,7 +171,7 @@ export const services: Record<string, ServiceData> = {
         desc: "SCFHS, DHA, HAAD, QCHP, MOH checked before submission — no compliance surprises.",
       },
       {
-        title: "Free Prometric Coaching",
+        title: "Prometric Coaching",
         desc: "Candidates coached for DHA/HAAD/SCFHS Prometric exams — higher pass rates, faster placement.",
       },
       {
@@ -358,12 +358,12 @@ export const services: Record<string, ServiceData> = {
     primaryCta: "Post a Technical Requirement",
     secondaryCta: "Browse Technical Profiles",
     heroStats: [
-      { value: "1,200+", label: "Technical Placements" },
+      { value: "4,000+", label: "Candidates Deployed" },
       { value: "40+", label: "Employer Partners" },
       { value: "48hr", label: "First Shortlist" },
     ],
     bandStats: [
-      { value: "1,200+", label: "Technical Placements" },
+      { value: "4,000+", label: "Candidates Deployed" },
       { value: "40+", label: "Employer Partners" },
       { value: "48hr", label: "First Shortlist" },
     ],
@@ -607,16 +607,16 @@ export const services: Record<string, ServiceData> = {
     headline1: "Your Nursing Career Abroad",
     headline2: "Starts Here.",
     subtext:
-      "Browse verified nursing roles across Saudi Arabia, UAE, Qatar, UK, Canada, and more. Free to apply — license coaching, visa, and documentation all included.",
+      "Browse verified nursing roles across Saudi Arabia, UAE, Qatar, UK, Canada, and more. License coaching, visa, and documentation support available.",
     primaryCta: "Browse Nursing Roles",
     secondaryCta: "Contact Us",
     heroStats: [
-      { value: "3,000+", label: "Nurses Placed" },
+      { value: "5,000+", label: "Nurses Placed" },
       { value: "Verified", label: "Companies" },
       { value: "94%", label: "Visa Success Rate" },
     ],
     bandStats: [
-      { value: "3,000+", label: "Nurses Placed" },
+      { value: "5,000+", label: "Nurses Placed" },
       { value: "Verified", label: "Companies" },
       { value: "94%", label: "Visa Success Rate" },
     ],
@@ -625,14 +625,14 @@ export const services: Record<string, ServiceData> = {
     photoAlt: "Nurse in professional setting abroad",
     includedHeading: "One Coordinator. Transparent Support. Every Step.",
     includedSubline:
-      "Everything you need to nurse abroad — coaching, docs, visa — packaged and free.",
+      "Everything you need to nurse abroad — coaching, docs, visa — packaged into one managed journey.",
     features: [
       {
         title: "All Specialties Welcome",
         desc: "ICU, CCU, OT, ER, Paediatric, Neonatal, General, Staff Nurse — all placed.",
       },
       {
-        title: "Free License Coaching",
+        title: "License Coaching",
         desc: "Prometric coaching for DHA, HAAD, SCFHS, QCHP, MOH-Oman.",
       },
       {
@@ -671,7 +671,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Coaching & Prometric",
-        desc: "Free coaching, mock exams, and Prometric clearance.",
+        desc: "Online coaching, mock exams, and Prometric clearance.",
         tag: "Weeks 1–4",
       },
       {
@@ -686,7 +686,7 @@ export const services: Record<string, ServiceData> = {
       },
     ],
     ctaHeading: "Ready to Nurse Abroad?",
-    ctaSubline: "Browse open roles — free to apply, coordinator assigned within 24 hours.",
+    ctaSubline: "Browse open roles — coordinator assigned within 24 hours.",
     ctaPrimary: "Browse Nursing Roles",
     ctaSecondary: "Chat on WhatsApp",
   },
@@ -813,7 +813,7 @@ export const services: Record<string, ServiceData> = {
     slug: "grooming-sessions",
     serviceName: "Pre-Departure Grooming",
     breadcrumbLabel: "Pre-Departure Grooming",
-    category: "Candidate Service · Free",
+    category: "Candidate Service",
     headline1: "Leave Prepared.",
     headline2: "Land Confident.",
     subtext:
@@ -822,12 +822,12 @@ export const services: Record<string, ServiceData> = {
     secondaryCta: "Learn More",
     heroStats: [
       { value: "5,000+", label: "Candidates Groomed" },
-      { value: "100%", label: "Included Free" },
+      { value: "100%", label: "Candidate Support" },
       { value: "1 wk", label: "Before Departure" },
     ],
     bandStats: [
       { value: "5,000+", label: "Candidates Groomed" },
-      { value: "100%", label: "Included Free" },
+      { value: "100%", label: "Candidate Support" },
       { value: "1 wk", label: "Before Departure" },
     ],
     badge: "Included for All Candidates",
@@ -904,7 +904,7 @@ export const services: Record<string, ServiceData> = {
     slug: "mock-interviews",
     serviceName: "Mock Interviews",
     breadcrumbLabel: "Mock Interviews",
-    category: "Candidate Service · Free",
+    category: "Candidate Service",
     headline1: "Interview Like You've",
     headline2: "Done It Before.",
     subtext:
@@ -921,7 +921,7 @@ export const services: Record<string, ServiceData> = {
       { value: "Verified", label: "Companies" },
       { value: "48hr", label: "Feedback Turnaround" },
     ],
-    badge: "Coordinator-Led · Free",
+    badge: "Coordinator-Led",
     photo: P.interview,
     photoAlt: "Coaching interview session",
     includedHeading: "Role-Specific. Employer-Specific. Repeatable.",
@@ -985,7 +985,7 @@ export const services: Record<string, ServiceData> = {
       },
     ],
     ctaHeading: "Prepared Candidates Get Placed.",
-    ctaSubline: "Book your free mock interview — coordinator confirms within 24 hours.",
+    ctaSubline: "Book your mock interview — coordinator confirms within 24 hours.",
     ctaPrimary: "Book a Mock Interview",
     ctaSecondary: "Chat on WhatsApp",
   },
@@ -994,8 +994,8 @@ export const services: Record<string, ServiceData> = {
     slug: "training",
     serviceName: "Training & Coaching",
     breadcrumbLabel: "Training & Coaching",
-    category: "Candidate Service · Free",
-    headline1: "Free Training.",
+    category: "Candidate Service",
+    headline1: "Structured Training.",
     headline2: "Included From Day One.",
     subtext:
       "Prometric coaching, mock interviews, pre-departure grooming, and documentation guidance.",
@@ -1014,7 +1014,7 @@ export const services: Record<string, ServiceData> = {
 
     photo: P.classroom,
     photoAlt: "Training and coaching classroom",
-    includedHeading: "The Full Package. Really Free.",
+    includedHeading: "The Full Package.",
     includedSubline: "Every service a candidate needs, bundled into one preparation programme.",
     features: [
       {
@@ -1038,7 +1038,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "Healthcare Candidates",
         heading: "From Application to Placement",
-        desc: "Prometric coaching, mock interviews, grooming — the full package, all free.",
+        desc: "Prometric coaching, mock interviews, grooming — the full package.",
         cta: "Apply Now",
         photo: P.nurse,
       },

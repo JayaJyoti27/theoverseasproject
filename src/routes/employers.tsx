@@ -311,7 +311,7 @@ function Process() {
     {
       n: "01",
       title: "Submit Requirement",
-      desc: "Tell us the role, location, and headcount. Takes under 5 minutes, no fee to post.",
+      desc: "Tell us the role, location, and headcount. Takes under 5 minutes.",
       meta: "Same day",
     },
     {
@@ -829,7 +829,7 @@ function FinalCTA() {
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-6 text-xs font-medium text-[color:var(--muted-foreground)]">
                 <span className="inline-flex items-center gap-2">
-                  <FileCheck2 size={14} className="text-[color:var(--brand)]" /> No fee to post
+                  <FileCheck2 size={14} className="text-[color:var(--brand)]" /> Submit in under 5 minutes
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <UserCircle2 size={14} className="text-[color:var(--brand)]" /> Dedicated contact

@@ -337,8 +337,8 @@ function WhyOzone() {
       d: "From first application to first week on site, one coordinator handles everything.",
     },
     {
-      t: "Free Prometric & License Coaching",
-      d: "DHA, HAAD, SCFHS, QCHP, MOH-Oman — included, no extra cost.",
+      t: "Prometric & License Coaching",
+      d: "DHA, HAAD, SCFHS, QCHP, MOH-Oman — delivered through online classes.",
     },
     {
       t: "Government Licensed Certified",
@@ -422,7 +422,7 @@ const JOURNEY_PHASES: {
       {
         icon: FileEdit,
         t: "Registration",
-        d: "Submit your CV in under 2 minutes — free, no format required.",
+        d: "Submit your CV in under 2 minutes — no format required.",
       },
       {
         icon: ClipboardList,
@@ -775,7 +775,7 @@ function QualityAssurance() {
     {
       i: BookOpenCheck,
       t: "Prometric Coaching — Healthcare",
-      d: "DHA, HAAD, SCFHS, QCHP prep included free.",
+      d: "DHA, HAAD, SCFHS, QCHP prep through online classes.",
     },
     {
       i: FileCheck,
@@ -892,9 +892,6 @@ function QualityAssurance() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs">
-            <Scale className="h-4 w-4 text-blue-soft" /> Ethical Recruitment Signatory
-          </div>
           <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs">
             <ShieldCheck className="h-4 w-4 text-blue-soft" /> Govt. of India MEA Licensed ·
             B-1934/KER/PART/1000+/5/10386/2023

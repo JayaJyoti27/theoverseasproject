@@ -342,8 +342,8 @@ const milestones = [
   {
     year: "2018",
     icon: GraduationCap,
-    title: "Free Prometric Coaching",
-    body: "Launched free Prometric coaching for English, German and Arabic. Over 1,000 candidates coached to date.",
+    title: "Prometric and Language Training Centre",
+    body: "Launched Prometric coaching and language training for English, German and Arabic. Over 1,000 candidates coached to date.",
   },
   {
     year: "2021",
@@ -814,7 +814,7 @@ function Credentials() {
               02
             </div>
             <ShieldCheck className="mt-6 h-10 w-10 text-[color:var(--blue)]" />
-            <h3 className="mt-6 font-display text-xl font-bold">Ethical Recruitment Signatory</h3>
+            <h3 className="mt-6 font-display text-xl font-bold">Transparent Candidate Support</h3>
             <p className="mt-3 text-sm leading-relaxed text-[color:var(--muted-foreground)]">
               Committed to transparent candidate support, transparent policy in writing, and no
               sub-agent networks.

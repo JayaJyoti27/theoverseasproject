@@ -13,7 +13,7 @@ const CANDIDATE_SERVICES = [
   {
     label: "Prometric Coaching",
     to: "/Services/Prometric-coaching",
-    desc: "Free — DHA, HAAD, SCFHS, QCHP",
+    desc: "Online classes — DHA, HAAD, SCFHS, QCHP",
   },
   {
     label: "Mock Interviews",

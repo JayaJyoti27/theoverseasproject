@@ -237,7 +237,7 @@ function ContactPage() {
               number="01"
               variant="navy"
               title="I'm a Candidate"
-              body="Browse open roles or submit your CV. Free to apply, coordinator assigned within 24 hours."
+              body="Browse open roles or submit your CV. Coordinator assigned within 24 hours."
               cta="Browse Roles"
               href="/jobs"
               buttonStyle="gold"
