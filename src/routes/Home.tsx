@@ -1005,7 +1005,7 @@ function Footer() {
             </div>
             <p className="mt-4 max-w-sm text-sm text-blue-soft/80">
               India's MEA-licensed international recruitment partner. Bridging Indian talent with
-              verified GCC employers since 2009.
+              verified employers across the globe since 2009.
             </p>
             <div className="mt-6 flex gap-3">
               {["in", "tw", "fb", "ig"].map((s) => (

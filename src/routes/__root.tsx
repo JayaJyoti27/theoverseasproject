@@ -78,29 +78,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC" },
+      { title: "Ozone Overseas Consultants — MEA-Licensed Global Recruitment & Workforce Solutions" },
       {
         name: "description",
         content:
-          "India's MEA-licensed bridge connecting top talent with verified employers across the GCC — fast, screened and trusted.",
+          "India's MEA-licensed bridge connecting top talent with verified employers across the globe — fast, screened and trusted.",
       },
       {
         property: "og:title",
-        content: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC",
+        content: "Ozone Overseas Consultants — MEA-Licensed Global Recruitment & Workforce Solutions",
       },
       {
         name: "twitter:title",
-        content: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC",
+        content: "Ozone Overseas Consultants — MEA-Licensed Global Recruitment & Workforce Solutions",
       },
       {
         property: "og:description",
         content:
-          "India's MEA-licensed bridge connecting top talent with verified employers across the GCC — fast, screened and trusted.",
+          "India's MEA-licensed bridge connecting top talent with verified employers across the globe — fast, screened and trusted.",
       },
       {
         name: "twitter:description",
         content:
-          "India's MEA-licensed bridge connecting top talent with verified employers across the GCC — fast, screened and trusted.",
+          "India's MEA-licensed bridge connecting top talent with verified employers across the globe — fast, screened and trusted.",
       },
       {
         property: "og:image",

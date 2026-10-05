@@ -72,7 +72,7 @@ export const services: Record<string, ServiceData> = {
     headline1: "Verified Healthcare Talent,",
     headline2: "Ready in 48 Hours.",
     subtext:
-      "Pre-screened nurses, allied health professionals, and paramedical specialists placed into GCC and international hospital networks — MEA licensed, SCFHS/DHA/HAAD compliant.",
+      "Pre-screened nurses, allied health professionals, and paramedical specialists placed into hospital networks across the globe — MEA licensed, SCFHS/DHA/HAAD compliant.",
     primaryCta: "Post a Requirement",
     secondaryCta: "Browse Talent Pool",
     heroStats: [
@@ -120,7 +120,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "For Technical Employers",
         heading: "Hire Verified Technical Talent",
-        desc: "Mechanical, civil, and electrical specialists verified for GCC compliance.",
+        desc: "Mechanical, civil, and electrical specialists verified for international compliance.",
         cta: "Browse Talent Pool",
         photo: P.engineer,
       },
@@ -141,7 +141,7 @@ export const services: Record<string, ServiceData> = {
     breadcrumbLabel: "Nursing Recruitment",
     category: "Healthcare · Employer Service",
     headline1: "Every Nursing Specialty.",
-    headline2: "GCC-Licensed & Verified.",
+    headline2: "Licensed & Verified.",
     subtext:
       "ICU, OT, ER, Paediatric, Staff Nurses — pre-screened for SCFHS, DHA, HAAD, and QCHP eligibility. India's largest source of internationally licensed nurses, placed in 48 hours.",
     primaryCta: "Contact Us",
@@ -213,7 +213,7 @@ export const services: Record<string, ServiceData> = {
     headline1: "Biomedical, Radiology, Lab —",
     headline2: "Placed in 8 Weeks.",
     subtext:
-      "Pre-screened paramedical and allied health technicians from India — verified for GCC license eligibility and technical qualification authenticity before submission.",
+      "Pre-screened paramedical and allied health technicians from India — verified for license eligibility and technical qualification authenticity before submission.",
     primaryCta: "Post a Requirement",
     secondaryCta: "Browse Technician Profiles",
     heroStats: [
@@ -226,7 +226,7 @@ export const services: Record<string, ServiceData> = {
       { value: "12+", label: "Specialties Covered" },
       { value: "48hr", label: "First Shortlist" },
     ],
-    badge: "GCC License Verified",
+    badge: "License Verified",
     photo: P.labTech,
     photoAlt: "Laboratory technician at work",
     includedHeading: "Allied Health, Verified End to End.",
@@ -239,7 +239,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Radiology & Imaging",
-        desc: "X-ray, MRI, CT, ultrasound technicians verified for GCC license eligibility.",
+        desc: "X-ray, MRI, CT, ultrasound technicians verified for license eligibility.",
       },
       {
         title: "Laboratory Technicians",
@@ -261,7 +261,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "For Paramedical Candidates",
         heading: "Your Global Career Starts Here",
-        desc: "Browse open roles for biomedical, lab, and radiology technicians across the GCC.",
+        desc: "Browse open roles for biomedical, lab, and radiology technicians across the globe.",
         cta: "Browse Roles",
         photo: P.paramedic,
       },
@@ -282,9 +282,9 @@ export const services: Record<string, ServiceData> = {
     breadcrumbLabel: "Doctor Recruitment",
     category: "Healthcare · Employer Service",
     headline1: "Medical Professionals.",
-    headline2: "Every Specialty, GCC-Licensed.",
+    headline2: "Every Specialty, Licensed.",
     subtext:
-      "Consultants, specialists, and general practitioners from India placed into GCC hospital networks — MOH, DHA, HAAD, and SCFHS license pathway supported end to end.",
+      "Consultants, specialists, and general practitioners from India placed into hospital networks worldwide — MOH, DHA, HAAD, and SCFHS license pathway supported end to end.",
     primaryCta: "Post a Medical Requirement",
     secondaryCta: "Browse Doctor Profiles",
     heroStats: [
@@ -352,9 +352,9 @@ export const services: Record<string, ServiceData> = {
     breadcrumbLabel: "Technical Recruitment",
     category: "Employer Service",
     headline1: "Engineering & Technical Talent,",
-    headline2: "Verified for the GCC.",
+    headline2: "Verified for Global Markets.",
     subtext:
-      "Mechanical, civil, electrical, and facilities specialists from India — vetted for qualification authenticity and GCC work permit eligibility before submission.",
+      "Mechanical, civil, electrical, and facilities specialists from India — vetted for qualification authenticity and work permit eligibility before submission.",
     primaryCta: "Post a Technical Requirement",
     secondaryCta: "Browse Technical Profiles",
     heroStats: [
@@ -367,12 +367,12 @@ export const services: Record<string, ServiceData> = {
       { value: "40+", label: "Employer Partners" },
       { value: "48hr", label: "First Shortlist" },
     ],
-    badge: "GCC Work Permit Verified",
+    badge: "Work Permit Verified",
     photo: P.engineer,
     photoAlt: "Engineer on construction site",
     includedHeading: "Every Trade. Every Certificate. Verified.",
     includedSubline:
-      "From civil site engineers to oil & gas HSE — a single verified pipeline built for GCC compliance.",
+      "From civil site engineers to oil & gas HSE — a single verified pipeline built for international compliance.",
     features: [
       {
         title: "Construction & Infrastructure",
@@ -402,7 +402,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "For Technical Candidates",
         heading: "Your Global Engineering Career",
-        desc: "Browse open roles in construction, oil & gas, and facilities across the GCC.",
+        desc: "Browse open roles in construction, oil & gas, and facilities across the globe.",
         cta: "Browse Technical Roles",
         photo: P.engineer,
       },
@@ -843,7 +843,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Interview Preparation",
-        desc: "Mock interviews with coordinator feedback, common employer questions, how to present GCC-ready.",
+        desc: "Mock interviews with coordinator feedback, common employer questions, how to present interview-ready.",
       },
       {
         title: "Documentation Walkthrough",
@@ -908,7 +908,7 @@ export const services: Record<string, ServiceData> = {
     headline1: "Interview Like You've",
     headline2: "Done It Before.",
     subtext:
-      "Coordinator-led mock interviews tailored to your target role and employer — for healthcare, engineering and technical roles. GCC hospital and site-based interview formats, role-specific clinical and technical questions, and real-time feedback.",
+      "Coordinator-led mock interviews tailored to your target role and employer — for healthcare, engineering and technical roles. Hospital and site-based interview formats, role-specific clinical and technical questions, and real-time feedback.",
     primaryCta: "Book a Mock Interview",
     secondaryCta: "Chat on WhatsApp",
     heroStats: [
@@ -946,9 +946,9 @@ export const services: Record<string, ServiceData> = {
     ],
     audiences: [
       {
-        eyebrow: "First-Time GCC Applicants",
+        eyebrow: "First-Time Applicants",
         heading: "Know What to Expect",
-        desc: "GCC hospital and engineering interviews are structured differently — we prepare you for exactly that.",
+        desc: "Hospital and engineering interviews are structured differently — we prepare you for exactly that.",
         cta: "Book Mock Interview",
         photo: P.interview,
       },
@@ -975,7 +975,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Mock Interview",
-        desc: "Coordinator-led session in GCC hospital or technical interview format.",
+        desc: "Coordinator-led session in hospital or technical interview format.",
         tag: "Session",
       },
       {
@@ -1013,6 +1013,7 @@ export const services: Record<string, ServiceData> = {
     ],
 
     photo: P.classroom,
+    badge: "Complete Candidate Training",
     photoAlt: "Training and coaching classroom",
     includedHeading: "The Full Package.",
     includedSubline: "Every service a candidate needs, bundled into one preparation programme.",
@@ -1023,7 +1024,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Mock Interviews",
-        desc: "Coordinator-led, role-specific, GCC hospital format. Repeat until confident.",
+        desc: "Coordinator-led, role-specific, hospital format. Repeat until confident.",
       },
       {
         title: "Pre-Departure Grooming",
@@ -1044,7 +1045,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         eyebrow: "Technical Candidates",
-        heading: "GCC-Ready from Day One",
+        heading: "Ready from Day One",
         desc: "Interview prep and pre-departure orientation tailored for technical and engineering roles.",
         cta: "Apply Now",
         photo: P.engineer,

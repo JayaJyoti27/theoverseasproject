@@ -27,6 +27,14 @@ export type ServiceData = {
   includedSubline: string;
   features: [Feature, Feature, Feature, Feature];
 
+  // Optional key-features strip (e.g. Prometric coaching)
+  highlights?: {
+    eyebrow: string;
+    heading: string;
+    subline: string;
+    items: Feature[];
+  };
+
   whoHeading?: string;
   audiences: [Audience, Audience];
 
@@ -81,7 +89,7 @@ const featureCardStyle = (i: number) => {
 const DEFAULT_INDUSTRIES: Industry[] = [
   {
     title: "Hospitals & Healthcare Groups",
-    desc: "Multi-specialty and specialty hospitals across the GCC.",
+    desc: "Multi-specialty and specialty hospitals across the globe.",
   },
   { title: "Nursing Homes & Clinics", desc: "Long-term care and outpatient facilities." },
   { title: "Government Health Authorities", desc: "MOH-affiliated and public sector facilities." },
@@ -101,7 +109,7 @@ const DEFAULT_FAQS: FAQ[] = [
   },
   {
     q: "Is Ozone Overseas Consultants licensed for overseas recruitment?",
-    a: "Yes, we are an MEA-licensed recruitment agency with 15+ years of experience placing healthcare and technical professionals into the GCC.",
+    a: "Yes, we are an MEA-licensed recruitment agency with 15+ years of experience placing healthcare and technical professionals into global markets.",
   },
   {
     q: "What support is provided after deployment?",
@@ -351,6 +359,39 @@ export function ServicePage({ data }: { data: ServiceData }) {
           </div>
         </div>
       </section>
+
+      {/* KEY FEATURES / HIGHLIGHTS */}
+      {data.highlights && (
+        <section className="relative py-20 md:py-24 overflow-hidden bg-mist">
+          <div className="container-ozone relative">
+            <div className="max-w-2xl mb-10">
+              <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue mb-3">
+                {data.highlights.eyebrow}
+              </div>
+              <h2 className="font-display font-extrabold text-3xl md:text-5xl text-navy leading-tight">
+                {data.highlights.heading}
+              </h2>
+              <p className="mt-4 text-muted-foreground text-lg">{data.highlights.subline}</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+              {data.highlights.items.map((h, i) => (
+                <div
+                  key={h.title}
+                  className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-blue/15 border-t-4 border-blue"
+                >
+                  <div className="text-[11px] font-mono font-semibold tracking-widest text-blue">
+                    0{i + 1}
+                  </div>
+                  <h3 className="mt-4 font-display font-bold text-lg leading-snug text-navy">
+                    {h.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{h.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* WHO IT'S FOR */}
       <section className="relative py-20 md:py-28 overflow-hidden bg-mist">
