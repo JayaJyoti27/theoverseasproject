@@ -40,12 +40,12 @@ export const Route = createFileRoute("/Home")({
       {
         property: "og:description",
         content:
-          "Apply online. Visa & licensing handled. One coordinator, ten countries. MEA-licensed since 2009.",
+          "Apply online. Visa & licensing handled. One coordinator, 20+ countries. MEA-licensed since 2009.",
       },
       {
         name: "twitter:description",
         content:
-          "Apply online. Visa & licensing handled. One coordinator, ten countries. MEA-licensed since 2009.",
+          "Apply online. Visa & licensing handled. One coordinator, 20+ countries. MEA-licensed since 2009.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -280,7 +280,7 @@ function Hero() {
               <Check className="h-4 w-4 text-blue" /> MEA Licensed Since 2009
             </div>
             <div className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-blue" /> 10 Countries · 32 Live Roles
+              <Check className="h-4 w-4 text-blue" /> 20+ Countries · 32 Live Roles
             </div>
           </div>
         </div>
@@ -321,7 +321,7 @@ function Hero() {
 /* ---------- 3. TRUST STATS ---------- */
 function TrustStats() {
   const stats = [
-    { icon: Users, l: "Candidates Placed", n: "5,000+" },
+    { icon: Users, l: "Candidates Placed", n: "10,000+" },
 
     { icon: BadgeCheck, l: "Visa Success Rate 2024", n: "94%" },
   ];
@@ -801,7 +801,7 @@ function Destinations() {
             Where You Can Go
           </span>
           <h2 className="mt-3 font-display text-4xl font-bold text-navy md:text-5xl">
-            Your Next Chapter, in <span className="text-blue">10 Countries.</span>
+            Your Next Chapter, in <span className="text-blue">20+ Countries.</span>
           </h2>
         </div>
 
@@ -946,7 +946,7 @@ function FinalCTA() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
         <div>
           <h2 className="font-display text-4xl font-bold leading-tight text-navy md:text-5xl">
-            One CV. One Coordinator. <span className="text-blue">Ten Countries Open.</span>
+            One CV. One Coordinator. <span className="text-blue">20+ Countries Open.</span>
           </h2>
           <p className="mt-5 max-w-md text-ink">
             Visa & licensing handled. Your tracker goes live the day you submit.

@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Connecting verified Indian talent with leading employers across the Globe. 5,000+ placements, 200+ employers, 48-hour shortlisting.",
+          "Connecting verified Indian talent with leading employers across the Globe. 10,000+ placements, 200+ employers, 48-hour shortlisting.",
       },
       { property: "og:title", content: "Ozone Overseas Consultants — Global Recruitment" },
       {
@@ -474,7 +474,7 @@ function WhyChoose() {
         <div className="mt-10 grid grid-cols-3 divide-x divide-white/15 rounded-full bg-navy px-6 py-5 text-white shadow-xl">
           {[
             { n: "15+", l: "Years of Experience" },
-            { n: "5,000+", l: "Professionals Placed" },
+            { n: "10,000+", l: "Professionals Placed" },
             { n: "98%", l: "Success Rate" },
           ].map((s) => (
             <div key={s.l} className="px-4 text-center">
@@ -827,7 +827,7 @@ function MatchEngine() {
                 icon: Briefcase,
                 href: "#",
               },
-              { t: "Find Jobs", d: "Vacancies across 10+ countries", icon: Plane, href: "/jobs" },
+              { t: "Find Jobs", d: "Vacancies across 20+ countries", icon: Plane, href: "/jobs" },
             ].map(({ t, d, icon: Icon, href }) => (
               <a
                 key={t}
@@ -1172,7 +1172,7 @@ function CTA() {
               <Building2 className="h-5 w-5" />
             </span>
             <div>
-              <div className="font-display text-lg font-bold text-navy leading-none">10+</div>
+              <div className="font-display text-lg font-bold text-navy leading-none">20+</div>
               <div className="text-xs text-ink">Countries served</div>
             </div>
           </div>
@@ -1224,7 +1224,7 @@ function TrustCredibility() {
     { icon: Landmark, n: "MEA", l: "Govt. of India Licensed", sub: "Recruitment Licence" },
     { icon: Award, n: "15+", l: "Years of Experience", sub: "Since 2009" },
     { icon: MapPin, n: "20+", l: "Countries Served", sub: "Across the Globe" },
-    { icon: Users, n: "5,000+", l: "Candidates Deployed", sub: "Successfully placed" },
+    { icon: Users, n: "10,000+", l: "Candidates Deployed", sub: "Successfully placed" },
     { icon: Building2, n: "200+", l: "Global Employer Network", sub: "Verified partners" },
     { icon: Briefcase, n: "12+", l: "Industry Sectors Served", sub: "Healthcare to Energy" },
   ];

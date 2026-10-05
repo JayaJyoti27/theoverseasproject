@@ -55,7 +55,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "MEA-licensed since 2009. 5,000+ placements across 17 countries. Zero sub-agents, direct employer relationships, and coordinators who put candidates first.",
+          "MEA-licensed since 2009. 10,000+ placements across 20+ countries. Zero sub-agents, direct employer relationships, and coordinators who put candidates first.",
       },
       { property: "og:title", content: "About Ozone Overseas Consultants" },
       {
@@ -259,10 +259,10 @@ const achievements = [
     sub: "B-1934/KER/PART/1000+/5/10386/2023",
   },
   { icon: Award, value: 15, suffix: "+", label: "Years of Industry Experience" },
-  { icon: Globe2, value: 17, suffix: "", label: "Countries Served" },
-  { icon: Users, value: 5000, suffix: "+", label: "Candidates Successfully Deployed" },
+  { icon: Globe2, value: 20, suffix: "+", label: "Countries Served" },
+  { icon: Users, value: 10000, suffix: "+", label: "Candidates Successfully Deployed" },
   { icon: Handshake, value: 200, suffix: "+", label: "Global Employer Network" },
-  { icon: Building2, value: 9, suffix: "", label: "Industry Sectors Served" },
+  { icon: Building2, value: 25, suffix: "+", label: "Industry Sectors Served" },
 ];
 
 function Achievements() {
@@ -355,7 +355,7 @@ const milestones = [
     year: "2024",
     icon: Sparkles,
     title: "5,000+ Careers Placed",
-    body: "200+ active employer partners. 17 countries. Same office, same license, same coordinators-first ethos.",
+    body: "200+ active employer partners. 20+ countries. Same office, same license, same coordinators-first ethos.",
   },
 ];
 
