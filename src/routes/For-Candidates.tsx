@@ -262,8 +262,7 @@ function Hero() {
             <BtnOutline href="#contact">Contact Us</BtnOutline>
           </div>
           <div className="mt-4 text-xs text-ink/70">
-            Candidate Support · MEA License No. B-1934/KER/PART/1000+/5/10386/2023 · Ethical
-            Recruitment Signatory
+            Candidate Support · MEA License No. B-1934/KER/PART/1000+/5/10386/2023
           </div>
         </div>
 

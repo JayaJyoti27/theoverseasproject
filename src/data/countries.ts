@@ -462,7 +462,7 @@ export const countries: Country[] = [
       "MEA-licensed placements to the Sultanate of Oman. Nurses, industrial workers, and mechanical technicians recruited under transparent, ethical contracts.",
     heroImageKeywords: "Muscat harbour Sultan Qaboos mosque",
     heroImageUrl:
-      "https://unsplash.com/photos/al-lawatiya-mosque-in-muscat-oman-dZd4XWMiM9g?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink",
+      "https://unsplash.com/photos/dZd4XWMiM9g/download?force=true&w=1600",
     tagline: "Ethical. Compliant. End-to-end recruitment to Oman.",
     intro:
       "Oman's oil, gas, and downstream manufacturing sectors — anchored around Sohar, Duqm, and Salalah — need thousands of skilled Indian technicians every year. Ozone Overseas Consultants is one of the few Indian recruiters with a permanent Muscat coordination presence, giving candidates a real handhold after arrival.",
