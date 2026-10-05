@@ -53,16 +53,16 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ozone Overseas — MEA-Licensed International Recruitment, India ↔ GCC" },
+      { title: "Ozone Overseas Consultants — MEA-Licensed Global Recruitment & Workforce Solutions" },
       {
         name: "description",
         content:
           "Connecting verified Indian talent with leading employers across the Globe. 5,000+ placements, 200+ employers, 48-hour shortlisting.",
       },
-      { property: "og:title", content: "Ozone Overseas — India ↔ GCC Recruitment" },
+      { property: "og:title", content: "Ozone Overseas Consultants — Global Recruitment" },
       {
         property: "og:description",
-        content: "MEA-licensed bridge between top Indian talent and verified GCC employers.",
+        content: "MEA-licensed bridge between top Indian talent and verified employers across the globe.",
       },
     ],
   }),
@@ -118,6 +118,7 @@ function Home() {
       <WhyChoose />
       <LiveJobs />
       <Industries />
+      <Destinations />
       <MatchEngine />
       <Process />
       <QualityAssurance />
@@ -175,7 +176,7 @@ function Hero() {
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">
             Ozone Overseas is a Government of India MEA-licensed recruitment partner delivering
             end-to-end workforce solutions — sourcing, screening, documentation, visa and deployment
-            — for verified employers across the GCC.
+            — for verified employers across the globe.
           </p>
 
           {/* USP row */}
@@ -206,6 +207,12 @@ function Hero() {
               className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue hover:bg-blue hover:text-white transition"
             >
               Apply for Jobs <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href="/candidate?mode=signup"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue ring-1 ring-blue/40 hover:ring-blue transition"
+            >
+              New User? Register <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/contact"
@@ -686,6 +693,55 @@ function IndustryCard({
 
 /* ---------- 8. match engine ---------- */
 
+function Destinations() {
+  const places = [
+    "GCC",
+    "Malaysia",
+    "Singapore",
+    "Maldives",
+    "Germany",
+    "Australia",
+    "Africa",
+    "Croatia",
+    "Latvia",
+    "Romania",
+    "Italy",
+    "Israel",
+    "Iraq",
+    "UK",
+    "Russia",
+    "Canada",
+    "Hungary",
+  ];
+  return (
+    <section className="bg-white px-6 py-20">
+      <div className="mx-auto max-w-7xl text-center">
+        <div className="text-xs font-bold uppercase tracking-[0.24em] text-blue">
+          Destinations
+        </div>
+        <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">
+          Global Recruitment &amp; Workforce Solutions
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm text-ink">
+          GCC, Europe, Africa, Asia, Australia and other international markets — one licensed
+          partner across the globe.
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {places.map((p) => (
+            <span
+              key={p}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-blue-wash px-5 py-2 text-sm font-semibold text-navy"
+            >
+              <MapPin className="h-4 w-4 text-blue" />
+              {p}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function MatchEngine() {
   const pills = [
     { t: "ICU Nurse", x: "10%", y: "12%" },
@@ -907,7 +963,7 @@ function Verticals() {
       img: vertical2,
       tag: "HEALTHCARE STAFFING",
       title: "Healthcare Staffing",
-      desc: "Doctors, nurses and allied health professionals into hospital groups GCC-wide.",
+      desc: "Doctors, nurses and allied health professionals into hospital groups worldwide.",
     },
     {
       img: vertical3,
@@ -1167,7 +1223,7 @@ function TrustCredibility() {
   const stats = [
     { icon: Landmark, n: "MEA", l: "Govt. of India Licensed", sub: "Recruitment Licence" },
     { icon: Award, n: "15+", l: "Years of Experience", sub: "Since 2009" },
-    { icon: MapPin, n: "10+", l: "Countries Served", sub: "GCC & beyond" },
+    { icon: MapPin, n: "20+", l: "Countries Served", sub: "Across the Globe" },
     { icon: Users, n: "5,000+", l: "Candidates Deployed", sub: "Successfully placed" },
     { icon: Building2, n: "200+", l: "Global Employer Network", sub: "Verified partners" },
     { icon: Briefcase, n: "12+", l: "Industry Sectors Served", sub: "Healthcare to Energy" },

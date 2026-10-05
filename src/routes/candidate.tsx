@@ -20,8 +20,11 @@ import {
 export const Route = createFileRoute("/candidate")({
   // /candidate?redirect=/jobs/<id> — where to send the person after login/signup
   // (set when a guest clicks Apply on the public job board).
-  validateSearch: (search: Record<string, unknown>): { redirect?: string } => ({
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { redirect?: string; mode?: "signup" } => ({
     redirect: isSafeRedirect(search.redirect) ? search.redirect : undefined,
+    mode: search.mode === "signup" ? "signup" : undefined,
   }),
   head: () => ({
     meta: [{ title: "Candidate Login — Ozone Overseas Consultants" }],
@@ -60,8 +63,8 @@ type Step = Mode | "confirm" | "finishing";
 function CandidateAuthPage() {
   const navigate = useNavigate();
   const router = useRouter();
-  const { redirect: redirectAfterLogin } = Route.useSearch();
-  const [step, setStep] = useState<Step>("signin");
+  const { redirect: redirectAfterLogin, mode: initialMode } = Route.useSearch();
+  const [step, setStep] = useState<Step>(initialMode === "signup" ? "signup" : "signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

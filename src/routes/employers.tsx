@@ -34,18 +34,18 @@ export const Route = createFileRoute("/employers")({
   head: () => ({
     meta: [
       {
-        title: "For Employers — Ozone Overseas Consultants | Hire Verified GCC Talent in 48 Hours",
+        title: "For Employers — Ozone Overseas Consultants | Hire Verified Global Talent in 48 Hours",
       },
       {
         name: "description",
         content:
-          "Submit a requirement and receive your first pre-screened candidate in 48 hours. 200+ hospitals and companies trust Ozone Overseas Consultants for compliant, verified hiring across the GCC.",
+          "Submit a requirement and receive your first pre-screened candidate in 48 hours. 200+ hospitals and companies trust Ozone Overseas Consultants for compliant, verified hiring across the globe.",
       },
       { property: "og:title", content: "For Employers — Ozone Overseas Consultants" },
       {
         property: "og:description",
         content:
-          "Verified GCC talent — pre-screened, compliant, and ready. First candidate in 48 hours.",
+          "Verified global talent — pre-screened, compliant, and ready. First candidate in 48 hours.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -411,7 +411,7 @@ function Industries() {
     {
       n: "01",
       title: "Hospitals & Healthcare Networks",
-      meta: "120+ Partners · GCC-Wide",
+      meta: "120+ Partners · Global",
       icon: Building2,
       style: "navy",
     },

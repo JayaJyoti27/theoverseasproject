@@ -37,7 +37,7 @@ const EMPLOYER_SERVICES = [
     to: "/Services/Healthcare-rec",
     desc: "Nurses, doctors, allied health",
   },
-  { label: "For Nurses", to: "/Services/Nurses", desc: "All nursing specialties, GCC-licensed" },
+  { label: "For Nurses", to: "/Services/Nurses", desc: "All nursing specialties, internationally licensed" },
   { label: "For Doctors", to: "/Services/Doctors", desc: "All specialties, MOH/DHA/HAAD" },
   {
     label: "Paramedical Technicians",

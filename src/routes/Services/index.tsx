@@ -63,7 +63,7 @@ function Index() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               Ozone Overseas Consultants places pre-screened healthcare and technical professionals from India
-              into GCC hospitals and employers — end-to-end, compliant, in 6–8 weeks.
+              into hospitals and employers worldwide — end-to-end, compliant, in 6–8 weeks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#post" className="btn-navy btn-navy-hover">
