@@ -9,6 +9,8 @@ import {
   Stethoscope,
   HardHat,
   Hotel,
+  ShoppingBag,
+  Truck,
   Quote,
   Plane,
   FileCheck2,
@@ -604,17 +606,19 @@ function Industries() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
-          {/* navy */}
+        <div className="grid gap-5 md:grid-cols-6">
           <IndustryCard
+            className="md:col-span-2"
+            href="/Services/Healthcare-rec"
             n="01."
             title="Healthcare & Nursing"
             text="ICU, OT, ward & specialty roles for hospital groups across the Globe."
             icon={<Stethoscope className="h-6 w-6" />}
             variant="dark"
           />
-          {/* photo */}
           <IndustryCard
+            className="md:col-span-2"
+            href="/Services/Technical-rec"
             n="02."
             title="Engineering & Construction"
             text="Civil, mechanical, electrical and biomedical engineers and site crews for major projects."
@@ -622,12 +626,31 @@ function Industries() {
             variant="photo"
             image={industryConstruction}
           />
-          {/* blue */}
           <IndustryCard
+            className="md:col-span-2"
+            href="/employers"
             n="03."
-            title="Hospitality, Retail & Logistics"
-            text="Skilled teams for hotels, retail chains and logistics operations."
+            title="Hospitality"
+            text="Skilled teams for hotels, resorts and food & beverage operations."
             icon={<Hotel className="h-6 w-6" />}
+            variant="blue"
+          />
+          <IndustryCard
+            className="md:col-span-3"
+            href="/employers"
+            n="04."
+            title="Retail"
+            text="Store, sales and supply-side staff for retail chains and malls."
+            icon={<ShoppingBag className="h-6 w-6" />}
+            variant="dark"
+          />
+          <IndustryCard
+            className="md:col-span-3"
+            href="/employers"
+            n="05."
+            title="Logistics"
+            text="Warehouse, transport and supply-chain teams for logistics operations."
+            icon={<Truck className="h-6 w-6" />}
             variant="blue"
           />
         </div>
@@ -643,7 +666,11 @@ function IndustryCard({
   icon,
   variant,
   image,
+  href = "#",
+  className = "",
 }: {
+  href?: string;
+  className?: string;
   n: string;
   title: string;
   text: string;
@@ -658,7 +685,7 @@ function IndustryCard({
   }[variant];
   return (
     <article
-      className={`relative flex h-[460px] flex-col justify-between overflow-hidden rounded-[28px] p-7 ${styles}`}
+      className={`relative flex h-[460px] flex-col justify-between overflow-hidden rounded-[28px] p-7 ${styles} ${className}`}
     >
       {variant === "photo" && image && (
         <>
@@ -679,7 +706,7 @@ function IndustryCard({
         <h3 className="font-display text-2xl font-bold leading-tight">{title}</h3>
         <p className="mt-3 text-sm opacity-85">{text}</p>
         <div className="mt-6 flex items-center justify-between">
-          <a href="#" className="text-sm font-semibold underline-offset-4 hover:underline">
+          <a href={href} className="text-sm font-semibold underline-offset-4 hover:underline">
             Explore
           </a>
           <span className="grid h-11 w-11 place-items-center rounded-full bg-white/15 ring-1 ring-white/30">

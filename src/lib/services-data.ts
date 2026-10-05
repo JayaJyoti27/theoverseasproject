@@ -469,7 +469,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Dataflow Verification",
-        desc: "Primary source verification for GCC healthcare licensing submitted and tracked.",
+        desc: "Primary source verification for healthcare licensing in your destination country, submitted and tracked.",
       },
     ],
     audiences: [
@@ -546,7 +546,7 @@ export const services: Record<string, ServiceData> = {
     photoAlt: "Professional documentation desk",
     includedHeading: "Portals, Stamps, Attestations — All Handled.",
     includedSubline:
-      "A single documentation desk covering every GCC licensing body and embassy requirement.",
+      "A single documentation desk covering every licensing body and embassy requirement across our destinations.",
     features: [
       {
         title: "Dataflow Submission",
@@ -554,7 +554,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "MOH / DHA / HAAD Portal",
-        desc: "Direct portal access for all major GCC licensing bodies — submissions done right first time.",
+        desc: "Direct portal access for major licensing bodies worldwide — submissions done right first time.",
       },
       {
         title: "Certificate Attestation",
@@ -662,7 +662,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "BSc Nurses",
         heading: "Internationally Qualified Nurses",
-        desc: "Direct entry to GCC and international roles — SCFHS, DHA, NMC pathways supported.",
+        desc: "Direct entry to roles across the globe — SCFHS, DHA, NMC pathways supported.",
         cta: "Browse Roles",
         href: "/jobs",
         photo: P.nurseAbroad,
@@ -767,7 +767,7 @@ export const services: Record<string, ServiceData> = {
         desc: "Weekly live classes with experienced Prometric instructors, recorded for replay.",
       },
       {
-        title: "All GCC Exams Covered",
+        title: "All Major Licensing Exams Covered",
         desc: "DHA (Dubai), HAAD (Abu Dhabi), SCFHS (Saudi), QCHP (Qatar), MOH-Oman.",
       },
       {
@@ -884,7 +884,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "Returning Candidates",
         heading: "New Country, Same Support",
-        desc: "Moving to a new GCC country? Updated orientation for your specific destination.",
+        desc: "Moving to a new country? Updated orientation for your specific destination.",
         cta: "Apply Now",
         href: "/candidate",
         photo: P.training,
@@ -895,7 +895,7 @@ export const services: Record<string, ServiceData> = {
     steps: [
       {
         title: "Culture & Etiquette",
-        desc: "GCC workplace norms, daily life, social expectations.",
+        desc: "Destination workplace norms, daily life, social expectations.",
         tag: "Session 1",
       },
       {

@@ -34,7 +34,9 @@ const columns: { title: string; wide?: boolean; links: { label: string; to?: str
     links: [
       { label: "Healthcare & Nursing", to: "/Services/Healthcare-rec" },
       { label: "Engineering & Construction", to: "/Services/Technical-rec" },
-      { label: "Hospitality, Retail & Logistics", to: "/employers" },
+      { label: "Hospitality", to: "/employers" },
+      { label: "Retail", to: "/employers" },
+      { label: "Logistics", to: "/employers" },
     ],
   },
   {

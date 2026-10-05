@@ -388,7 +388,7 @@ function ProcessTimeline() {
       <div className="relative mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="How it works"
-          title="Your journey to a job in the Gulf"
+          title="Your journey to a job abroad"
           subtitle="Five documented stages — the same for every candidate."
         />
         <div className="relative mt-16">
