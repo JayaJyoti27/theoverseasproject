@@ -174,7 +174,7 @@ function Hero() {
             <span className="text-blue">International Recruitment</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">
-            Ozone Overseas is a Government of India MEA-licensed recruitment partner delivering
+            Ozone Overseas Consultants is a Government of India MEA-licensed recruitment partner delivering
             end-to-end workforce solutions — sourcing, screening, documentation, visa and deployment
             — for verified employers across the globe.
           </p>
@@ -229,7 +229,7 @@ function Hero() {
           <div className="absolute left-2 top-6 h-[360px] w-[78%] overflow-hidden rounded-[28px] ring-4 ring-blue/30 shadow-[0_30px_60px_-20px_rgba(30,77,140,0.55)]">
             <img
               src={hero}
-              alt="Ozone Overseas recruitment consultant"
+              alt="Ozone Overseas Consultants recruitment consultant"
               className="h-full w-full object-cover"
               width={800}
               height={960}

@@ -42,8 +42,8 @@ type Input = {
 const make = (c: Input): Country => ({
   slug: c.slug,
   name: c.name,
-  metaTitle: `${c.name} Recruitment Agency — Ozone Overseas`,
-  metaDescription: `MEA-licensed recruitment for ${c.name}. ${c.region} Contract-first placements with visa and documentation support from Ozone Overseas.`,
+  metaTitle: `${c.name} Recruitment Agency — Ozone Overseas Consultants`,
+  metaDescription: `MEA-licensed recruitment for ${c.name}. ${c.region} Contract-first placements with visa and documentation support from Ozone Overseas Consultants.`,
   heroImageKeywords: c.name,
   tagline: c.tagline,
   intro: c.intro,
@@ -61,7 +61,7 @@ const make = (c: Input): Country => ({
     },
     {
       q: "Do you charge fees in cash or outside the official process?",
-      a: "No. Ozone Overseas works under its MEA recruitment licence and e-Migrate. Any service charge follows the permitted limits and is documented with a receipt.",
+      a: "No. Ozone Overseas Consultants works under its MEA recruitment licence and e-Migrate. Any service charge follows the permitted limits and is documented with a receipt.",
     },
   ],
 });
@@ -73,7 +73,7 @@ export const moreCountries: Country[] = [
     region: "Manufacturing, hospitality and healthcare roles.",
     tagline: "Licensed, contract-first recruitment to Malaysia.",
     intro:
-      "Malaysia offers openings in manufacturing, hospitality, plantation support and healthcare. Ozone Overseas coordinates the full journey, from employer matching and contract review to work-pass formalities and departure.",
+      "Malaysia offers openings in manufacturing, hospitality, plantation support and healthcare. Ozone Overseas Consultants coordinates the full journey, from employer matching and contract review to work-pass formalities and departure.",
     jobs: [
       ["Manufacturing Operators", "Factory"],
       ["Hospitality Staff", "Hotel"],

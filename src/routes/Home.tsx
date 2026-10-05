@@ -1001,7 +1001,7 @@ function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_3fr]">
           <div>
             <div className="font-display text-2xl font-bold">
-              Ozone<span className="text-blue-soft">Overseas</span>
+              Ozone <span className="text-blue-soft">Overseas Consultants</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-blue-soft/80">
               India's MEA-licensed international recruitment partner. Bridging Indian talent with

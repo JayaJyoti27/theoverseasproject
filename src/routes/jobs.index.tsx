@@ -5,7 +5,7 @@ import PublicJobsLayout from "@/components/Candidate/Jobs/PublicJobsLayout";
 
 export const Route = createFileRoute("/jobs/")({
   head: () => ({
-    meta: [{ title: "Browse Jobs — Ozone Overseas" }],
+    meta: [{ title: "Browse Jobs — Ozone Overseas Consultants" }],
   }),
   component: PublicJobsPage,
 });
