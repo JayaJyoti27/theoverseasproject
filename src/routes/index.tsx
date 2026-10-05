@@ -870,7 +870,7 @@ function MatchEngine() {
             <div className="text-sm text-ink">
               <span className="font-semibold text-navy">Trusted by 200+ hospitals & companies</span>
               <br />
-              5,000+ professionals placed
+              10,000+ professionals placed
             </div>
           </div>
         </div>
@@ -1153,7 +1153,7 @@ function CTA() {
           {/* stat card top */}
           <div className="absolute right-0 top-6 w-[44%] rounded-2xl bg-white p-5 shadow-xl ring-1 ring-border">
             <div className="text-xs font-semibold uppercase tracking-widest text-blue">Placed</div>
-            <div className="mt-1 font-display text-3xl font-bold text-navy">5,000+</div>
+            <div className="mt-1 font-display text-3xl font-bold text-navy">10,000+</div>
             <div className="text-xs text-ink">Candidates worldwide</div>
             <div className="mt-3 flex items-center gap-1 text-xs font-semibold text-emerald-600">
               <TrendingUp className="h-3.5 w-3.5" /> +18% YoY
@@ -1236,7 +1236,7 @@ function TrustCredibility() {
     { icon: MapPin, n: "20+", l: "Countries Served", sub: "Across the Globe" },
     { icon: Users, n: "10,000+", l: "Candidates Deployed", sub: "Successfully placed" },
     { icon: Building2, n: "200+", l: "Global Employer Network", sub: "Verified partners" },
-    { icon: Briefcase, n: "12+", l: "Industry Sectors Served", sub: "Healthcare to Energy" },
+    { icon: Briefcase, n: "25+", l: "Industry Sectors Served", sub: "Healthcare to Energy" },
   ];
   return (
     <section className="relative overflow-hidden px-6 py-20">

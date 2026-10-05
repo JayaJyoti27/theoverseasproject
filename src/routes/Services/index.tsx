@@ -53,7 +53,7 @@ function Index() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-border shadow-[0_2px_10px_-6px_rgba(11,31,58,0.15)] mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-gold" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy">
-                MEA Licensed · 15+ Years · 5,000+ Placements
+                MEA Licensed · 15+ Years · 10,000+ Placements
               </span>
             </div>
             <h1 className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl leading-[1.02] text-navy">

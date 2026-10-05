@@ -354,7 +354,7 @@ const milestones = [
   {
     year: "2024",
     icon: Sparkles,
-    title: "5,000+ Careers Placed",
+    title: "10,000+ Careers Placed",
     body: "200+ active employer partners. 20+ countries. Same office, same license, same coordinators-first ethos.",
   },
 ];
