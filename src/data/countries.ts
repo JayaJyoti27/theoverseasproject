@@ -20,6 +20,8 @@ export type JobCategory = {
     | "GraduationCap";
 };
 
+import { moreCountries } from "./more-countries";
+
 export type FAQ = { q: string; a: string };
 export type Stat = { value: string; label: string };
 export type SalaryRow = { role: string; range: string; benefits: string };
@@ -32,19 +34,19 @@ export type Country = {
   metaTitle: string;
   metaDescription: string;
   heroImageKeywords: string;
-  heroImageUrl: string;
+  heroImageUrl?: string;
   tagline: string;
   intro: string;
   jobCategories: JobCategory[];
-  stats: Stat[];
-  salaryTable: SalaryRow[];
+  stats?: Stat[];
+  salaryTable?: SalaryRow[];
   lifeInCountry: string;
-  gallery: GalleryImage[];
+  gallery?: GalleryImage[];
   visaNotes: string;
   visaHandled: string[];
   documentationNotes: string;
   documentationChecklist: string[];
-  testimonials: Testimonial[];
+  testimonials?: Testimonial[];
   faqs: FAQ[];
 };
 
@@ -101,7 +103,7 @@ export const WHY_OZONE: { title: string; description: string }[] = [
   },
 ];
 
-export const countries: Country[] = [
+const coreCountries: Country[] = [
   {
     slug: "kuwait",
     name: "Kuwait",
@@ -695,6 +697,8 @@ export const countries: Country[] = [
     ],
   },
 ];
+
+export const countries: Country[] = [...coreCountries, ...moreCountries];
 
 export function getCountryBySlug(slug: string): Country | undefined {
   return countries.find((c) => c.slug === slug);

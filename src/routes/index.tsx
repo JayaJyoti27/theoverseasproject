@@ -694,24 +694,24 @@ function IndustryCard({
 /* ---------- 8. match engine ---------- */
 
 function Destinations() {
-  const places = [
-    "GCC",
-    "Malaysia",
-    "Singapore",
-    "Maldives",
-    "Germany",
-    "Australia",
-    "Africa",
-    "Croatia",
-    "Latvia",
-    "Romania",
-    "Italy",
-    "Israel",
-    "Iraq",
-    "UK",
-    "Russia",
-    "Canada",
-    "Hungary",
+  const places: { label: string; to?: string }[] = [
+    { label: "GCC" },
+    { label: "Malaysia", to: "/Country/Malaysia" },
+    { label: "Singapore", to: "/Country/Singapore" },
+    { label: "Maldives", to: "/Country/Maldives" },
+    { label: "Germany", to: "/Country/Germany" },
+    { label: "Australia", to: "/Country/Australia" },
+    { label: "Africa", to: "/Country/Africa" },
+    { label: "Croatia", to: "/Country/Croatia" },
+    { label: "Latvia", to: "/Country/Latvia" },
+    { label: "Romania", to: "/Country/Romania" },
+    { label: "Italy", to: "/Country/Italy" },
+    { label: "Israel", to: "/Country/Israel" },
+    { label: "Iraq", to: "/Country/Iraq" },
+    { label: "UK", to: "/Country/UK" },
+    { label: "Russia", to: "/Country/Russia" },
+    { label: "Canada", to: "/Country/Canada" },
+    { label: "Hungary", to: "/Country/Hungary" },
   ];
   return (
     <section className="bg-white px-6 py-20">
@@ -727,15 +727,25 @@ function Destinations() {
           partner across the globe.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {places.map((p) => (
-            <span
-              key={p}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-blue-wash px-5 py-2 text-sm font-semibold text-navy"
-            >
-              <MapPin className="h-4 w-4 text-blue" />
-              {p}
-            </span>
-          ))}
+          {places.map((p) => {
+            const cls =
+              "inline-flex items-center gap-2 rounded-full border border-border bg-blue-wash px-5 py-2 text-sm font-semibold text-navy";
+            return p.to ? (
+              <a
+                key={p.label}
+                href={p.to}
+                className={`${cls} transition hover:border-blue hover:bg-white`}
+              >
+                <MapPin className="h-4 w-4 text-blue" />
+                {p.label}
+              </a>
+            ) : (
+              <span key={p.label} className={cls}>
+                <MapPin className="h-4 w-4 text-blue" />
+                {p.label}
+              </span>
+            );
+          })}
         </div>
       </div>
     </section>
