@@ -211,7 +211,7 @@ export const countries: Country[] = [
       },
       {
         q: "How long does the Kuwait deployment process usually take?",
-        a: "From offer to boarding, most healthcare placements complete in 6-8 weeks. Construction and technical categories vary with GAMCA slot availability.",
+        a: "From offer to boarding, most healthcare placements complete in 8–12 weeks. Construction and technical categories vary with GAMCA slot availability.",
       },
       {
         q: "Do I pay any fees to Ozone Overseas Consultants?",

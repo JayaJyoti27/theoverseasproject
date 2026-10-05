@@ -29,23 +29,23 @@ import vertical3 from "@/assets/vertical-3.jpg";
 export const Route = createFileRoute("/Home")({
   head: () => ({
     meta: [
-      { title: "For Candidates — Ozone Overseas Consultants | Free Applications, MEA-Licensed" },
+      { title: "For Candidates — Ozone Overseas Consultants | Global Careers, MEA-Licensed" },
       {
         name: "description",
         content:
-          "Your career abroad starts here. Free candidate applications, licensed visa & documentation handling, one coordinator from apply to landing across 10 GCC countries.",
+          "Your career abroad starts here. Online applications, licensed visa & documentation handling, one coordinator from apply to landing across global markets.",
       },
       { property: "og:title", content: "For Candidates — Ozone Overseas Consultants" },
       { name: "twitter:title", content: "For Candidates — Ozone Overseas Consultants" },
       {
         property: "og:description",
         content:
-          "Free applications. Visa & licensing handled. One coordinator, ten countries. MEA-licensed since 2009.",
+          "Apply online. Visa & licensing handled. One coordinator, ten countries. MEA-licensed since 2009.",
       },
       {
         name: "twitter:description",
         content:
-          "Free applications. Visa & licensing handled. One coordinator, ten countries. MEA-licensed since 2009.",
+          "Apply online. Visa & licensing handled. One coordinator, ten countries. MEA-licensed since 2009.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -256,7 +256,7 @@ function Hero() {
             <span className="text-blue">Starts Here.</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">
-            Applications are free. We handle licensing, visa, flight and onboarding — through one
+            We handle licensing, visa, flight and onboarding — through one
             coordinator.
           </p>
 
@@ -367,7 +367,7 @@ function WhyCandidates() {
     "Direct employer relationships, no sub-agents",
     "Transparent fee policy in writing",
     "Same coordinator through visa & landing",
-    "Free Prometric coaching included",
+    "Online Prometric coaching support",
   ];
   return (
     <section className="relative overflow-hidden px-6 py-24">
@@ -446,7 +446,7 @@ function Services() {
       n: "01",
       variant: "dark" as const,
       icon: GraduationCap,
-      t: "Free Prometric Coaching",
+      t: "Prometric Coaching",
       d: "Live cohort sessions + recorded library. Mock exams turned around in 48 hours. Dedicated WhatsApp study room with senior nurses.",
     },
     {
@@ -581,7 +581,7 @@ function Services() {
 /* ---------- 6. JOURNEY ---------- */
 function Journey() {
   const steps = [
-    { n: "01", t: "Apply", d: "Submit your CV in under 90 seconds. Free, no CV format needed." },
+    { n: "01", t: "Apply", d: "Submit your CV in under 90 seconds. No CV format needed." },
     {
       n: "02",
       t: "Get Verified",
@@ -874,7 +874,7 @@ function FAQ() {
     },
     {
       q: "Do you help with Prometric / DHA / SCFHS exams?",
-      a: "Yes. Free coaching cohorts, recorded lectures and 48-hour mock reviews are included for every nursing and allied-health candidate.",
+      a: "Yes. Online classes, recorded lectures and 48-hour mock reviews are available for nursing and allied-health candidates. Coaching is free only for candidates who did not clear their first attempt taken through Ozone and write the second attempt through Ozone Overseas Consultants.",
     },
     {
       q: "What happens if my visa is rejected?",
@@ -949,7 +949,7 @@ function FinalCTA() {
             One CV. One Coordinator. <span className="text-blue">Ten Countries Open.</span>
           </h2>
           <p className="mt-5 max-w-md text-ink">
-            Free to apply. Visa & licensing handled. Your tracker goes live the day you submit.
+            Visa & licensing handled. Your tracker goes live the day you submit.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
