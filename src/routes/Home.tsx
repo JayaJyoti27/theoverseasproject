@@ -110,9 +110,9 @@ function Home() {
 function TrackerCard({ compact = false }: { compact?: boolean }) {
   const steps = [
     { n: 1, t: "Applied", when: "Day 1", state: "done" as const },
-    { n: 2, t: "Verified", when: "Week 1", state: "done" as const },
-    { n: 3, t: "Visa & Licensing", when: "Week 6", state: "active" as const },
-    { n: 4, t: "Placed Abroad", when: "Week 10", state: "upcoming" as const },
+    { n: 2, t: "Prometric", when: "Week 1–4", state: "done" as const },
+    { n: 3, t: "Interview & Offer", when: "Week 4–6", state: "active" as const },
+    { n: 4, t: "Documentation & Visa", when: "Week 6–12", state: "upcoming" as const },
   ];
   return (
     <div
@@ -581,21 +581,21 @@ function Services() {
 /* ---------- 6. JOURNEY ---------- */
 function Journey() {
   const steps = [
-    { n: "01", t: "Apply", d: "Submit your CV in under 90 seconds. No CV format needed." },
+    { n: "01", t: "Day 1 — Apply", d: "Submit your CV in under 90 seconds. No CV format needed." },
     {
       n: "02",
-      t: "Get Verified",
-      d: "Coordinator review, shortlist call, employer interview within 10–14 days.",
+      t: "Week 1–4 — Prometric",
+      d: "Prometric preparation and exam, with coordinator support throughout.",
     },
     {
       n: "03",
-      t: "License & Visa",
-      d: "Dataflow + Prometric + embassy stamping — all handled for you.",
+      t: "Week 4–6 — Interview & Offer",
+      d: "Mock interview, employer interview and offer confirmation.",
     },
     {
       n: "04",
-      t: "Board & Settle",
-      d: "Pre-departure briefing, airport pickup, first-week check-ins.",
+      t: "Week 6–12 — Documentation & Visa",
+      d: "Dataflow, attestation, visa and pre-departure briefing — all handled for you.",
     },
   ];
   return (
@@ -1039,7 +1039,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-blue-soft/70">
-          <div>MEA License No. B-0123/MUM/PER/1000+/5/8525/2009 — Government of India.</div>
+          <div>MEA License No. B-1934/KER/PART/1000+/5/10386/2023 — Government of India.</div>
           <div>© {new Date().getFullYear()} Ozone Overseas Consultants. All rights reserved.</div>
         </div>
       </div>

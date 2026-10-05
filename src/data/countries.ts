@@ -50,7 +50,7 @@ export type Country = {
   faqs: FAQ[];
 };
 
-export const MEA_LICENSE = "B-0123/MUM/PER/1000+/5/9999/2020";
+export const MEA_LICENSE = "B-1934/KER/PART/1000+/5/10386/2023";
 
 export const PROCESS_STEPS: { title: string; description: string }[] = [
   {
@@ -371,17 +371,17 @@ const coreCountries: Country[] = [
     salaryTable: [
       {
         role: "Registered Nurse (HMC / private)",
-        range: "OMR 4,500–6,500 / month",
+        range: "QAR 4,500–6,500 / month",
         benefits: "Accommodation, transport, ticket, medical",
       },
       {
         role: "Electrician (industrial)",
-        range: "OMR 1,500 – 3,800 / month",
+        range: "QAR 1,500 – 3,000 / month",
         benefits: "Camp, food allowance, overtime, ticket",
       },
       {
         role: "HVAC Technician",
-        range: "OMR 2,400 – 4,200 / month",
+        range: "QAR 2,000 – 4,000 / month",
         benefits: "Camp accommodation, transport, overtime",
       },
     ],
@@ -530,7 +530,7 @@ const coreCountries: Country[] = [
     documentationChecklist: [
       "Passport valid for 18+ months",
       "ITI / trade certificate, MEA-attested",
-      "H2S, BOSIET, or NEBOSH safety certifications where required",
+      "Trade and safety certificates relevant to the role, where required",
       "Police Clearance Certificate attested by Oman Embassy",
       "GAMCA medical fitness certificate",
     ],
@@ -550,8 +550,8 @@ const coreCountries: Country[] = [
     ],
     faqs: [
       {
-        q: "Which safety certifications do industrial workers need for Oman?",
-        a: "Oil-and-gas employers commonly require H2S Awareness, BOSIET, or NEBOSH IGC. We list the exact certifications on the job card and connect you to approved training centres in India if you don't hold them yet.",
+        q: "Do industrial workers need extra certificates for Oman?",
+        a: "Requirements vary by employer and role. We list the exact certificates on the job card and guide you on what to arrange before deployment.",
       },
       {
         q: "Is there a trade test for mechanical technicians?",
