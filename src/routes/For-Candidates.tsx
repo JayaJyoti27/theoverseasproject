@@ -1121,7 +1121,7 @@ function FinalCTA() {
             >
               Apply for Jobs <ArrowRight className="h-4 w-4" />
             </a>
-            <BtnOutline href="#jobs" dark>
+            <BtnOutline href="/jobs" dark>
               Browse Roles <ArrowRight className="h-4 w-4" />
             </BtnOutline>
             <BtnOutline href="#contact" dark>

@@ -262,7 +262,7 @@ function Hero() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="#openings"
+              href="/jobs"
               className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-blue transition"
             >
               Browse Roles <ArrowRight className="h-4 w-4" />
