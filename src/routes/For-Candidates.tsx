@@ -65,7 +65,7 @@ export const Route = createFileRoute("/For-Candidates")({
       {
         name: "description",
         content:
-          "Government of India MEA-licensed recruitment consultancy. Healthcare, engineering, construction and technical roles across 17 countries. ",
+          "Government of India MEA-licensed recruitment consultancy. Healthcare, engineering, construction and technical roles across 20+ countries. ",
       },
       {
         property: "og:title",
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/For-Candidates")({
       {
         property: "og:description",
         content:
-          "MEA-licensed recruitment consultancy placing Indian professionals abroad. 17 countries, transparent candidate support, end-to-end support.",
+          "MEA-licensed recruitment consultancy placing Indian professionals abroad. 20+ countries, transparent candidate support, end-to-end support.",
       },
       { property: "og:url", content: "/for-candidates" },
     ],
@@ -248,7 +248,7 @@ function Hero() {
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink sm:text-base">
             Ozone Overseas Consultants is a Government-licensed international recruitment
-            consultancy placing Indian professionals into verified roles across 17 countries — with
+            consultancy placing Indian professionals into verified roles across 20+ countries — with
             full compliance, ethical practices, and end-to-end support from registration to
             post-arrival.
           </p>
@@ -307,7 +307,7 @@ function Hero() {
       <div className="relative border-t border-border bg-blue-wash">
         <div className="mx-auto grid max-w-7xl grid-cols-3 gap-y-3 divide-blue/20 px-4 py-3 sm:grid-cols-6 sm:px-6 lg:divide-x lg:px-8 lg:py-4">
           {[
-            { icon: Users, big: "5,000+", small: "Deployed" },
+            { icon: Users, big: "10,000+", small: "Deployed" },
             { icon: Globe2, big: "17", small: "Countries" },
             { icon: Calendar, big: "15+", small: "Years" },
             { icon: ShieldCheck, big: "MEA", small: "Licensed" },
