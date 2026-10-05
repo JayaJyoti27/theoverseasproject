@@ -215,6 +215,16 @@ function ContactPage() {
               />
             </div>
 
+            <div className="mt-6 overflow-hidden rounded-2xl border border-border">
+              <iframe
+                title="Ozone Overseas Consultants office location"
+                src="https://www.google.com/maps?q=40%2F1223-A%2C+Praveen+Chandran+Building%2C+Near+Palarivattam+Flyover%2C+Pipeline+Jn%2C+Palarivattam%2C+Edappally%2C+Ernakulam+682024%2C+Kerala%2C+India&output=embed"
+                className="h-64 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
             <div className="mt-6 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-gold" />
               <p className="text-xs text-muted-foreground">

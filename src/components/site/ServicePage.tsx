@@ -65,6 +65,7 @@ type Audience = {
   heading: string;
   desc: string;
   cta: string;
+  href?: string;
   photo: string;
 };
 type Step = { title: string; desc: string; tag: string };
@@ -416,7 +417,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 {data.audiences[0].heading}
               </h3>
               <p className="mt-4 text-navy/70 max-w-md">{data.audiences[0].desc}</p>
-              <a href="#audience-1" className="btn-navy btn-navy-hover mt-8">
+              <a href={data.audiences[0].href ?? "#audience-1"} className="btn-navy btn-navy-hover mt-8">
                 {data.audiences[0].cta} <ArrowRight className="w-4 h-4" />
               </a>
               <div className="absolute -bottom-4 -right-4 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white shadow-soft">
@@ -445,7 +446,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 {data.audiences[1].heading}
               </h3>
               <p className="mt-4 text-white/70 max-w-md">{data.audiences[1].desc}</p>
-              <a href="#audience-2" className="btn-gold mt-8">
+              <a href={data.audiences[1].href ?? "#audience-2"} className="btn-gold mt-8">
                 {data.audiences[1].cta} <ArrowRight className="w-4 h-4" />
               </a>
               <div className="absolute -bottom-4 -right-4 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white/10 shadow-soft">
