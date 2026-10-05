@@ -1,45 +1,67 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
-const columns: { title: string; links: { label: string; to?: string }[] }[] = [
+const columns: { title: string; wide?: boolean; links: { label: string; to?: string }[] }[] = [
   {
     title: "Candidates",
     links: [
-      { label: "Browse Jobs" },
-      { label: "How It Works" },
-      { label: "Documentation" },
-      { label: "Success Stories" },
+      { label: "Browse Jobs", to: "/jobs" },
+      { label: "How It Works", to: "/For-Candidates" },
+      { label: "Documentation", to: "/Services/Documentation" },
+      { label: "Success Stories", to: "/For-Candidates" },
     ],
   },
   {
     title: "Employers",
     links: [
-      { label: "Post a Requirement" },
-      { label: "Talent Pool" },
-      { label: "Process" },
-      { label: "Compliance" },
+      { label: "Post a Requirement", to: "/employers" },
+      { label: "Talent Pool", to: "/employers" },
+      { label: "Process", to: "/employers" },
+      { label: "Compliance", to: "/about" },
     ],
   },
   {
     title: "Company",
-    links: [{ label: "About" }, { label: "Careers" }, { label: "Press" }, { label: "Contact" }],
+    links: [
+      { label: "About", to: "/about" },
+      { label: "Careers" },
+      { label: "Press" },
+      { label: "Contact", to: "/contact" },
+    ],
   },
   {
     title: "Sectors",
     links: [
-      { label: "Healthcare" },
-      { label: "Construction" },
-      { label: "Oil & Gas" },
-      { label: "Facilities" },
+      { label: "Healthcare & Nursing", to: "/Services/Healthcare-rec" },
+      { label: "Engineering & Construction", to: "/Services/Technical-rec" },
+      { label: "Hospitality, Retail & Logistics", to: "/employers" },
     ],
   },
   {
     title: "Destinations",
+    wide: true,
     links: [
-      { label: "Saudi Arabia" },
-      { label: "UAE" },
-      { label: "Qatar" },
-      { label: "Kuwait & Bahrain" },
+      { label: "Kuwait", to: "/Country/Kuwait" },
+      { label: "Oman", to: "/Country/Oman" },
+      { label: "Qatar", to: "/Country/Qatar" },
+      { label: "Saudi Arabia", to: "/Country/Saudi-Arabia" },
+      { label: "UAE", to: "/Country/UAE" },
+      { label: "Australia", to: "/Country/Australia" },
+      { label: "Africa", to: "/Country/Africa" },
+      { label: "Canada", to: "/Country/Canada" },
+      { label: "Croatia", to: "/Country/Croatia" },
+      { label: "Germany", to: "/Country/Germany" },
+      { label: "Hungary", to: "/Country/Hungary" },
+      { label: "Iraq", to: "/Country/Iraq" },
+      { label: "Israel", to: "/Country/Israel" },
+      { label: "Italy", to: "/Country/Italy" },
+      { label: "Latvia", to: "/Country/Latvia" },
+      { label: "Malaysia", to: "/Country/Malaysia" },
+      { label: "Maldives", to: "/Country/Maldives" },
+      { label: "Romania", to: "/Country/Romania" },
+      { label: "Russia", to: "/Country/Russia" },
+      { label: "Singapore", to: "/Country/Singapore" },
+      { label: "UK", to: "/Country/UK" },
     ],
   },
 ];
@@ -148,16 +170,28 @@ export function Footer() {
           </div>
 
           {columns.map((col) => (
-            <div key={col.title}>
+            <div key={col.title} className={col.wide ? "col-span-2 md:col-span-6" : undefined}>
               <div className="font-[family-name:var(--font-display)] text-sm font-semibold text-white">
                 {col.title}
               </div>
-              <ul className="mt-4 space-y-2.5 text-sm text-white/65">
+              <ul
+                className={`mt-4 text-sm text-white/65 ${
+                  col.wide
+                    ? "grid grid-cols-2 gap-x-6 gap-y-2.5 sm:grid-cols-4 md:grid-cols-7"
+                    : "space-y-2.5"
+                }`}
+              >
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <a href="#" className="transition hover:text-white">
-                      {l.label}
-                    </a>
+                    {l.to ? (
+                      <Link to={l.to} className="transition hover:text-white">
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a href="#" className="transition hover:text-white">
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -184,9 +218,9 @@ export function Footer() {
               Recruitment Licence No. <span className="text-white/80">{CONTACT.licenseNo}</span>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              <a href="#" className="hover:text-white">
+              <Link to="/privacypolicy" className="hover:text-white">
                 Privacy Policy
-              </a>
+              </Link>
               <span className="text-white/25">·</span>
               <a href="#" className="hover:text-white">
                 Terms &amp; Conditions

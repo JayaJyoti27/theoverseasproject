@@ -55,13 +55,31 @@ const EMPLOYER_SERVICES = [
 
 const ADMIN_SERVICES = [{ label: "For Admin", to: "/Login", desc: "Internal admin dashboard" }];
 
-const COUNTRY_LINKS = [
+const GULF_LINKS = [
   { label: "Kuwait", to: "/Country/Kuwait" },
   { label: "Oman", to: "/Country/Oman" },
   { label: "Qatar", to: "/Country/Qatar" },
   { label: "Saudi Arabia", to: "/Country/Saudi-Arabia" },
   { label: "UAE", to: "/Country/UAE" },
-  // Terms removed — no /terms route exists yet. Add back once that page is built.
+];
+
+const MORE_COUNTRY_LINKS = [
+  { label: "Australia", to: "/Country/Australia" },
+  { label: "Africa", to: "/Country/Africa" },
+  { label: "Canada", to: "/Country/Canada" },
+  { label: "Croatia", to: "/Country/Croatia" },
+  { label: "Germany", to: "/Country/Germany" },
+  { label: "Hungary", to: "/Country/Hungary" },
+  { label: "Iraq", to: "/Country/Iraq" },
+  { label: "Israel", to: "/Country/Israel" },
+  { label: "Italy", to: "/Country/Italy" },
+  { label: "Latvia", to: "/Country/Latvia" },
+  { label: "Maldives", to: "/Country/Maldives" },
+  { label: "Malaysia", to: "/Country/Malaysia" },
+  { label: "Romania", to: "/Country/Romania" },
+  { label: "Russia", to: "/Country/Russia" },
+  { label: "Singapore", to: "/Country/Singapore" },
+  { label: "UK", to: "/Country/UK" },
 ];
 
 const COMPANY_LINKS = [
@@ -92,6 +110,35 @@ function ServicePanel({ items }: { items: { label: string; to: string; desc?: st
           )}
         </Link>
       ))}
+    </div>
+  );
+}
+
+function CountryPanel() {
+  const linkCls =
+    "rounded-xl px-3 py-2 text-sm font-semibold text-navy transition-colors hover:bg-lightblue";
+  return (
+    <div className="w-[22rem] rounded-2xl border border-blue/15 bg-card p-3 shadow-elevated">
+      <div className="px-3 pb-1 text-[11px] font-bold uppercase tracking-widest text-blue">
+        Gulf (GCC)
+      </div>
+      <div className="grid grid-cols-2 gap-0.5">
+        {GULF_LINKS.map((c) => (
+          <Link key={c.to} to={c.to} className={linkCls}>
+            {c.label}
+          </Link>
+        ))}
+      </div>
+      <div className="mt-2 border-t border-border px-3 pb-1 pt-3 text-[11px] font-bold uppercase tracking-widest text-blue">
+        More destinations
+      </div>
+      <div className="grid grid-cols-2 gap-0.5">
+        {MORE_COUNTRY_LINKS.map((c) => (
+          <Link key={c.to} to={c.to} className={linkCls}>
+            {c.label}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
@@ -224,7 +271,7 @@ export function Header() {
               onEnter={handleEnter}
               onLeave={handleLeave}
             >
-              <ServicePanel items={COUNTRY_LINKS} />
+              <CountryPanel />
             </DropdownTrigger>
 
             <DropdownTrigger
@@ -318,7 +365,7 @@ export function Header() {
                 expanded={mobileExpanded === "countries"}
                 onToggle={() => toggleMobile("countries")}
               >
-                {COUNTRY_LINKS.map((c) => (
+                {[...GULF_LINKS, ...MORE_COUNTRY_LINKS].map((c) => (
                   <MobileLink
                     key={c.to + c.label}
                     to={c.to}
