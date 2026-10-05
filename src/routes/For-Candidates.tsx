@@ -262,7 +262,7 @@ function Hero() {
             <BtnOutline href="#contact">Contact Us</BtnOutline>
           </div>
           <div className="mt-4 text-xs text-ink/70">
-            Candidate Support · MEA License No. B-1934/KER/PART/1000+/5/10386/2023 · IRIS Ethical
+            Candidate Support · MEA License No. B-1934/KER/PART/1000+/5/10386/2023 · Ethical
             Recruitment Signatory
           </div>
         </div>
@@ -341,7 +341,7 @@ function WhyOzone() {
       d: "DHA, HAAD, SCFHS, QCHP, MOH-Oman — included, no extra cost.",
     },
     {
-      t: "Government Licensed & IRIS Certified",
+      t: "Government Licensed Certified",
       d: "Every placement is MEA compliant and meets destination-country regulatory requirements.",
     },
   ];
@@ -800,7 +800,7 @@ function QualityAssurance() {
     {
       i: Scale,
       t: "Ethical Recruitment Practices",
-      d: "IRIS Signatory. Aligned with global fair-hiring norms.",
+      d: "Aligned with global fair-hiring norms.",
     },
     {
       i: Plane,
@@ -893,7 +893,7 @@ function QualityAssurance() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs">
-            <Scale className="h-4 w-4 text-blue-soft" /> IRIS Ethical Recruitment Signatory
+            <Scale className="h-4 w-4 text-blue-soft" /> Ethical Recruitment Signatory
           </div>
           <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs">
             <ShieldCheck className="h-4 w-4 text-blue-soft" /> Govt. of India MEA Licensed ·

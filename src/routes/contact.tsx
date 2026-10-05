@@ -36,8 +36,13 @@ function ContactPage() {
       ? "Tell us the role you're looking for..."
       : "Tell us the role you're hiring for...";
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -81,16 +86,40 @@ function ContactPage() {
               <ConfirmationState />
             ) : (
               <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-                <Field label="Full Name" htmlFor="name">
-                  <input id="name" name="name" required type="text" className={inputCls} />
+                <Field label="Full Name" htmlFor="name" required>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    type="text"
+                    autoComplete="name"
+                    className={inputCls}
+                  />
                 </Field>
 
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <Field label="Email Address" htmlFor="email">
-                    <input id="email" name="email" required type="email" className={inputCls} />
+                  <Field label="Email Address" htmlFor="email" required>
+                    <input
+                      id="email"
+                      name="email"
+                      required
+                      type="email"
+                      autoComplete="email"
+                      className={inputCls}
+                    />
                   </Field>
-                  <Field label="Phone Number (optional)" htmlFor="phone">
-                    <input id="phone" name="phone" type="tel" className={inputCls} />
+                  <Field label="Phone Number" htmlFor="phone" required>
+                    <input
+                      id="phone"
+                      name="phone"
+                      required
+                      type="tel"
+                      autoComplete="tel"
+                      inputMode="tel"
+                      pattern="[+0-9\s\-]{7,18}"
+                      title="Enter a valid phone number, e.g. +91 8086066611"
+                      className={inputCls}
+                    />
                   </Field>
                 </div>
 
@@ -119,7 +148,7 @@ function ContactPage() {
                   <input id="subject" name="subject" type="text" className={inputCls} />
                 </Field>
 
-                <Field label="Message" htmlFor="message">
+                <Field label="Message" htmlFor="message" required>
                   <textarea
                     id="message"
                     name="message"
@@ -129,6 +158,10 @@ function ContactPage() {
                     className={cn(inputCls, "resize-none")}
                   />
                 </Field>
+
+                <p className="text-xs text-brand-slate">
+                  <span className="text-red-600">*</span> Required fields
+                </p>
 
                 <button
                   type="submit"
@@ -182,16 +215,6 @@ function ContactPage() {
               />
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-2xl border border-border">
-              <iframe
-                title="Ozone Overseas Consultants office location"
-                src="https://www.google.com/maps/search/?api=1&query=40%2F1223-A%2C+Praveen+Chandran+Building%2C+Near+Palarivattam+Flyover%2C+Pipeline+Jn%2C+Palarivattam%2C+Edappally%2C+Ernakulam+682024%2C+Kerala%2C+India"
-                className="h-56 w-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
             <div className="mt-6 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-gold" />
               <p className="text-xs text-muted-foreground">
@@ -223,19 +246,10 @@ function ContactPage() {
               number="02"
               variant="lightblue"
               title="I'm an Employer"
-              body="Post a requirement. First pre-screened shortlist in 48 hours, no fee to post."
+              body="Post a requirement. First pre-screened shortlist in 48 hours."
               cta="Post a Requirement"
               href="/for-employers"
               buttonStyle="navy"
-            />
-            <CtaCard
-              number="03"
-              variant="white"
-              title="I Have a General Question"
-              body="Check our FAQ first — most answers are already there."
-              cta="View FAQ"
-              href="/for-candidates#faq"
-              buttonStyle="outline"
             />
           </div>
         </div>
@@ -250,15 +264,24 @@ const inputCls =
 function Field({
   label,
   htmlFor,
+  required,
   children,
 }: {
   label: string;
   htmlFor: string;
+  required?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <label htmlFor={htmlFor} className="block">
-      <span className="mb-2 block text-sm font-medium text-brand-navy">{label}</span>
+      <span className="mb-2 block text-sm font-medium text-brand-navy">
+        {label}
+        {required && (
+          <span className="ml-0.5 text-red-600" aria-hidden>
+            *
+          </span>
+        )}
+      </span>
       {children}
     </label>
   );

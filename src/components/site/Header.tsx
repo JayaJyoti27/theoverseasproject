@@ -27,7 +27,6 @@ const CANDIDATE_SERVICES = [
     to: "/Services/Documentation",
     desc: "Dataflow, MOH portal, attestation",
   },
-  { label: "Training & Coaching", to: "/Services/Training", desc: "Full free training package" },
 ];
 
 const EMPLOYER_SERVICES = [

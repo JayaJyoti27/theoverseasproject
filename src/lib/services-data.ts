@@ -130,7 +130,7 @@ export const services: Record<string, ServiceData> = {
       "A predictable, milestone-tracked pipeline from your first brief to their first shift.",
     steps: healthcareProcess,
     ctaHeading: "Ready to Hire Verified Healthcare Talent?",
-    ctaSubline: "Post a requirement — first shortlist in 48 hours, no fee to post.",
+    ctaSubline: "Post a requirement — first shortlist in 48 hours.",
     ctaPrimary: "Post a Requirement",
     ctaSecondary: "Talk to Our Team",
   },
@@ -144,15 +144,15 @@ export const services: Record<string, ServiceData> = {
     headline2: "GCC-Licensed & Verified.",
     subtext:
       "ICU, OT, ER, Paediatric, Staff Nurses — pre-screened for SCFHS, DHA, HAAD, and QCHP eligibility. India's largest source of internationally licensed nurses, placed in 48 hours.",
-    primaryCta: "Post a Nursing Requirement",
+    primaryCta: "Contact Us",
     secondaryCta: "View Nurse Profiles",
     heroStats: [
-      { value: "3,000+", label: "Nurses Placed" },
+      { value: "5,000+", label: "Nurses Placed" },
       { value: "15+", label: "Years Placing Nurses" },
       { value: "94%", label: "License Success Rate" },
     ],
     bandStats: [
-      { value: "3,000+", label: "Nurses Placed" },
+      { value: "5,000+", label: "Nurses Placed" },
       { value: "15+", label: "Years Placing Nurses" },
       { value: "94%", label: "License Success Rate" },
     ],
@@ -172,7 +172,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Free Prometric Coaching",
-        desc: "Candidates coached for DHA/HAAD/SCFHS Prometric exams at no cost — higher pass rates, faster placement.",
+        desc: "Candidates coached for DHA/HAAD/SCFHS Prometric exams — higher pass rates, faster placement.",
       },
       {
         title: "48-Hour First Shortlist",
@@ -609,15 +609,15 @@ export const services: Record<string, ServiceData> = {
     subtext:
       "Browse verified nursing roles across Saudi Arabia, UAE, Qatar, UK, Canada, and more. Free to apply — license coaching, visa, and documentation all included.",
     primaryCta: "Browse Nursing Roles",
-    secondaryCta: "Check My Eligibility",
+    secondaryCta: "Contact Us",
     heroStats: [
       { value: "3,000+", label: "Nurses Placed" },
-      { value: "₹0", label: "Candidate Fees" },
+      { value: "Verified", label: "Companies" },
       { value: "94%", label: "Visa Success Rate" },
     ],
     bandStats: [
       { value: "3,000+", label: "Nurses Placed" },
-      { value: "₹0", label: "Candidate Fees" },
+      { value: "Verified", label: "Companies" },
       { value: "94%", label: "Visa Success Rate" },
     ],
     badge: "Candidate Support · Ever",
@@ -633,7 +633,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Free License Coaching",
-        desc: "Prometric coaching for DHA, HAAD, SCFHS, QCHP, MOH-Oman included at zero cost.",
+        desc: "Prometric coaching for DHA, HAAD, SCFHS, QCHP, MOH-Oman.",
       },
       {
         title: "Visa & Documentation Handled",
@@ -655,19 +655,19 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "GNM Nurses",
         heading: "GNM-Qualified Nurses",
-        desc: "GNM candidates assessed for direct and adaptation pathways — free eligibility check available.",
+        desc: "GNM candidates assessed for direct and adaptation pathways.",
         cta: "Check Eligibility",
         photo: P.nurse,
       },
     ],
     processHeading: "From Application to Boarding Pass.",
     processSubline:
-      "A candidate journey we've run 3,000 times — with the same coordinator each step.",
+      "A candidate journey we've run 5,000 times — with the same coordinator each step.",
     steps: [
       {
-        title: "Apply Free",
+        title: "Apply",
         desc: "Send your CV — coordinator assigned within 24 hours.",
-        tag: "Day 1 · Free",
+        tag: "Day 1",
       },
       {
         title: "Coaching & Prometric",
@@ -680,9 +680,9 @@ export const services: Record<string, ServiceData> = {
         tag: "Weeks 4–6",
       },
       {
-        title: "Docs, Visa & Fly",
+        title: "Documentation & Visa",
         desc: "Documentation, visa stamping, pre-departure briefing.",
-        tag: "Weeks 6–8",
+        tag: "Weeks 6–12",
       },
     ],
     ctaHeading: "Ready to Nurse Abroad?",
@@ -695,29 +695,56 @@ export const services: Record<string, ServiceData> = {
     slug: "prometric-coaching",
     serviceName: "Prometric Coaching",
     breadcrumbLabel: "Prometric Coaching",
-    category: "Candidate Service · Free",
-    headline1: "Free Prometric Coaching.",
+    category: "Candidate Service",
+    headline1: "Prometric Coaching.",
     headline2: "Pass First Time.",
     subtext:
-      "Live cohort sessions, recorded classes, and mock exams scored within 48 hours — covering DHA, HAAD, SCFHS, QCHP, and MOH-Oman. Instructor feedback via WhatsApp study room.",
+      "Online classes, recorded classes, AI-based mock tests and previous year questions — covering DHA, HAAD, SCFHS, QCHP, and MOH-Oman. Retake coaching is free only for candidates who fail their first attempt through Ozone and take the second attempt through Ozone, via online classes.",
     primaryCta: "Join the Next Cohort",
     secondaryCta: "Chat on WhatsApp",
     heroStats: [
       { value: "94%", label: "First-Attempt Pass" },
       { value: "48hr", label: "Mock Exam Scoring" },
-      { value: "₹0", label: "Cost to Candidates" },
+      { value: "Online", label: "Classes & Mock Tests" },
     ],
     bandStats: [
       { value: "94%", label: "First-Attempt Pass" },
       { value: "48hr", label: "Mock Exam Scoring" },
-      { value: "₹0", label: "Cost to Candidates" },
+      { value: "Online", label: "Classes & Mock Tests" },
     ],
-    badge: "₹0 · Included for All Candidates",
+    badge: "Online Classes · AI-Based Mock Tests",
     photo: P.study,
     photoAlt: "Candidate preparing for Prometric exam",
-    includedHeading: "Live. Recorded. Retakeable. Free.",
+    includedHeading: "Live. Recorded. Retakeable.",
     includedSubline:
       "A working coaching product — not a one-off webinar — that gets candidates through first time.",
+    highlights: {
+      eyebrow: "Key Features",
+      heading: "Everything You Need to Clear Prometric.",
+      subline: "Five tools that work together — from your first class to exam day.",
+      items: [
+        {
+          title: "Online Classes",
+          desc: "Live online classes with experienced Prometric instructors — prepare from anywhere.",
+        },
+        {
+          title: "AI-Based Mock Tests",
+          desc: "Mock tests that follow the real exam pattern and show you exactly where to improve.",
+        },
+        {
+          title: "Recorded Classes",
+          desc: "Every class is recorded, so you can revisit topics and catch up at your own pace.",
+        },
+        {
+          title: "Previous Year Questions (PYQs)",
+          desc: "Practise with previous year questions to learn the exam pattern and question style.",
+        },
+        {
+          title: "Regular Monitoring",
+          desc: "Regular check-ins on your progress keep your preparation on track until exam day.",
+        },
+      ],
+    },
     features: [
       {
         title: "Live Cohort Sessions",
@@ -747,7 +774,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "Retake Candidates",
         heading: "Failed Before? We've Got You.",
-        desc: "Free retake coaching — Anand P. cleared on attempt two after free coaching with Ozone.",
+        desc: "Free only if you failed your first attempt through Ozone and take the second attempt through Ozone, via online classes. Anand P. cleared on attempt two.",
         cta: "Get Retake Support",
         photo: P.candidateHappy,
       },
@@ -757,8 +784,8 @@ export const services: Record<string, ServiceData> = {
     steps: [
       {
         title: "Enrol",
-        desc: "Register as an Ozone candidate — coaching is automatically included.",
-        tag: "Day 1 · Free",
+        desc: "Register as an Ozone candidate and start your Prometric coaching.",
+        tag: "Day 1",
       },
       {
         title: "Attend Live Sessions",
@@ -776,7 +803,7 @@ export const services: Record<string, ServiceData> = {
         tag: "Weeks 5–6",
       },
     ],
-    ctaHeading: "Coaching Included. No Extra Cost.",
+    ctaHeading: "Ready to Pass Prometric First Time?",
     ctaSubline: "Register as a candidate — Prometric coaching starts immediately.",
     ctaPrimary: "Join the Next Cohort",
     ctaSecondary: "Chat on WhatsApp",
@@ -881,17 +908,17 @@ export const services: Record<string, ServiceData> = {
     headline1: "Interview Like You've",
     headline2: "Done It Before.",
     subtext:
-      "Coordinator-led mock interviews tailored to your target role and employer — GCC hospital interview formats, common clinical questions, and real-time feedback.",
+      "Coordinator-led mock interviews tailored to your target role and employer — for healthcare, engineering and technical roles. GCC hospital and site-based interview formats, role-specific clinical and technical questions, and real-time feedback.",
     primaryCta: "Book a Mock Interview",
     secondaryCta: "Chat on WhatsApp",
     heroStats: [
       { value: "5,000+", label: "Candidates Prepped" },
-      { value: "₹0", label: "Cost" },
+      { value: "Verified", label: "Companies" },
       { value: "48hr", label: "Feedback Turnaround" },
     ],
     bandStats: [
       { value: "5,000+", label: "Candidates Prepped" },
-      { value: "₹0", label: "Cost" },
+      { value: "Verified", label: "Companies" },
       { value: "48hr", label: "Feedback Turnaround" },
     ],
     badge: "Coordinator-Led · Free",
@@ -902,11 +929,11 @@ export const services: Record<string, ServiceData> = {
     features: [
       {
         title: "Role-Specific Questions",
-        desc: "Mock interviews built around your exact role — ICU nurse questions differ from OT technician questions.",
+        desc: "Mock interviews built around your exact role — ICU nurse, civil engineer, HVAC technician and electrician interviews each test different things.",
       },
       {
-        title: "GCC Hospital Format",
-        desc: "Employer interview formats from Al Hammadi, NMC, Aster, and other partner hospitals replicated.",
+        title: "Employer Interview Formats",
+        desc: "Hospital formats from Al Hammadi, NMC, Aster and other partner hospitals, plus engineering and technical interview formats used by construction, oil & gas and facilities employers, replicated.",
       },
       {
         title: "Real-Time Feedback",
@@ -921,7 +948,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "First-Time GCC Applicants",
         heading: "Know What to Expect",
-        desc: "GCC hospital interviews are structured differently — we prepare you for exactly that.",
+        desc: "GCC hospital and engineering interviews are structured differently — we prepare you for exactly that.",
         cta: "Book Mock Interview",
         photo: P.interview,
       },
@@ -948,7 +975,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Mock Interview",
-        desc: "Coordinator-led session in GCC hospital format.",
+        desc: "Coordinator-led session in GCC hospital or technical interview format.",
         tag: "Session",
       },
       {
@@ -971,20 +998,20 @@ export const services: Record<string, ServiceData> = {
     headline1: "Free Training.",
     headline2: "Included From Day One.",
     subtext:
-      "Prometric coaching, mock interviews, pre-departure grooming, and documentation guidance — every Ozone candidate gets the full training package at zero cost.",
+      "Prometric coaching, mock interviews, pre-departure grooming, and documentation guidance.",
     primaryCta: "Apply Now",
     secondaryCta: "See What's Included",
     heroStats: [
       { value: "5,000+", label: "Trained" },
-      { value: "₹0", label: "Training Costs" },
+      { value: "Verified", label: "Companies" },
       { value: "94%", label: "First-Attempt Pass" },
     ],
     bandStats: [
       { value: "5,000+", label: "Trained" },
-      { value: "₹0", label: "Training Costs" },
+      { value: "Verified", label: "Companies" },
       { value: "94%", label: "First-Attempt Pass" },
     ],
-    badge: "₹0 · Full Training Package",
+
     photo: P.classroom,
     photoAlt: "Training and coaching classroom",
     includedHeading: "The Full Package. Really Free.",
