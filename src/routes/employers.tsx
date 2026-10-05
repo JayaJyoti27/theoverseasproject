@@ -312,7 +312,7 @@ function Process() {
       n: "01",
       title: "Submit Requirement",
       desc: "Tell us the role, location, and headcount. Takes under 5 minutes, no fee to post.",
-      meta: "Same day · No fee",
+      meta: "Same day",
     },
     {
       n: "02",

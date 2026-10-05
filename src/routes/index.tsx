@@ -53,13 +53,13 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ozone Overseas Consultants — MEA-Licensed International Recruitment, India ↔ GCC" },
+      { title: "Ozone Overseas — MEA-Licensed International Recruitment, India ↔ GCC" },
       {
         name: "description",
         content:
-          "Connecting verified Indian talent with leading employers across the GCC. 5,000+ placements, 200+ employers, 48-hour shortlisting.",
+          "Connecting verified Indian talent with leading employers across the Globe. 5,000+ placements, 200+ employers, 48-hour shortlisting.",
       },
-      { property: "og:title", content: "Ozone Overseas Consultants — India ↔ GCC Recruitment" },
+      { property: "og:title", content: "Ozone Overseas — India ↔ GCC Recruitment" },
       {
         property: "og:description",
         content: "MEA-licensed bridge between top Indian talent and verified GCC employers.",
@@ -136,11 +136,7 @@ function Home() {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Sweeping wave background (
-      
-      
-    
-    Box-style) */}
+      {/* Sweeping wave background (JobBox-style) */}
       <svg
         aria-hidden
         viewBox="0 0 1440 900"
@@ -177,9 +173,9 @@ function Hero() {
             <span className="text-blue">International Recruitment</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">
-            Ozone Overseas Consultants is a Government of India MEA-licensed recruitment partner
-            delivering end-to-end workforce solutions — sourcing, screening, documentation, visa and
-            deployment — for verified employers across the GCC.
+            Ozone Overseas is a Government of India MEA-licensed recruitment partner delivering
+            end-to-end workforce solutions — sourcing, screening, documentation, visa and deployment
+            — for verified employers across the GCC.
           </p>
 
           {/* USP row */}
@@ -226,7 +222,7 @@ function Hero() {
           <div className="absolute left-2 top-6 h-[360px] w-[78%] overflow-hidden rounded-[28px] ring-4 ring-blue/30 shadow-[0_30px_60px_-20px_rgba(30,77,140,0.55)]">
             <img
               src={hero}
-              alt="Ozone Overseas Consultants recruitment consultant"
+              alt="Ozone Overseas recruitment consultant"
               className="h-full w-full object-cover"
               width={800}
               height={960}
@@ -259,54 +255,51 @@ function Hero() {
 
 /* ---------- 3. trusted strip ---------- */
 
+const EMPLOYERS = [
+  { name: "Avicen Pharmaceuticals", country: "Oman" },
+  { name: "Al Salam Hospital", country: "Kuwait" },
+  { name: "Alorf Hospital", country: "Kuwait" },
+  { name: "Al-Serkel", country: "UAE" },
+  { name: "Safeline", country: "Oman" },
+  { name: "Rafif General Trading and Contracting Company", country: "Kuwait" },
+];
+
 function TrustedStrip() {
-  const logos = [
-    "Apollo",
-    "NMC Royal",
-    "Cleveland",
-    "Aster DM",
-    "Burjeel",
-    "Mediclinic",
-    "SEHA",
-    "KIMS",
-    "Avicen",
-    "Al Salam Hospital",
-    "Alorf Hospital",
-  ];
+  // 4 copies so the line always fills wide screens; the animation moves exactly 2 copies for a seamless loop
+  const track = [...EMPLOYERS, ...EMPLOYERS, ...EMPLOYERS, ...EMPLOYERS];
+
   return (
-    <section className="px-6">
-      <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-[40px] bg-blue-wash px-8 py-10">
-          <Blob
-            className="absolute -top-20 -left-16 h-56 w-56 opacity-70"
-            color="var(--blue-soft)"
-          />
-          <DotGrid className="absolute top-4 right-6 h-16 w-24 opacity-80" />
-          <svg
-            viewBox="0 0 1200 100"
-            className="absolute inset-x-0 bottom-0 text-blue-soft opacity-60"
-            preserveAspectRatio="none"
-            aria-hidden
-          >
-            <path
-              d="M0,60 C200,20 400,90 600,50 C800,10 1000,80 1200,40 L1200,100 L0,100 Z"
-              fill="currentColor"
-            />
-          </svg>
-          <p className="relative text-center text-sm font-semibold uppercase tracking-widest text-blue">
-            Trusted by Leading Employers Across the Globe
-          </p>
-          <div className="relative mt-6 grid grid-cols-2 items-center gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
-            {logos.map((l) => (
-              <div
-                key={l}
-                className="text-center font-display text-lg font-bold text-navy/70 hover:text-navy transition"
-              >
-                {l}
-              </div>
-            ))}
-          </div>
-        </div>
+    <section className="w-full border-y border-border bg-blue-wash py-5">
+      <style>{`
+        @keyframes trusted-scroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        .trusted-track { animation: trusted-scroll 45s linear infinite; }
+        .trusted-wrap:hover .trusted-track { animation-play-state: paused; }
+        @media (prefers-reduced-motion: reduce) {
+          .trusted-track { animation: none; }
+        }
+      `}</style>
+
+      <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-blue">
+        Trusted by Leading Employers Across the Globe
+      </p>
+
+      <div className="trusted-wrap relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <ul className="trusted-track flex w-max items-center">
+          {track.map((e, i) => (
+            <li
+              key={i}
+              aria-hidden={i >= EMPLOYERS.length}
+              className="flex shrink-0 items-center gap-2 whitespace-nowrap pl-10 pr-2 text-sm"
+            >
+              <span className="font-display font-semibold text-navy/80">{e.name}</span>
+              <span className="text-xs font-medium text-blue">{e.country}</span>
+              <span className="ml-8 h-1.5 w-1.5 rounded-full bg-blue/40" aria-hidden />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -600,7 +593,7 @@ function Industries() {
             Industries We <span className="text-blue">Serve</span>
           </h2>
           <p className="max-w-md text-ink">
-            Decades of deep specialization across the sectors driving the GCC.
+            Decades of deep specialization across the sectors driving global hiring.
           </p>
         </div>
 
@@ -609,26 +602,26 @@ function Industries() {
           <IndustryCard
             n="01."
             title="Healthcare & Nursing"
-            text="ICU, OT, ward & specialty roles for hospital groups across UAE, KSA, Qatar."
+            text="ICU, OT, ward & specialty roles for hospital groups across the Globe."
             icon={<Stethoscope className="h-6 w-6" />}
             variant="dark"
           />
-          {/* blue */}
-          <IndustryCard
-            n="02."
-            title="Engineering & Technical"
-            text="Civil, mechanical, electrical and biomedical talent for major projects."
-            icon={<Wrench className="h-6 w-6" />}
-            variant="blue"
-          />
           {/* photo */}
           <IndustryCard
-            n="03."
-            title="Hospitality & Construction"
-            text="Skilled crews for hotels, restaurants and high-rise developments."
+            n="02."
+            title="Engineering & Construction"
+            text="Civil, mechanical, electrical and biomedical engineers and site crews for major projects."
             icon={<HardHat className="h-6 w-6" />}
             variant="photo"
             image={industryConstruction}
+          />
+          {/* blue */}
+          <IndustryCard
+            n="03."
+            title="Hospitality, Retail & Logistics"
+            text="Skilled teams for hotels, retail chains and logistics operations."
+            icon={<Hotel className="h-6 w-6" />}
+            variant="blue"
           />
         </div>
       </div>
@@ -1154,10 +1147,10 @@ function CTA() {
           </div>
           <div className="mt-8 flex flex-wrap gap-6 text-sm text-navy">
             <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-blue" /> +91 4843513302, 8086066611
+              <Phone className="h-4 w-4 text-blue" /> +91 80 4567 8900
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-blue" /> info@ozoneoverseas.in
+              <Mail className="h-4 w-4 text-blue" /> hello@ozoneoverseas.in
             </div>
           </div>
         </div>
@@ -1174,12 +1167,10 @@ function TrustCredibility() {
   const stats = [
     { icon: Landmark, n: "MEA", l: "Govt. of India Licensed", sub: "Recruitment Licence" },
     { icon: Award, n: "15+", l: "Years of Experience", sub: "Since 2009" },
-
-    { icon: MapPin, n: "20+", l: "Countries Served Across the Globe", sub: "Global Markets" },
-    { icon: Users, n: "10,000+", l: "Candidates Deployed", sub: "Successfully placed" },
-
+    { icon: MapPin, n: "10+", l: "Countries Served", sub: "GCC & beyond" },
+    { icon: Users, n: "5,000+", l: "Candidates Deployed", sub: "Successfully placed" },
     { icon: Building2, n: "200+", l: "Global Employer Network", sub: "Verified partners" },
-    { icon: Briefcase, n: "25+", l: "Sectors Served", sub: "Healthcare to Engineering" },
+    { icon: Briefcase, n: "12+", l: "Industry Sectors Served", sub: "Healthcare to Energy" },
   ];
   return (
     <section className="relative overflow-hidden px-6 py-20">
@@ -1258,7 +1249,7 @@ function QualityAssurance() {
     {
       icon: Languages,
       t: "Language Training Support",
-      d: "English, Arabic and German language training support for client-facing roles.",
+      d: "English and Arabic support for client-facing roles.",
     },
     {
       icon: GraduationCap,

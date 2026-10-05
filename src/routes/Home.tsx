@@ -322,7 +322,7 @@ function Hero() {
 function TrustStats() {
   const stats = [
     { icon: Users, l: "Candidates Placed", n: "5,000+" },
-    { icon: Wallet, l: "Candidate Support", n: "₹0" },
+
     { icon: BadgeCheck, l: "Visa Success Rate 2024", n: "94%" },
   ];
   return (
@@ -454,7 +454,7 @@ function Services() {
       variant: "blue" as const,
       icon: Wallet,
       t: "Candidate-Focused Support",
-      d: "Employers pay us — not you. Our candidate support policy is written directly into your offer letter, so it is contractual, not a promise.",
+      d: "Our candidate support policy is written directly into your offer letter, so it is contractual, not a promise.",
     },
     {
       n: "03",
@@ -843,7 +843,7 @@ function Destinations() {
           {[
             "MOH / DHA / SCFHS Approved · Direct portal access",
             "Govt. Licensed · B-1934/KER/PART/1000+/5/10386/2023",
-            "Ethical Recruitment · IRIS Signatory",
+            "Ethical Recruitment",
           ].map((t) => (
             <div
               key={t}
@@ -866,7 +866,7 @@ function FAQ() {
   const qs = [
     {
       q: "How long does the full process usually take?",
-      a: "Most placements land between 8 and 14 weeks, depending on country and licensing exam calendars. Your tracker gives you a week-by-week ETA the day you apply.",
+      a: "Most placements land between 8 and 12 weeks, depending on country and licensing exam calendars. Your tracker gives you a week-by-week ETA the day you apply.",
     },
     {
       q: "What documents do I need to start?",
@@ -878,7 +878,7 @@ function FAQ() {
     },
     {
       q: "What happens if my visa is rejected?",
-      a: "We re-file at no cost and place you on the next matching mandate. Our 94% first-pass approval rate means it is rare — but the safety net is contractual.",
+      a: "We re-file and place you on the next matching mandate. Our 94% first-pass approval rate means it is rare — but the safety net is contractual.",
     },
     {
       q: "Can I speak to someone before applying?",

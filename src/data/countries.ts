@@ -211,7 +211,7 @@ export const countries: Country[] = [
       },
       {
         q: "How long does the Kuwait deployment process usually take?",
-        a: "From offer to boarding, most healthcare placements complete in 8–12 weeks. Construction and technical categories vary with GAMCA slot availability.",
+        a: "From offer to boarding, most healthcare placements complete in 6-8 weeks. Construction and technical categories vary with GAMCA slot availability.",
       },
       {
         q: "Do I pay any fees to Ozone Overseas Consultants?",
@@ -361,7 +361,7 @@ export const countries: Country[] = [
       { title: "Hotel Staff", icon: "Hotel" },
     ],
     stats: [
-      { value: "900+", label: "Qatar placements since 2018" },
+      { value: "2000+", label: "Qatar placements since 2018" },
       { value: "100%", label: "WPS-compliant employer roster" },
       { value: "QVC", label: "In-India medicals & biometrics" },
       { value: "2 yrs", label: "Standard renewable contract" },
@@ -369,23 +369,18 @@ export const countries: Country[] = [
     salaryTable: [
       {
         role: "Registered Nurse (HMC / private)",
-        range: "QAR 6,500 – 9,500 / month",
+        range: "OMR 4,500–6,500 / month",
         benefits: "Accommodation, transport, ticket, medical",
       },
       {
         role: "Electrician (industrial)",
-        range: "QAR 2,200 – 3,800 / month",
+        range: "OMR 1,500 – 3,800 / month",
         benefits: "Camp, food allowance, overtime, ticket",
       },
       {
         role: "HVAC Technician",
-        range: "QAR 2,400 – 4,200 / month",
+        range: "OMR 2,400 – 4,200 / month",
         benefits: "Camp accommodation, transport, overtime",
-      },
-      {
-        role: "Hotel Staff (4/5-star)",
-        range: "QAR 1,800 – 3,500 / month",
-        benefits: "Duty meals, shared room, service charge, tips",
       },
     ],
     lifeInCountry:
