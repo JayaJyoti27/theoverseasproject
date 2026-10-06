@@ -861,7 +861,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Interview Preparation",
-        desc: "Mock interviews with coordinator feedback, common employer questions, how to present interview-ready.",
+        desc: "Mock interviews for healthcare, engineering and technical candidates, with coordinator feedback and common employer questions.",
       },
       {
         title: "Documentation Walkthrough",
@@ -900,7 +900,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Interview Reps",
-        desc: "Mock interviews with real-time coordinator feedback.",
+        desc: "Mock interviews for healthcare, engineering and technical candidates, with real-time coordinator feedback.",
         tag: "Session 2",
       },
       {
@@ -928,7 +928,7 @@ export const services: Record<string, ServiceData> = {
     headline1: "Interview Like You've",
     headline2: "Done It Before.",
     subtext:
-      "Coordinator-led mock interviews tailored to your target role and employer — for healthcare, engineering and technical roles. Hospital and site-based interview formats, role-specific clinical and technical questions, and real-time feedback.",
+      "Mock interviews are conducted for healthcare, engineering and technical candidates to help ensure candidates are properly prepared before attending employer interviews. Coordinator-led, role-specific, with real-time feedback.",
     primaryCta: "Book a Mock Interview",
     secondaryCta: "Chat on WhatsApp",
     heroStats: [
@@ -941,15 +941,15 @@ export const services: Record<string, ServiceData> = {
       { value: "Verified", label: "Companies" },
       { value: "48hr", label: "Feedback Turnaround" },
     ],
-    badge: "Coordinator-Led",
+    badge: "Healthcare · Engineering · Technical",
     photo: P.interview,
     photoAlt: "Coaching interview session",
     includedHeading: "Role-Specific. Employer-Specific. Repeatable.",
     includedSubline: "The interview reps most candidates skip — and the ones we insist you do.",
     features: [
       {
-        title: "Role-Specific Questions",
-        desc: "Mock interviews built around your exact role — ICU nurse, civil engineer, HVAC technician and electrician interviews each test different things.",
+        title: "Healthcare, Engineering & Technical",
+        desc: "Mock interviews for nurses and allied health, plus engineers and technical candidates — built around your exact role, from ICU nurse to civil engineer, HVAC technician or electrician.",
       },
       {
         title: "Employer Interview Formats",
@@ -968,7 +968,7 @@ export const services: Record<string, ServiceData> = {
       {
         eyebrow: "First-Time Applicants",
         heading: "Know What to Expect",
-        desc: "Hospital and engineering interviews are structured differently — we prepare you for exactly that.",
+        desc: "Clinical, engineering and technical interviews are structured differently — we prepare you for exactly the one you face.",
         cta: "Book Mock Interview",
         href: "/candidate",
         photo: P.interview,
@@ -997,7 +997,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Mock Interview",
-        desc: "Coordinator-led session in hospital or technical interview format.",
+        desc: "Coordinator-led session in a clinical, engineering or technical interview format.",
         tag: "Session",
       },
       {
