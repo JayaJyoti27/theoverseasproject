@@ -24,8 +24,8 @@ const columns: { title: string; wide?: boolean; links: { label: string; to?: str
     title: "Company",
     links: [
       { label: "About", to: "/about" },
-      { label: "Careers" },
-      { label: "Press" },
+      { label: "Careers", to: "/contact" },
+      { label: "Press", to: "/contact" },
       { label: "Contact", to: "/contact" },
     ],
   },
@@ -224,9 +224,9 @@ export function Footer() {
                 Privacy Policy
               </Link>
               <span className="text-white/25">·</span>
-              <a href="#" className="hover:text-white">
+              <Link to="/privacypolicy" className="hover:text-white">
                 Terms &amp; Conditions
-              </a>
+              </Link>
               <span className="text-white/25">·</span>
               <span>© 2025 Ozone Overseas Consultants Pvt. Ltd.</span>
             </div>

@@ -834,7 +834,7 @@ function Destinations() {
           ))}
         </div>
         <div className="mt-4 text-center">
-          <a href="#" className="text-sm font-semibold text-blue hover:text-navy">
+          <a href="/jobs" className="text-sm font-semibold text-blue hover:text-navy">
             Explore All Openings →
           </a>
         </div>
@@ -959,7 +959,9 @@ function FinalCTA() {
               Browse Open Roles <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#"
+              href="https://wa.me/918086066611"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border-2 border-emerald-600 px-6 py-3 text-sm font-semibold text-emerald-700 hover:bg-emerald-600 hover:text-white transition"
             >
               <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
@@ -985,6 +987,26 @@ function FinalCTA() {
 }
 
 /* ---------- footer ---------- */
+const footerLinks: Record<string, string> = {
+  "Browse Jobs": "/jobs",
+  "How to Apply": "/For-Candidates",
+  Documentation: "/Services/Documentation",
+  "Pre-Departure": "/Services/Training",
+  "Post a Mandate": "/employers",
+  "Hiring Process": "/employers",
+  Industries: "/employers",
+  "Case Studies": "/employers",
+  "About Ozone": "/about",
+  "MEA License": "/about",
+  Careers: "/contact",
+  Contact: "/contact",
+  "Healthcare & Nursing": "/Services/Healthcare-rec",
+  "Engineering & Construction": "/Services/Technical-rec",
+  Hospitality: "/employers",
+  Retail: "/employers",
+  Logistics: "/employers",
+};
+
 function Footer() {
   const cols = {
     Candidates: ["Browse Jobs", "How to Apply", "Documentation", "Pre-Departure"],
@@ -1028,7 +1050,7 @@ function Footer() {
                 <ul className="mt-4 space-y-2.5 text-sm text-white/80">
                   {v.map((i) => (
                     <li key={i}>
-                      <a href="#" className="hover:text-white">
+                      <a href={footerLinks[i] ?? "/"} className="hover:text-white">
                         {i}
                       </a>
                     </li>

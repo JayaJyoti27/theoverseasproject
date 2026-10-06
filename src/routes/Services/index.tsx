@@ -34,6 +34,21 @@ const grouped = [
   },
 ];
 
+const servicePaths: Record<string, string> = {
+  "healthcare-recruitment": "/Services/Healthcare-rec",
+  "for-nurses": "/Services/Nurses",
+  "for-doctors": "/Services/Doctors",
+  "for-paramedical-technicians": "/Services/ParaMedical-tech",
+  "technical-recruitment": "/Services/Technical-rec",
+  "nursing-recruitment": "/Services/Nursing-rec",
+  "prometric-coaching": "/Services/Prometric-coaching",
+  "mock-interviews": "/Services/Mock-Interviews",
+  "grooming-sessions": "/Services/Grooming",
+  training: "/Services/Training",
+  "visa-services": "/Services/Visa",
+  documentation: "/Services/Documentation",
+};
+
 function Index() {
   return (
     <div className="bg-background min-h-screen">
@@ -107,7 +122,7 @@ function Index() {
                     return (
                       <Link
                         key={slug}
-                        to={`/services/${slug}` as string}
+                        to={servicePaths[slug] ?? "/Services"}
                         className="group relative rounded-2xl border border-border bg-white p-6 hover:border-blue transition shadow-[0_4px_20px_-14px_rgba(11,31,58,0.15)] hover:shadow-soft"
                       >
                         <div className="text-[10px] font-semibold uppercase tracking-[0.14em] text-blue">
