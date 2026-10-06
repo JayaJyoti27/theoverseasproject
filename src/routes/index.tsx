@@ -9,6 +9,8 @@ import {
   Stethoscope,
   HardHat,
   Hotel,
+  ShoppingBag,
+  Truck,
   Quote,
   Plane,
   FileCheck2,
@@ -53,7 +55,9 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ozone Overseas Consultants — MEA-Licensed Global Recruitment & Workforce Solutions" },
+      {
+        title: "Ozone Overseas Consultants — MEA-Licensed Global Recruitment & Workforce Solutions",
+      },
       {
         name: "description",
         content:
@@ -62,7 +66,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Ozone Overseas Consultants — Global Recruitment" },
       {
         property: "og:description",
-        content: "MEA-licensed bridge between top Indian talent and verified employers across the globe.",
+        content:
+          "MEA-licensed bridge between top Indian talent and verified employers across the globe.",
       },
     ],
   }),
@@ -116,7 +121,7 @@ function Home() {
       <TrustedStrip />
       <WhyTrustUs />
       <WhyChoose />
-      <LiveJobs />
+
       <Industries />
       <Destinations />
       <MatchEngine />
@@ -174,9 +179,9 @@ function Hero() {
             <span className="text-blue">International Recruitment</span>
           </h1>
           <p className="mt-4 max-w-xl text-base text-ink md:text-lg">
-            Ozone Overseas Consultants is a Government of India MEA-licensed recruitment partner delivering
-            end-to-end workforce solutions — sourcing, screening, documentation, visa and deployment
-            — for verified employers across the globe.
+            Ozone Overseas Consultants is a Government of India MEA-licensed recruitment partner
+            delivering end-to-end workforce solutions — sourcing, screening, documentation, visa and
+            deployment — for verified employers across the globe.
           </p>
 
           {/* USP row */}
@@ -197,7 +202,7 @@ function Hero() {
 
           <div className="mt-5 flex flex-wrap gap-3">
             <a
-              href="/Login"
+              href="/employer"
               className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-blue transition"
             >
               Hire Talent <ArrowRight className="h-4 w-4" />
@@ -213,12 +218,6 @@ function Hero() {
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue ring-1 ring-blue/40 hover:ring-blue transition"
             >
               New User? Register <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy ring-1 ring-border hover:ring-blue transition"
-            >
-              Contact Us <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -604,17 +603,19 @@ function Industries() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
-          {/* navy */}
+        <div className="grid gap-5 md:grid-cols-6">
           <IndustryCard
+            className="md:col-span-2"
+            href="/Services/Healthcare-rec"
             n="01."
             title="Healthcare & Nursing"
             text="ICU, OT, ward & specialty roles for hospital groups across the Globe."
             icon={<Stethoscope className="h-6 w-6" />}
             variant="dark"
           />
-          {/* photo */}
           <IndustryCard
+            className="md:col-span-2"
+            href="/Services/Technical-rec"
             n="02."
             title="Engineering & Construction"
             text="Civil, mechanical, electrical and biomedical engineers and site crews for major projects."
@@ -622,12 +623,31 @@ function Industries() {
             variant="photo"
             image={industryConstruction}
           />
-          {/* blue */}
           <IndustryCard
+            className="md:col-span-2"
+            href="/employers"
             n="03."
-            title="Hospitality, Retail & Logistics"
-            text="Skilled teams for hotels, retail chains and logistics operations."
+            title="Hospitality"
+            text="Skilled teams for hotels, resorts and food & beverage operations."
             icon={<Hotel className="h-6 w-6" />}
+            variant="blue"
+          />
+          <IndustryCard
+            className="md:col-span-3"
+            href="/employers"
+            n="04."
+            title="Retail"
+            text="Store, sales and supply-side staff for retail chains and malls."
+            icon={<ShoppingBag className="h-6 w-6" />}
+            variant="dark"
+          />
+          <IndustryCard
+            className="md:col-span-3"
+            href="/employers"
+            n="05."
+            title="Logistics"
+            text="Warehouse, transport and supply-chain teams for logistics operations."
+            icon={<Truck className="h-6 w-6" />}
             variant="blue"
           />
         </div>
@@ -643,7 +663,11 @@ function IndustryCard({
   icon,
   variant,
   image,
+  href = "#",
+  className = "",
 }: {
+  href?: string;
+  className?: string;
   n: string;
   title: string;
   text: string;
@@ -658,7 +682,7 @@ function IndustryCard({
   }[variant];
   return (
     <article
-      className={`relative flex h-[460px] flex-col justify-between overflow-hidden rounded-[28px] p-7 ${styles}`}
+      className={`relative flex h-[460px] flex-col justify-between overflow-hidden rounded-[28px] p-7 ${styles} ${className}`}
     >
       {variant === "photo" && image && (
         <>
@@ -679,7 +703,7 @@ function IndustryCard({
         <h3 className="font-display text-2xl font-bold leading-tight">{title}</h3>
         <p className="mt-3 text-sm opacity-85">{text}</p>
         <div className="mt-6 flex items-center justify-between">
-          <a href="#" className="text-sm font-semibold underline-offset-4 hover:underline">
+          <a href={href} className="text-sm font-semibold underline-offset-4 hover:underline">
             Explore
           </a>
           <span className="grid h-11 w-11 place-items-center rounded-full bg-white/15 ring-1 ring-white/30">
@@ -716,9 +740,7 @@ function Destinations() {
   return (
     <section className="bg-white px-6 py-20">
       <div className="mx-auto max-w-7xl text-center">
-        <div className="text-xs font-bold uppercase tracking-[0.24em] text-blue">
-          Destinations
-        </div>
+        <div className="text-xs font-bold uppercase tracking-[0.24em] text-blue">Destinations</div>
         <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">
           Global Recruitment &amp; Workforce Solutions
         </h2>
@@ -1211,14 +1233,6 @@ function CTA() {
               Apply Now <ArrowRight className="h-4 w-4" />
             </a>
           </div>
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-navy">
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-blue" /> +91 80 4567 8900
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-blue" /> hello@ozoneoverseas.in
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -1310,7 +1324,7 @@ function QualityAssurance() {
     {
       icon: Users,
       t: "Interview Preparation & Grooming",
-      d: "Coaching and mock interviews before employer rounds.",
+      d: "Coaching and mock interviews for healthcare, engineering and technical candidates before employer rounds.",
     },
     {
       icon: Languages,

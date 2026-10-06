@@ -753,7 +753,7 @@ function QualityAssurance() {
     {
       i: MessageSquare,
       t: "Interview Preparation",
-      d: "Mock interviews with employer-specific formats.",
+      d: "Mock interviews for healthcare, engineering and technical candidates, in employer-specific formats.",
     },
     {
       i: Star,

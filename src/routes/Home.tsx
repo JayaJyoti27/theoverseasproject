@@ -990,7 +990,7 @@ function Footer() {
     Candidates: ["Browse Jobs", "How to Apply", "Documentation", "Pre-Departure"],
     Employers: ["Post a Mandate", "Hiring Process", "Industries", "Case Studies"],
     Company: ["About Ozone", "MEA License", "Careers", "Contact"],
-    Sectors: ["Healthcare", "Engineering", "Hospitality", "Construction"],
+    Sectors: ["Healthcare & Nursing", "Engineering & Construction", "Hospitality", "Retail", "Logistics"],
   };
   return (
     <footer className="relative bg-navy text-white">

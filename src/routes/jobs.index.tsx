@@ -14,7 +14,7 @@ function PublicJobsPage() {
   return (
     <PublicJobsLayout
       title="Browse Jobs"
-      subtitle="Explore open roles across the Gulf. No account needed to browse — sign in when you're ready to apply."
+      subtitle="Explore open roles across the globe. No account needed to browse — sign in when you're ready to apply."
     >
       <JobsBrowser />
     </PublicJobsLayout>

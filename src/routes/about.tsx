@@ -831,7 +831,7 @@ function Credentials() {
               MOH · DHA · SCFHS · QCHP Approved
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-[color:var(--muted-foreground)]">
-              Direct portal access across all major GCC licensing bodies. Documentation is processed
+              Direct portal access across major licensing bodies worldwide. Documentation is processed
               entirely in-house.
             </p>
           </article>
