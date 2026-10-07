@@ -2,9 +2,10 @@ import type { Country, JobCategory } from "./countries";
 
 /**
  * Destination pages beyond the five core GCC countries.
- * These intentionally have no stats, salary tables, testimonials, gallery or hero photo:
- * add them per country only once real, verified figures/images are available.
- * The layout skips any section whose data is missing.
+ * Stats here are the company-wide, client-verified figures (not per-country numbers).
+ * Salary tables, testimonials and gallery are left out until real, verified data exists.
+ * Hero photo: add `heroImageUrl`, or drop a licensed photo at public/countries/<slug>.jpg.
+ * The layout skips any section whose data is missing and shows a flag card if no photo loads.
  */
 
 const COMMON_DOCS = [
@@ -48,6 +49,12 @@ const make = (c: Input): Country => ({
   tagline: c.tagline,
   intro: c.intro,
   jobCategories: c.jobs.map(([title, icon]) => ({ title, icon })),
+  stats: [
+    { value: "10,000+", label: "Candidates deployed across the globe" },
+    { value: "20+", label: "Countries served" },
+    { value: String(c.jobs.length), label: `Role categories we recruit for in ${c.name}` },
+    { value: "EN · AR · DE", label: "Language training available" },
+  ],
   lifeInCountry: c.life,
   visaNotes: c.visaNotes,
   visaHandled: COMMON_HANDLED,

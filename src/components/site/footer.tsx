@@ -228,7 +228,7 @@ export function Footer() {
                 Terms &amp; Conditions
               </Link>
               <span className="text-white/25">·</span>
-              <span>© 2025 Ozone Overseas Consultants Pvt. Ltd.</span>
+              <span>© {new Date().getFullYear()} Ozone Overseas Consultants Pvt. Ltd.</span>
             </div>
           </div>
         </div>

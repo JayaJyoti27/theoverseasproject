@@ -71,7 +71,7 @@ export const PROCESS_STEPS: { title: string; description: string }[] = [
   {
     title: "Visa stamping & pre-departure",
     description:
-      "Work-permit lodged, visa stamped, e-Migrate clearance filed. You attend our free orientation covering culture, rights, WPS, and grievance channels.",
+      "Work-permit lodged, visa stamped, e-Migrate clearance filed. You attend our pre-departure orientation covering culture, rights, WPS, and grievance channels.",
   },
   {
     title: "Departure & post-arrival care",
@@ -243,7 +243,7 @@ const coreCountries: Country[] = [
     stats: [
       { value: "3,400+", label: "KSA placements to date" },
       { value: "70+", label: "SCFHS-verified hospitals partnered" },
-      { value: "6-12 wks", label: "Typical time from offer to Iqama" },
+      { value: "6–12 wks", label: "Deployment Timeline" },
       { value: "24/7", label: "Riyadh liaison desk support" },
     ],
     salaryTable: [
@@ -363,7 +363,7 @@ const coreCountries: Country[] = [
       { title: "Hotel Staff", icon: "Hotel" },
     ],
     stats: [
-      { value: "2000+", label: "Qatar placements since 2018" },
+      { value: "2,000+", label: "Qatar placements since 2018" },
       { value: "100%", label: "WPS-compliant employer roster" },
       { value: "QVC", label: "In-India medicals & biometrics" },
       { value: "2 yrs", label: "Standard renewable contract" },
@@ -376,12 +376,12 @@ const coreCountries: Country[] = [
       },
       {
         role: "Electrician (industrial)",
-        range: "QAR 1,500 – 3,000 / month",
+        range: "QAR 1,500–3,000 / month",
         benefits: "Camp, food allowance, overtime, ticket",
       },
       {
         role: "HVAC Technician",
-        range: "QAR 2,000 – 4,000 / month",
+        range: "QAR 2,000–4,000 / month",
         benefits: "Camp accommodation, transport, overtime",
       },
     ],
@@ -474,25 +474,25 @@ const coreCountries: Country[] = [
       { title: "Mechanical Technicians", icon: "Cog" },
     ],
     stats: [
-      { value: "3000+", label: "Oman deployments since 2016" },
+      { value: "3,000+", label: "Oman deployments since 2016" },
       { value: "Sohar · Duqm", label: "Active industrial corridors" },
-      { value: "3-12 Wks", label: "Deployment Timeline" },
+      { value: "3–12 wks", label: "Deployment Timeline" },
       { value: "48 hrs", label: "Post-arrival check-in window" },
     ],
     salaryTable: [
       {
         role: "Registered Nurse (MoH / Royal Hospital)",
-        range: "OMR 4,500 – 6,500 / month",
+        range: "OMR 450 – 650 / month",
         benefits: "Accommodation, transport, ticket, medical",
       },
       {
-        role: "HVAC Technician ",
-        range: "OMR 2,000 - 4,000 / month",
+        role: "HVAC Technician",
+        range: "OMR 200 – 400 / month",
         benefits: "Camp, food, PPE, overtime, rotation ticket",
       },
       {
         role: "Electrical Technician",
-        range: "OMR 1,500 - 3,000 / month",
+        range: "OMR 150 – 300 / month",
         benefits: "Camp accommodation, meals, transport",
       },
     ],

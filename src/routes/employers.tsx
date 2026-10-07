@@ -344,7 +344,7 @@ function Process() {
             </span>
             <h2 className="mt-5 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.05] tracking-tight text-[color:var(--navy)] sm:text-5xl">
               Requirement to Onboarding, in{" "}
-              <span className="text-[color:var(--brand)]">6–8 Weeks.</span>
+              <span className="text-[color:var(--brand)]">8–12 Weeks.</span>
             </h2>
             <p className="mt-5 max-w-md text-[16px] leading-relaxed text-[color:var(--muted-foreground)]">
               A transparent pipeline. You'll always know exactly how many candidates are in motion

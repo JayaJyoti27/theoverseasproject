@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import * as FlagStrings from "country-flag-icons/string/1x1";
 import {
   Stethoscope,
   HeartPulse,
@@ -138,6 +140,62 @@ export function CountryPageLayout({ country }: { country: Country }) {
   );
 }
 
+
+/* slug -> ISO code, used for the designed fallback hero (flag) */
+const COUNTRY_ISO: Record<string, string> = {
+  kuwait: "KW", "saudi-arabia": "SA", qatar: "QA", oman: "OM", uae: "AE",
+  malaysia: "MY", singapore: "SG", maldives: "MV", germany: "DE", australia: "AU",
+  africa: "ZA", croatia: "HR", latvia: "LV", romania: "RO", italy: "IT",
+  israel: "IL", iraq: "IQ", uk: "GB", russia: "RU", canada: "CA", hungary: "HU",
+};
+
+function flagDataUri(slug: string): string | null {
+  const code = COUNTRY_ISO[slug];
+  const svg = code ? (FlagStrings as Record<string, string>)[code] : undefined;
+  return svg ? `data:image/svg+xml;utf8,${encodeURIComponent(svg)}` : null;
+}
+
+/**
+ * Hero photo. Uses country.heroImageUrl, else /countries/<slug>.jpg (drop a licensed
+ * photo into public/countries/). If the image is missing or fails to load, shows a
+ * designed flag card instead of an empty box or broken-image icon.
+ */
+function HeroImage({ country }: { country: Country }) {
+  const [failed, setFailed] = useState(false);
+  const src = country.heroImageUrl ?? `/countries/${country.slug}.jpg`;
+  const flag = flagDataUri(country.slug);
+  if (!failed) {
+    return (
+      <img
+        src={src}
+        alt={`${country.name} — ${country.heroImageKeywords}`}
+        className="h-full w-full object-cover"
+        loading="eager"
+        onError={() => setFailed(true)}
+      />
+    );
+  }
+  return (
+    <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy to-blue p-8 text-center">
+      <div>
+        {flag ? (
+          <img
+            src={flag}
+            alt=""
+            className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-white/30"
+          />
+        ) : (
+          <MapPin className="mx-auto h-10 w-10 text-blue-soft" />
+        )}
+        <div className="mt-4 font-display text-3xl font-bold text-white">{country.name}</div>
+        <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-blue-soft">
+          Ozone Overseas Consultants
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------- 1. hero ---------- */
 
 function Hero({ country }: { country: Country }) {
@@ -199,23 +257,7 @@ function Hero({ country }: { country: Country }) {
         <div className="relative mx-auto h-[380px] w-full max-w-[480px] lg:h-[440px]">
           <DotGrid className="absolute top-0 right-0 h-20 w-20" />
           <div className="absolute left-2 top-4 h-full w-[86%] overflow-hidden rounded-[28px] ring-4 ring-blue/25 shadow-[0_30px_60px_-20px_rgba(30,77,140,0.5)]">
-            {country.heroImageUrl ? (
-              <img
-                src={country.heroImageUrl}
-                alt={`${country.name} — ${country.heroImageKeywords}`}
-                className="h-full w-full object-cover"
-                loading="eager"
-              />
-            ) : (
-              <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy to-blue p-8 text-center">
-                <div>
-                  <MapPin className="mx-auto h-10 w-10 text-blue-soft" />
-                  <div className="mt-3 font-display text-3xl font-bold text-white">
-                    {country.name}
-                  </div>
-                </div>
-              </div>
-            )}
+            <HeroImage country={country} />
           </div>
           <DotGrid className="absolute -bottom-2 -left-2 h-16 w-16 opacity-80" />
         </div>
@@ -561,12 +603,28 @@ function LifeInCountry({ country }: { country: Country }) {
             <p className="mt-5 text-ink">{country.lifeInCountry}</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
+            {!country.gallery?.length &&
+              [
+                ...country.visaHandled.slice(0, 3),
+                "Language training available: English, Arabic and German",
+              ].map((t) => (
+                <div
+                  key={t}
+                  className="flex items-start gap-3 rounded-[20px] border border-border bg-white p-4 shadow-[0_12px_30px_-24px_rgba(11,31,58,0.35)]"
+                >
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue" />
+                  <span className="text-sm text-ink">{t}</span>
+                </div>
+              ))}
             {(country.gallery ?? []).map((img, idx) => (
               <img
                 key={img.url + idx}
                 src={img.url}
                 alt={img.alt}
                 loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
                 className={`h-40 w-full rounded-[20px] object-cover shadow-[0_12px_30px_-20px_rgba(11,31,58,0.35)] md:h-48 ${
                   idx % 2 === 0 ? "md:translate-y-4" : ""
                 }`}

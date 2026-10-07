@@ -127,7 +127,7 @@ export const services: Record<string, ServiceData> = {
         photo: P.engineer,
       },
     ],
-    processHeading: "Requirement to Onboarding in 6–8 Weeks.",
+    processHeading: "Requirement to Onboarding in 8–12 Weeks.",
     processSubline:
       "A predictable, milestone-tracked pipeline from your first brief to their first shift.",
     steps: healthcareProcess,
@@ -199,7 +199,7 @@ export const services: Record<string, ServiceData> = {
         photo: P.nurseAbroad,
       },
     ],
-    processHeading: "Requirement to Onboarding in 6–8 Weeks.",
+    processHeading: "Requirement to Onboarding in 8–12 Weeks.",
     processSubline:
       "A predictable, milestone-tracked pipeline from your first brief to their first shift.",
     steps: healthcareProcess,
@@ -215,7 +215,7 @@ export const services: Record<string, ServiceData> = {
     breadcrumbLabel: "Paramedical Technicians",
     category: "Healthcare · Employer Service",
     headline1: "Biomedical, Radiology, Lab —",
-    headline2: "Placed in 8 Weeks.",
+    headline2: "Placed in 8–12 Weeks.",
     subtext:
       "Pre-screened paramedical and allied health technicians from India — verified for license eligibility and technical qualification authenticity before submission.",
     primaryCta: "Post a Requirement",
@@ -272,7 +272,7 @@ export const services: Record<string, ServiceData> = {
         photo: P.paramedic,
       },
     ],
-    processHeading: "Requirement to Onboarding in 6–8 Weeks.",
+    processHeading: "Requirement to Onboarding in 8–12 Weeks.",
     processSubline:
       "A predictable, milestone-tracked pipeline from your first brief to their first shift.",
     steps: healthcareProcess,
@@ -296,12 +296,12 @@ export const services: Record<string, ServiceData> = {
     heroStats: [
       { value: "500+", label: "Doctors Placed" },
       { value: "20+", label: "Specialties" },
-      { value: "6–10 wk", label: "Avg. Process" },
+      { value: "8–12 wk", label: "Avg. Process" },
     ],
     bandStats: [
       { value: "500+", label: "Doctors Placed" },
       { value: "20+", label: "Specialties" },
-      { value: "6–10 wk", label: "Avg. Process" },
+      { value: "8–12 wk", label: "Avg. Process" },
     ],
     badge: "MOH / DHA / HAAD Licensed",
     photo: P.doctor,
@@ -344,7 +344,7 @@ export const services: Record<string, ServiceData> = {
         photo: P.doctor,
       },
     ],
-    processHeading: "Requirement to Onboarding in 6–10 Weeks.",
+    processHeading: "Requirement to Onboarding in 8–12 Weeks.",
     processSubline:
       "A predictable, milestone-tracked pipeline from your first brief to their first shift.",
     steps: healthcareProcess,
@@ -417,7 +417,7 @@ export const services: Record<string, ServiceData> = {
         photo: P.engineer,
       },
     ],
-    processHeading: "Requirement to Onboarding in 6–8 Weeks.",
+    processHeading: "Requirement to Onboarding in 8–12 Weeks.",
     processSubline:
       "A predictable, milestone-tracked pipeline from your first brief to their first shift.",
     steps: healthcareProcess,
@@ -798,7 +798,7 @@ export const services: Record<string, ServiceData> = {
       },
     ],
     processHeading: "Coaching → Mocks → Clearance.",
-    processSubline: "A repeatable path most Ozone candidates finish in under 6 weeks.",
+    processSubline: "A repeatable path that fits the Weeks 1–4 Prometric stage of your Ozone journey.",
     steps: [
       {
         title: "Enrol",
@@ -807,18 +807,18 @@ export const services: Record<string, ServiceData> = {
       },
       {
         title: "Attend Live Sessions",
-        desc: "Weekly live classes + recordings for your target exam body.",
-        tag: "Weeks 1–4",
+        desc: "Online classes + recordings for your target exam body.",
+        tag: "Weeks 1–2",
       },
       {
         title: "Take Mock Exams",
         desc: "Full mock papers — scored and returned with feedback in 48 hours.",
-        tag: "Weeks 3–5",
+        tag: "Weeks 2–3",
       },
       {
         title: "Clear & Proceed",
-        desc: "Pass your Prometric — your visa process starts immediately after.",
-        tag: "Weeks 5–6",
+        desc: "Pass your Prometric — interview and offer follow.",
+        tag: "Weeks 3–4",
       },
     ],
     ctaHeading: "Ready to Pass Prometric First Time?",

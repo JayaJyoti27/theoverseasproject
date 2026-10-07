@@ -78,10 +78,10 @@ function Index() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               Ozone Overseas Consultants places pre-screened healthcare and technical professionals from India
-              into hospitals and employers worldwide — end-to-end, compliant, in 6–8 weeks.
+              into hospitals and employers worldwide — end-to-end, compliant, in 8–12 weeks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#post" className="btn-navy btn-navy-hover">
+              <a href="/Employer/register" className="btn-navy btn-navy-hover">
                 Post a Requirement
               </a>
               <Link to="/Services" className="btn-outline-blue btn-outline-blue-hover">

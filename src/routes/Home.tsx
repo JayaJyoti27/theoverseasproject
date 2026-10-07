@@ -280,7 +280,7 @@ function Hero() {
               <Check className="h-4 w-4 text-blue" /> MEA Licensed Since 2009
             </div>
             <div className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-blue" /> 20+ Countries · 32 Live Roles
+              <Check className="h-4 w-4 text-blue" /> 20+ Countries · Live Vacancies
             </div>
           </div>
         </div>
