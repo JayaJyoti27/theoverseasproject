@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useId } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 
@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 
 const CANDIDATE_SERVICES = [
   { label: "For Candidates", to: "/For-Candidates", desc: "Overview & how it works" },
-  { label: "Browse Jobs", to: "/jobs", desc: "42+ live roles across 20+ countries" },
+  { label: "Browse Jobs", to: "/jobs", desc: "Active vacancies across 20+ countries" },
   { label: "My Dashboard", to: "/candidate", desc: "Track applications & profile" },
   { label: "Nursing Careers", to: "/Services/Nursing-rec", desc: "ICU, OT, Staff Nurse & more" },
   {
@@ -37,7 +37,11 @@ const EMPLOYER_SERVICES = [
     to: "/Services/Healthcare-rec",
     desc: "Nurses, doctors, allied health",
   },
-  { label: "For Nurses", to: "/Services/Nurses", desc: "All nursing specialties, internationally licensed" },
+  {
+    label: "For Nurses",
+    to: "/Services/Nurses",
+    desc: "All nursing specialties, internationally licensed",
+  },
   { label: "For Doctors", to: "/Services/Doctors", desc: "All specialties, MOH/DHA/HAAD" },
   {
     label: "Paramedical Technicians",
@@ -90,6 +94,54 @@ const COMPANY_LINKS = [
 ];
 
 type DropdownKey = "countries" | "candidates" | "employers" | "admin" | "company" | null;
+
+// ─── Logo ─────────────────────────────────────────────────────────────────────
+
+function LogoMark({ className = "" }: { className?: string }) {
+  const gid = useId();
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="var(--navy)" />
+          <stop offset="100%" stopColor="var(--blue)" />
+        </linearGradient>
+      </defs>
+      <rect width="40" height="40" rx="12" fill={`url(#${gid})`} />
+      {/* the "O" */}
+      <circle cx="20" cy="20" r="9" fill="none" stroke="#fff" strokeWidth="3.2" />
+      {/* flight path leaving the O — "overseas" */}
+      <path
+        d="M5 28 C14 35, 29 29, 34.5 11.5"
+        fill="none"
+        stroke="var(--blue-soft)"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+      <circle cx="34.5" cy="11.5" r="2.6" fill="#fff" />
+    </svg>
+  );
+}
+
+function Logo() {
+  return (
+    <Link
+      to="/"
+      aria-label="Ozone Overseas Consultants — home"
+      className="group flex min-w-0 items-center gap-2.5"
+    >
+      <LogoMark className="h-9 w-9 shrink-0 drop-shadow-sm transition-transform duration-300 group-hover:rotate-[-8deg] group-hover:scale-105 sm:h-10 sm:w-10" />
+      <span className="flex min-w-0 flex-col leading-none">
+        <span className="font-display text-[19px] font-extrabold tracking-[0.14em] text-navy sm:text-[21px]">
+          OZONE
+        </span>
+        <span className="mt-1 truncate text-[8.5px] font-semibold uppercase tracking-[0.2em] text-blue sm:text-[10px] sm:tracking-[0.24em]">
+          Overseas Consultants
+        </span>
+      </span>
+    </Link>
+  );
+}
 
 // ─── Panels ───────────────────────────────────────────────────────────────────
 
@@ -253,15 +305,7 @@ export function Header() {
     <>
       <header className="sticky top-0 z-50 border-b border-blue/10 bg-background/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5">
-          <Link
-            to="/"
-            className="flex items-center gap-2 font-display text-[17px] font-bold text-navy"
-          >
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-navy text-navy-foreground text-sm">
-              O
-            </span>
-            Ozone <span className="text-blue ml-1">Overseas Consultants</span>
-          </Link>
+          <Logo />
 
           <nav className="hidden items-center gap-0.5 lg:flex">
             <DropdownTrigger
@@ -317,15 +361,6 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              href="https://wa.me/918086066611"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border-2 border-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp transition-colors hover:bg-whatsapp hover:text-white"
-            >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </a>
-            <a
               href="/candidate"
               className="flex items-center gap-2 rounded-full bg-blue px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy"
             >
@@ -364,7 +399,7 @@ export function Header() {
 
             <div className="p-3 space-y-0.5">
               <MobileLink to="/" label="Home" onClick={() => setMobileOpen(false)} />
-              <MobileLink to="/Jobs" label="Jobs" onClick={() => setMobileOpen(false)} />
+              <MobileLink to="/jobs" label="Jobs" onClick={() => setMobileOpen(false)} />
 
               <MobileGroup
                 label="Countries"
