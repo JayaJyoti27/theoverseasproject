@@ -258,7 +258,7 @@ function ContactPage() {
               title="I'm an Employer"
               body="Post a requirement. First pre-screened shortlist in 48 hours."
               cta="Post a Requirement"
-              href="/for-employers"
+              href="/employers"
               buttonStyle="navy"
             />
           </div>

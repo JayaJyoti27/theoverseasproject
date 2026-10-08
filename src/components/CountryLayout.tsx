@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import * as FlagStrings from "country-flag-icons/string/1x1";
 import {
   Stethoscope,
   HeartPulse,
@@ -138,6 +140,81 @@ export function CountryPageLayout({ country }: { country: Country }) {
   );
 }
 
+
+/* slug -> ISO code, used for the designed fallback hero (flag) */
+const COUNTRY_ISO: Record<string, string> = {
+  kuwait: "KW", "saudi-arabia": "SA", qatar: "QA", oman: "OM", uae: "AE",
+  malaysia: "MY", singapore: "SG", maldives: "MV", germany: "DE", australia: "AU",
+  africa: "ZA", croatia: "HR", latvia: "LV", romania: "RO", italy: "IT",
+  israel: "IL", iraq: "IQ", uk: "GB", russia: "RU", canada: "CA", hungary: "HU",
+};
+
+function flagDataUri(slug: string): string | null {
+  const code = COUNTRY_ISO[slug];
+  const svg = code ? (FlagStrings as Record<string, string>)[code] : undefined;
+  return svg ? `data:image/svg+xml;utf8,${encodeURIComponent(svg)}` : null;
+}
+
+const UNS = (id: string, w = 1400) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+/** Role-relevant workforce photos (used when a country has no landmark photo yet). */
+const SECTOR_PHOTOS = {
+  health: UNS("photo-1584515933487-779824d29309"),
+  industrial: UNS("photo-1581093588401-fbb62a02f120"),
+  hospitality: UNS("photo-1566073771259-6a8506099945"),
+  construction: UNS("photo-1541888946425-d81bb19240f5"),
+  briefing: UNS("photo-1590650046871-92c887180603", 900),
+};
+
+function genericHeroFor(country: Country): string {
+  const icons: string[] = country.jobCategories.map((j) => j.icon);
+  const has = (...n: string[]) => icons.some((i) => n.includes(i));
+  if (has("Stethoscope", "HeartPulse", "HandHeart")) return SECTOR_PHOTOS.health;
+  if (has("Factory", "Cog", "Wrench", "Zap", "Snowflake")) return SECTOR_PHOTOS.industrial;
+  if (has("Hotel", "UtensilsCrossed")) return SECTOR_PHOTOS.hospitality;
+  return SECTOR_PHOTOS.construction;
+}
+
+/**
+ * Hero photo. Tries, in order: country.heroImageUrl, /countries/<slug>.jpg (drop a
+ * licensed photo in public/), then a role-relevant workforce photo. If every source
+ * fails it shows a flag card, so the box is never empty or broken.
+ */
+function HeroImage({ country }: { country: Country }) {
+  const sources = [
+    country.heroImageUrl,
+    `/countries/${country.slug}.jpg`,
+    genericHeroFor(country),
+  ].filter(Boolean) as string[];
+  const [idx, setIdx] = useState(0);
+  const flag = flagDataUri(country.slug);
+  if (idx < sources.length) {
+    return (
+      <img
+        key={sources[idx]}
+        src={sources[idx]}
+        alt={`${country.name} — ${country.heroImageKeywords}`}
+        className="h-full w-full object-cover"
+        loading="eager"
+        onError={() => setIdx((i) => i + 1)}
+      />
+    );
+  }
+  return (
+    <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy to-blue p-8 text-center">
+      <div>
+        {flag ? (
+          <img src={flag} alt="" className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-white/30" />
+        ) : (
+          <MapPin className="mx-auto h-10 w-10 text-blue-soft" />
+        )}
+        <div className="mt-4 font-display text-3xl font-bold text-white">{country.name}</div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------- 1. hero ---------- */
 
 function Hero({ country }: { country: Country }) {
@@ -167,86 +244,116 @@ function Hero({ country }: { country: Country }) {
       </svg>
       <DotGrid className="absolute left-6 top-32 h-24 w-24 opacity-70" />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:py-12">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:pb-24 lg:pt-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-blue/20 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue backdrop-blur">
-            <ShieldCheck className="h-3.5 w-3.5" /> Govt. of India · MEA Licensed
+            {flagDataUri(country.slug) && (
+              <img src={flagDataUri(country.slug)!} alt="" className="h-4 w-4 rounded-full object-cover" />
+            )}
+            Destination · {country.name}
           </span>
-          <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] text-navy md:text-5xl lg:text-6xl">
-            {country.name} Recruitment
+          <h1 className="mt-5 font-display text-4xl font-bold leading-[1.08] text-navy sm:text-5xl lg:text-6xl">
+            Recruitment to
             <br />
-            <span className="text-blue">Agency — Ozone Overseas Consultants</span>
+            <span className="text-blue">{country.name}</span>
           </h1>
-          <p className="mt-4 max-w-xl text-base text-ink md:text-lg">{country.tagline}</p>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink/80">{country.intro}</p>
+          <p className="mt-5 max-w-xl text-lg font-medium text-navy/80">{country.tagline}</p>
+          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-ink/80">{country.intro}</p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap gap-3">
             <a
               href="/jobs"
-              className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-blue transition"
+              className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue"
             >
               Apply for Jobs in {country.name} <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue hover:bg-blue hover:text-white transition"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-blue px-6 py-3 text-sm font-semibold text-blue transition hover:bg-blue hover:text-white"
             >
-              Contact Us
+              Talk to Our Team
             </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {country.jobCategories.slice(0, 4).map((j) => (
+              <span
+                key={j.title}
+                className="rounded-full border border-border bg-white/80 px-3 py-1 text-xs font-medium text-navy backdrop-blur"
+              >
+                {j.title}
+              </span>
+            ))}
           </div>
         </div>
 
-        <div className="relative mx-auto h-[380px] w-full max-w-[480px] lg:h-[440px]">
-          <DotGrid className="absolute top-0 right-0 h-20 w-20" />
-          <div className="absolute left-2 top-4 h-full w-[86%] overflow-hidden rounded-[28px] ring-4 ring-blue/25 shadow-[0_30px_60px_-20px_rgba(30,77,140,0.5)]">
-            {country.heroImageUrl ? (
-              <img
-                src={country.heroImageUrl}
-                alt={`${country.name} — ${country.heroImageKeywords}`}
-                className="h-full w-full object-cover"
-                loading="eager"
-              />
-            ) : (
-              <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy to-blue p-8 text-center">
-                <div>
-                  <MapPin className="mx-auto h-10 w-10 text-blue-soft" />
-                  <div className="mt-3 font-display text-3xl font-bold text-white">
-                    {country.name}
-                  </div>
+        <div className="relative mx-auto w-full max-w-[520px]">
+          <DotGrid className="absolute -right-4 -top-4 h-20 w-20" />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-navy ring-4 ring-white shadow-[0_30px_70px_-25px_rgba(30,77,140,0.55)]">
+            <HeroImage country={country} />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/5 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 text-white">
+              {flagDataUri(country.slug) && (
+                <img
+                  src={flagDataUri(country.slug)!}
+                  alt=""
+                  className="h-11 w-11 rounded-full object-cover ring-2 ring-white/70"
+                />
+              )}
+              <div>
+                <div className="font-display text-xl font-bold leading-tight">{country.name}</div>
+                <div className="text-xs uppercase tracking-wider text-white/75">
+                  Ozone Overseas Consultants
                 </div>
               </div>
-            )}
+            </div>
           </div>
-          <DotGrid className="absolute -bottom-2 -left-2 h-16 w-16 opacity-80" />
+          <div className="absolute left-2 top-8 flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-[0_14px_34px_-14px_rgba(11,31,58,0.45)] sm:-left-5">
+            <span className="grid h-8 w-8 place-items-center rounded-full bg-blue-wash text-blue">
+              <ShieldCheck className="h-4 w-4" />
+            </span>
+            <span className="text-xs font-semibold leading-tight text-navy">
+              MEA licensed
+              <span className="block font-normal text-ink/60">Govt. of India</span>
+            </span>
+          </div>
+          <div className="absolute bottom-28 right-2 flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-[0_14px_34px_-14px_rgba(11,31,58,0.45)] sm:-right-5">
+            <CheckCircle2 className="h-5 w-5 text-blue" />
+            <span className="text-xs font-semibold leading-tight text-navy">
+              Visa &amp; documents
+              <span className="block font-normal text-ink/60">handled end to end</span>
+            </span>
+          </div>
+          <DotGrid className="absolute -bottom-3 -left-3 h-16 w-16 opacity-80" />
         </div>
       </div>
     </section>
   );
 }
 
-/* ---------- 2. floating license bar ---------- */
+/* ---------- 2. trust strip ---------- */
 
 function LicenseBar({ country }: { country: Country }) {
+  const items = [
+    { icon: ShieldCheck, title: "MEA licensed", text: MEA_LICENSE, mono: true },
+    { icon: FileCheck2, title: "e-Migrate registered", text: `Every ${country.name} placement is filed officially` },
+    { icon: Briefcase, title: "Contract before commitment", text: "Demand letter and terms shared up front" },
+    { icon: GraduationCap, title: "Language training", text: "English · Arabic · German" },
+  ];
   return (
     <section className="px-6">
-      <div className="relative z-20 mx-auto -mt-10 max-w-6xl">
-        <div className="rounded-[28px] bg-navy p-6 text-white shadow-[0_20px_60px_-30px_rgba(11,31,58,0.5)] md:flex md:items-center md:justify-between md:p-8">
-          <div className="flex items-start gap-4">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-blue-soft">
-              <ShieldCheck className="h-6 w-6" />
+      <div className="relative z-20 mx-auto -mt-10 grid max-w-6xl gap-px overflow-hidden rounded-[22px] border border-border bg-border shadow-[0_20px_50px_-30px_rgba(11,31,58,0.4)] sm:grid-cols-2 lg:grid-cols-4">
+        {items.map(({ icon: Icon, title, text, mono }) => (
+          <div key={title} className="flex items-start gap-3 bg-white p-5">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-blue-wash text-blue">
+              <Icon className="h-5 w-5" />
             </span>
-            <div>
-              <div className="text-xs uppercase tracking-wider text-blue-soft">
-                Government of India MEA Recruitment Licence
-              </div>
-              <div className="mt-1 font-mono text-lg font-semibold">{MEA_LICENSE}</div>
+            <div className="min-w-0">
+              <div className="text-sm font-semibold text-navy">{title}</div>
+              <div className={`mt-0.5 text-xs text-ink/70 ${mono ? "break-all font-mono" : ""}`}>{text}</div>
             </div>
           </div>
-          <p className="mt-4 max-w-md text-sm text-white/70 md:mt-0">
-            Every {country.name} placement is documented, contract-transparent, and lodged through
-            the MEA e-Migrate system. No cash. No shortcuts.
-          </p>
-        </div>
+        ))}
       </div>
     </section>
   );
@@ -286,7 +393,27 @@ function TrendingIconFor({ index }: { index: number }) {
   return <Icon className="h-5 w-5" />;
 }
 
-/* ---------- 4. jobs ---------- */
+/* ---------- 4. roles we recruit for ---------- */
+
+const ROLE_BLURB: Record<string, string> = {
+  Stethoscope: "Hospitals, clinics and healthcare groups",
+  HeartPulse: "Patient-care and clinical support roles",
+  HandHeart: "Home and facility care roles",
+  HardHat: "Construction and site roles",
+  Briefcase: "Corporate and professional roles",
+  Wrench: "Technical and maintenance roles",
+  Building2: "Engineering and project roles",
+  UtensilsCrossed: "Restaurants, hotels and catering",
+  Zap: "Electrical and power roles",
+  Snowflake: "HVAC and refrigeration roles",
+  Hotel: "Hotels, resorts and hospitality",
+  Factory: "Industrial and manufacturing roles",
+  Cog: "Mechanical and plant roles",
+  ShoppingBag: "Retail and customer-facing roles",
+  Car: "Driving and logistics roles",
+  Hammer: "Skilled trades and workshops",
+  GraduationCap: "Teaching and training roles",
+};
 
 function Jobs({ country }: { country: Country }) {
   return (
@@ -294,30 +421,45 @@ function Jobs({ country }: { country: Country }) {
       <Blob className="absolute -right-32 top-10 h-80 w-80 opacity-50" color="var(--blue-wash)" />
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Live opportunities"
-          title={`Live Opportunities in ${country.name}`}
+          eyebrow="Sectors & roles"
+          title={`Roles we recruit for in ${country.name}`}
           subtitle="Vetted employers, transparent contracts, MEA-registered placements only."
         />
-        <div className="mt-12 flex flex-wrap justify-center gap-5">
-          {country.jobCategories.map((job) => {
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {country.jobCategories.map((job, i) => {
             const Icon = iconMap[job.icon] ?? Briefcase;
             return (
-              <Link
+              <div
                 key={job.title}
-                to="/"
-                className="group relative w-full max-w-[340px] flex-1 basis-[300px] overflow-hidden rounded-[24px] border border-border bg-white p-6 shadow-[0_12px_40px_-28px_rgba(11,31,58,0.3)] transition hover:-translate-y-1 hover:border-blue"
+                className="relative overflow-hidden rounded-[24px] border border-border bg-white p-6 shadow-[0_12px_40px_-28px_rgba(11,31,58,0.3)]"
               >
+                <span className={`absolute inset-x-0 top-0 h-1 ${i % 2 === 0 ? "bg-blue" : "bg-navy"}`} />
                 <span className="mb-5 inline-flex rounded-xl bg-blue-wash p-3 text-blue">
                   <Icon className="h-6 w-6" />
                 </span>
                 <div className="font-display text-lg font-semibold text-navy">{job.title}</div>
-                <div className="mt-1 text-sm text-ink/70">Current openings in {country.name}</div>
-                <div className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue">
-                  View roles <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                <div className="mt-1 text-sm text-ink/70">
+                  {ROLE_BLURB[job.icon] ?? `Roles in ${country.name}`}
                 </div>
-              </Link>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="rounded-full bg-blue-wash px-3 py-1 text-xs font-medium text-blue">
+                    Visa support
+                  </span>
+                  <span className="rounded-full bg-blue-wash px-3 py-1 text-xs font-medium text-blue">
+                    Contract review
+                  </span>
+                </div>
+              </div>
             );
           })}
+        </div>
+        <div className="mt-10 text-center">
+          <a
+            href="/jobs"
+            className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white transition hover:bg-blue"
+          >
+            Browse open vacancies <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>
@@ -561,12 +703,23 @@ function LifeInCountry({ country }: { country: Country }) {
             <p className="mt-5 text-ink">{country.lifeInCountry}</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
+            {!country.gallery?.length && (
+              <>
+                <SectorTile src={SECTOR_PHOTOS.health} label="Healthcare & Nursing" />
+                <SectorTile src={SECTOR_PHOTOS.construction} label="Engineering & Construction" offset />
+                <SectorTile src={SECTOR_PHOTOS.hospitality} label="Hospitality, Retail & Logistics" />
+                <SectorTile src={SECTOR_PHOTOS.briefing} label="Pre-departure briefing" offset />
+              </>
+            )}
             {(country.gallery ?? []).map((img, idx) => (
               <img
                 key={img.url + idx}
                 src={img.url}
                 alt={img.alt}
                 loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
                 className={`h-40 w-full rounded-[20px] object-cover shadow-[0_12px_30px_-20px_rgba(11,31,58,0.35)] md:h-48 ${
                   idx % 2 === 0 ? "md:translate-y-4" : ""
                 }`}
@@ -576,6 +729,31 @@ function LifeInCountry({ country }: { country: Country }) {
         </div>
       </div>
     </section>
+  );
+}
+
+function SectorTile({ src, label, offset }: { src: string; label: string; offset?: boolean }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <div
+      className={`relative h-40 overflow-hidden rounded-[20px] bg-gradient-to-br from-navy to-blue shadow-[0_12px_30px_-20px_rgba(11,31,58,0.35)] md:h-48 ${
+        offset ? "md:translate-y-4" : ""
+      }`}
+    >
+      {!failed && (
+        <img
+          src={src}
+          alt={label}
+          loading="lazy"
+          onError={() => setFailed(true)}
+          className="h-full w-full object-cover"
+        />
+      )}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/75 to-transparent" />
+      <span className="absolute bottom-3 left-3 right-3 text-sm font-semibold leading-tight text-white">
+        {label}
+      </span>
+    </div>
   );
 }
 

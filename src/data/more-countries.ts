@@ -2,9 +2,10 @@ import type { Country, JobCategory } from "./countries";
 
 /**
  * Destination pages beyond the five core GCC countries.
- * These intentionally have no stats, salary tables, testimonials, gallery or hero photo:
- * add them per country only once real, verified figures/images are available.
- * The layout skips any section whose data is missing.
+ * Stats here are the company-wide, client-verified figures (not per-country numbers).
+ * Salary tables, testimonials and gallery are left out until real, verified data exists.
+ * Hero photo: add `heroImageUrl`, or drop a licensed photo at public/countries/<slug>.jpg.
+ * The layout skips any section whose data is missing and falls back to a role-relevant workforce photo if no landmark photo loads.
  */
 
 const COMMON_DOCS = [
@@ -28,6 +29,7 @@ const police = "Police clearance certificate";
 type Input = {
   slug: string;
   name: string;
+  heroImageUrl?: string;
   region: string;
   tagline: string;
   intro: string;
@@ -45,9 +47,16 @@ const make = (c: Input): Country => ({
   metaTitle: `${c.name} Recruitment Agency — Ozone Overseas Consultants`,
   metaDescription: `MEA-licensed recruitment for ${c.name}. ${c.region} Contract-first placements with visa and documentation support from Ozone Overseas Consultants.`,
   heroImageKeywords: c.name,
+  heroImageUrl: c.heroImageUrl,
   tagline: c.tagline,
   intro: c.intro,
   jobCategories: c.jobs.map(([title, icon]) => ({ title, icon })),
+  stats: [
+    { value: "10,000+", label: "Candidates deployed across the globe" },
+    { value: "20+", label: "Countries served" },
+    { value: String(c.jobs.length), label: `Role categories we recruit for in ${c.name}` },
+    { value: "EN · AR · DE", label: "Language training available" },
+  ],
   lifeInCountry: c.life,
   visaNotes: c.visaNotes,
   visaHandled: COMMON_HANDLED,
@@ -69,6 +78,8 @@ const make = (c: Input): Country => ({
 export const moreCountries: Country[] = [
   make({
     slug: "malaysia",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1738681172857-4fb5dfe22f14?auto=format&fit=crop&w=1600&q=80",
     name: "Malaysia",
     region: "Manufacturing, hospitality and healthcare roles.",
     tagline: "Licensed, contract-first recruitment to Malaysia.",
@@ -445,6 +456,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "canada",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1516981427939-05bfa973da5c?auto=format&fit=crop&w=1600&q=80",
     name: "Canada",
     region: "Healthcare, trades and hospitality roles.",
     tagline: "Honest, compliant recruitment to Canada.",
