@@ -4,7 +4,7 @@ import type { Country, JobCategory } from "./countries";
  * Destination pages beyond the five core GCC countries.
  * Stats here are the company-wide, client-verified figures (not per-country numbers).
  * Salary tables, testimonials and gallery are left out until real, verified data exists.
- * Hero photo: add `heroImageUrl`, or drop a licensed photo at public/countries/<slug>.jpg.
+ * Hero photo: add `heroImageUrl`, add a landmark/monument photo URL.
  * The layout skips any section whose data is missing and falls back to a role-relevant workforce photo if no landmark photo loads.
  */
 
@@ -106,6 +106,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "singapore",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=1600&q=80",
     name: "Singapore",
     region: "Healthcare, hospitality, marine and technical roles.",
     tagline: "Compliant, transparent recruitment to Singapore.",
@@ -158,6 +160,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "germany",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1695711392286-eaef761b7f46?auto=format&fit=crop&w=1600&q=80",
     name: "Germany",
     region: "Healthcare, engineering and skilled-trade roles.",
     tagline: "Structured, compliant recruitment to Germany.",
@@ -189,6 +193,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "australia",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1599376059755-f4c875433c98?auto=format&fit=crop&w=1600&q=80",
     name: "Australia",
     region: "Healthcare, trades and hospitality roles.",
     tagline: "Honest, well-documented recruitment to Australia.",
@@ -324,6 +330,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "italy",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1514896856000-91cb6de818e0?auto=format&fit=crop&w=1600&q=80",
     name: "Italy",
     region: "Healthcare, hospitality and skilled-trade roles.",
     tagline: "Structured, lawful recruitment to Italy.",
@@ -403,6 +411,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "uk",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1705050030361-6713b6cd1cf2?auto=format&fit=crop&w=1600&q=80",
     name: "United Kingdom",
     region: "Healthcare, care and skilled roles.",
     tagline: "Lawful, well-documented recruitment to the UK.",
@@ -430,6 +440,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "russia",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1558509336-44482918b852?auto=format&fit=crop&w=1600&q=80",
     name: "Russia",
     region: "Construction, manufacturing and technical roles.",
     tagline: "Verified-employer recruitment to Russia, subject to current advisories.",

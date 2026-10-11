@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import * as FlagStrings from "country-flag-icons/string/1x1";
 import {
@@ -155,61 +155,44 @@ function flagDataUri(slug: string): string | null {
   return svg ? `data:image/svg+xml;utf8,${encodeURIComponent(svg)}` : null;
 }
 
-const UNS = (id: string, w = 1400) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
-
-/** Role-relevant workforce photos (used when a country has no landmark photo yet). */
-const SECTOR_PHOTOS = {
-  health: UNS("photo-1584515933487-779824d29309"),
-  industrial: UNS("photo-1581093588401-fbb62a02f120"),
-  hospitality: UNS("photo-1566073771259-6a8506099945"),
-  construction: UNS("photo-1541888946425-d81bb19240f5"),
-  briefing: UNS("photo-1590650046871-92c887180603", 900),
-};
-
-function genericHeroFor(country: Country): string {
-  const icons: string[] = country.jobCategories.map((j) => j.icon);
-  const has = (...n: string[]) => icons.some((i) => n.includes(i));
-  if (has("Stethoscope", "HeartPulse", "HandHeart")) return SECTOR_PHOTOS.health;
-  if (has("Factory", "Cog", "Wrench", "Zap", "Snowflake")) return SECTOR_PHOTOS.industrial;
-  if (has("Hotel", "UtensilsCrossed")) return SECTOR_PHOTOS.hospitality;
-  return SECTOR_PHOTOS.construction;
-}
-
 /**
- * Hero photo. Tries, in order: country.heroImageUrl, /countries/<slug>.jpg (drop a
- * licensed photo in public/), then a role-relevant workforce photo. If every source
- * fails it shows a flag card, so the box is never empty or broken.
+ * Hero photo: a landmark/monument photo of the country (country.heroImageUrl).
+ * If there is no photo, or it fails to load, a flag card is shown instead, so the
+ * box is never empty or broken. The effect below also catches images that already
+ * failed before React hydrated (their onError would otherwise be missed).
  */
 function HeroImage({ country }: { country: Country }) {
-  const sources = [
-    country.heroImageUrl,
-    `/countries/${country.slug}.jpg`,
-    genericHeroFor(country),
-  ].filter(Boolean) as string[];
-  const [idx, setIdx] = useState(0);
+  const src = country.heroImageUrl;
+  const [failed, setFailed] = useState(!src);
+  const ref = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (el && el.complete && el.naturalWidth === 0) setFailed(true);
+  }, [src]);
   const flag = flagDataUri(country.slug);
-  if (idx < sources.length) {
+  if (src && !failed) {
     return (
       <img
-        key={sources[idx]}
-        src={sources[idx]}
+        ref={ref}
+        src={src}
         alt={`${country.name} — ${country.heroImageKeywords}`}
         className="h-full w-full object-cover"
         loading="eager"
-        onError={() => setIdx((i) => i + 1)}
+        onError={() => setFailed(true)}
       />
     );
   }
   return (
-    <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy to-blue p-8 text-center">
-      <div>
+    <div className="relative grid h-full w-full place-items-center overflow-hidden bg-gradient-to-br from-navy via-navy to-blue p-8 text-center">
+      <DotGrid className="absolute -right-4 -top-4 h-24 w-24 opacity-30" />
+      <DotGrid className="absolute -bottom-4 -left-4 h-24 w-24 opacity-20" />
+      <div className="relative">
         {flag ? (
-          <img src={flag} alt="" className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-white/30" />
+          <img src={flag} alt="" className="mx-auto h-28 w-28 rounded-full object-cover ring-4 ring-white/30" />
         ) : (
-          <MapPin className="mx-auto h-10 w-10 text-blue-soft" />
+          <MapPin className="mx-auto h-12 w-12 text-blue-soft" />
         )}
-        <div className="mt-4 font-display text-3xl font-bold text-white">{country.name}</div>
+        <div className="mt-5 font-display text-3xl font-bold text-white">{country.name}</div>
       </div>
     </div>
   );
@@ -287,9 +270,9 @@ function Hero({ country }: { country: Country }) {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[520px]">
+        <div className="relative mx-auto w-full max-w-[560px]">
           <DotGrid className="absolute -right-4 -top-4 h-20 w-20" />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-navy ring-4 ring-white shadow-[0_30px_70px_-25px_rgba(30,77,140,0.55)]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] bg-navy ring-4 ring-white shadow-[0_30px_70px_-25px_rgba(30,77,140,0.55)]">
             <HeroImage country={country} />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/5 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 text-white">
@@ -317,7 +300,7 @@ function Hero({ country }: { country: Country }) {
               <span className="block font-normal text-ink/60">Govt. of India</span>
             </span>
           </div>
-          <div className="absolute bottom-28 right-2 flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-[0_14px_34px_-14px_rgba(11,31,58,0.45)] sm:-right-5">
+          <div className="absolute bottom-24 right-2 flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-[0_14px_34px_-14px_rgba(11,31,58,0.45)] sm:-right-5">
             <CheckCircle2 className="h-5 w-5 text-blue" />
             <span className="text-xs font-semibold leading-tight text-navy">
               Visa &amp; documents
@@ -703,14 +686,16 @@ function LifeInCountry({ country }: { country: Country }) {
             <p className="mt-5 text-ink">{country.lifeInCountry}</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {!country.gallery?.length && (
-              <>
-                <SectorTile src={SECTOR_PHOTOS.health} label="Healthcare & Nursing" />
-                <SectorTile src={SECTOR_PHOTOS.construction} label="Engineering & Construction" offset />
-                <SectorTile src={SECTOR_PHOTOS.hospitality} label="Hospitality, Retail & Logistics" />
-                <SectorTile src={SECTOR_PHOTOS.briefing} label="Pre-departure briefing" offset />
-              </>
-            )}
+            {!country.gallery?.length &&
+              country.visaHandled.slice(0, 4).map((t) => (
+                <div
+                  key={t}
+                  className="flex items-start gap-3 rounded-[20px] border border-border bg-white p-4 shadow-[0_12px_30px_-24px_rgba(11,31,58,0.35)]"
+                >
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue" />
+                  <span className="text-sm text-ink">{t}</span>
+                </div>
+              ))}
             {(country.gallery ?? []).map((img, idx) => (
               <img
                 key={img.url + idx}
@@ -729,31 +714,6 @@ function LifeInCountry({ country }: { country: Country }) {
         </div>
       </div>
     </section>
-  );
-}
-
-function SectorTile({ src, label, offset }: { src: string; label: string; offset?: boolean }) {
-  const [failed, setFailed] = useState(false);
-  return (
-    <div
-      className={`relative h-40 overflow-hidden rounded-[20px] bg-gradient-to-br from-navy to-blue shadow-[0_12px_30px_-20px_rgba(11,31,58,0.35)] md:h-48 ${
-        offset ? "md:translate-y-4" : ""
-      }`}
-    >
-      {!failed && (
-        <img
-          src={src}
-          alt={label}
-          loading="lazy"
-          onError={() => setFailed(true)}
-          className="h-full w-full object-cover"
-        />
-      )}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/75 to-transparent" />
-      <span className="absolute bottom-3 left-3 right-3 text-sm font-semibold leading-tight text-white">
-        {label}
-      </span>
-    </div>
   );
 }
 
