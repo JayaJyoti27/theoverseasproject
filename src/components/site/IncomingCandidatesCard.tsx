@@ -93,7 +93,7 @@ export function IncomingCandidatesCard({ compact = false }: { compact?: boolean 
         <div className="flex items-center justify-between border-t border-[color:var(--brand-soft)] px-5 py-3.5 text-[12px]">
           <span className="text-[color:var(--muted-foreground)]">48h avg. first candidate</span>
           <a
-            href="#"
+            href="/employers"
             className="inline-flex items-center gap-1 font-semibold text-[color:var(--brand)] hover:text-[color:var(--navy)]"
           >
             View Talent Pool <ArrowRight size={13} />

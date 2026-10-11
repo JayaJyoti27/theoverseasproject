@@ -708,7 +708,7 @@ function JobsByCountry() {
                 {active} · Coordinator assigned within 24 hours
               </div>
               <a
-                href=""
+                href="/jobs"
                 className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue hover:text-navy"
               >
                 View Roles <ArrowRight className="h-3.5 w-3.5" />
@@ -1020,7 +1020,7 @@ function Testimonials() {
     {
       photo: IMG.t1,
       quote:
-        "Failed Prometric first time. Free retake coaching, cleared on attempt two. Ozone didn't give up on me.",
+        "Failed Prometric first time. Ozone's online retake coaching got me through on attempt two. Ozone didn't give up on me.",
       name: "Anand P.",
       meta: "Biomedical Technician → Doha · Hamad Medical",
     },

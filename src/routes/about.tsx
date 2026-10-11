@@ -961,13 +961,15 @@ function ContactCTA() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                to="/"
+                to="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-[color:var(--navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[color:var(--navy)]/20 transition hover:bg-[color:var(--blue)]"
               >
                 Contact Us <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="#"
+                href="https://wa.me/918086066611"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-[color:var(--blue)] px-5 py-3 text-sm font-semibold text-[color:var(--blue)] transition hover:bg-white"
               >
                 <MessageCircle className="h-4 w-4" /> Chat on WhatsApp

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Eye } from "lucide-react";
 
 import { getInterviews } from "@/lib/employer/api";
@@ -115,10 +116,12 @@ export function InterviewsTable() {
                   </TableCell>
 
                   <TableCell className="text-right">
-                    <Button size="sm" variant="outline">
-                      <Eye className="mr-2 h-4 w-4" />
-                      View
-                    </Button>
+                    <Link to="/Employer/interviews/$interviewId" params={{ interviewId: item.id }}>
+                      <Button size="sm" variant="outline">
+                        <Eye className="mr-2 h-4 w-4" />
+                        View
+                      </Button>
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))

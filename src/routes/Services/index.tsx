@@ -34,6 +34,21 @@ const grouped = [
   },
 ];
 
+const servicePaths: Record<string, string> = {
+  "healthcare-recruitment": "/Services/Healthcare-rec",
+  "for-nurses": "/Services/Nurses",
+  "for-doctors": "/Services/Doctors",
+  "for-paramedical-technicians": "/Services/ParaMedical-tech",
+  "technical-recruitment": "/Services/Technical-rec",
+  "nursing-recruitment": "/Services/Nursing-rec",
+  "prometric-coaching": "/Services/Prometric-coaching",
+  "mock-interviews": "/Services/Mock-Interviews",
+  "grooming-sessions": "/Services/Grooming",
+  training: "/Services/Training",
+  "visa-services": "/Services/Visa",
+  documentation: "/Services/Documentation",
+};
+
 function Index() {
   return (
     <div className="bg-background min-h-screen">
@@ -63,10 +78,10 @@ function Index() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               Ozone Overseas Consultants places pre-screened healthcare and technical professionals from India
-              into hospitals and employers worldwide — end-to-end, compliant, in 6–8 weeks.
+              into hospitals and employers worldwide — end-to-end, compliant, in 8–12 weeks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#post" className="btn-navy btn-navy-hover">
+              <a href="/Employer/register" className="btn-navy btn-navy-hover">
                 Post a Requirement
               </a>
               <Link to="/Services" className="btn-outline-blue btn-outline-blue-hover">
@@ -107,7 +122,7 @@ function Index() {
                     return (
                       <Link
                         key={slug}
-                        to={`/services/${slug}` as string}
+                        to={servicePaths[slug] ?? "/Services"}
                         className="group relative rounded-2xl border border-border bg-white p-6 hover:border-blue transition shadow-[0_4px_20px_-14px_rgba(11,31,58,0.15)] hover:shadow-soft"
                       >
                         <div className="text-[10px] font-semibold uppercase tracking-[0.14em] text-blue">

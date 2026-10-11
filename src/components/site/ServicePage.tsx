@@ -5,6 +5,28 @@ import { Header } from "./Header";
 import { Footer } from "./footer";
 import { Blob, DotGrid } from "./decor";
 
+
+const WHATSAPP_URL = "https://wa.me/918086066611";
+
+/** Map a CTA label to a real destination so no service-page button is dead. */
+function resolveCta(label: string, explicit?: string): string {
+  if (explicit && explicit !== "#") return explicit;
+  const l = label.toLowerCase();
+  if (l.includes("whatsapp")) return WHATSAPP_URL;
+  if (l.includes("requirement")) return "/Employer/register";
+  if (/browse.*(profile|talent)/.test(l)) return "/employers";
+  if (/(browse|view).*roles?/.test(l)) return "/jobs";
+  if (l.includes("learn more") || l.includes("what's included")) return "#included";
+  if (/mock interview|cohort|apply/.test(l)) return "/candidate";
+  return "/contact";
+}
+
+function ctaProps(href: string) {
+  return href.startsWith("http")
+    ? { href, target: "_blank", rel: "noopener noreferrer" }
+    : { href };
+}
+
 export type ServiceData = {
   slug: string;
   serviceName: string;
@@ -102,7 +124,7 @@ const DEFAULT_INDUSTRIES: Industry[] = [
 const DEFAULT_FAQS: FAQ[] = [
   {
     q: "How long does the placement process take?",
-    a: "Typically 6-8 weeks from requirement confirmation to candidate deployment, depending on documentation, licensing, and visa processing timelines.",
+    a: "Typically 8–12 weeks from requirement confirmation to candidate deployment, depending on documentation, licensing, and visa processing timelines.",
   },
   {
     q: "Are candidates pre-screened before submission?",
@@ -177,7 +199,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                   Home
                 </Link>
                 <span>/</span>
-                <Link to="/" className="hover:text-navy">
+                <Link to="/Services" className="hover:text-navy">
                   Services
                 </Link>
                 <span>/</span>
@@ -202,11 +224,11 @@ export function ServicePage({ data }: { data: ServiceData }) {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={data.primaryHref ?? "#post"} className="btn-navy btn-navy-hover">
+                <a {...ctaProps(resolveCta(data.primaryCta, data.primaryHref))} className="btn-navy btn-navy-hover">
                   {data.primaryCta}
                 </a>
                 <a
-                  href={data.secondaryHref ?? "#browse"}
+                  {...ctaProps(resolveCta(data.secondaryCta, data.secondaryHref))}
                   className="btn-outline-blue btn-outline-blue-hover"
                 >
                   {data.secondaryCta}
@@ -302,7 +324,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
       </section>
 
       {/* WHAT'S INCLUDED (Key Benefits) */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section id="included" className="scroll-mt-24 relative py-20 md:py-28 overflow-hidden">
         <Blob className="absolute -top-10 -right-16 w-72 h-72 -z-10" style={{ opacity: 0.9 }} />
         <div className="container-ozone relative">
           <div className="max-w-2xl mb-12">
@@ -363,7 +385,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* KEY FEATURES / HIGHLIGHTS */}
       {data.highlights && (
-        <section className="relative py-20 md:py-24 overflow-hidden bg-mist">
+        <section id="highlights" className="scroll-mt-24 relative py-20 md:py-24 overflow-hidden bg-mist">
           <div className="container-ozone relative">
             <div className="max-w-2xl mb-10">
               <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue mb-3">
@@ -395,7 +417,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
       )}
 
       {/* WHO IT'S FOR */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-mist">
+      <section id="audience" className="scroll-mt-24 relative py-20 md:py-28 overflow-hidden bg-mist">
         <Blob className="absolute -top-10 -right-16 w-72 h-72 -z-10" style={{ opacity: 0.9 }} />
         <div className="container-ozone relative">
           <div className="max-w-2xl mb-12">
@@ -417,7 +439,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 {data.audiences[0].heading}
               </h3>
               <p className="mt-4 text-navy/70 max-w-md">{data.audiences[0].desc}</p>
-              <a href={data.audiences[0].href ?? "#audience-1"} className="btn-navy btn-navy-hover mt-8">
+              <a {...ctaProps(resolveCta(data.audiences[0].cta, data.audiences[0].href))} className="btn-navy btn-navy-hover mt-8">
                 {data.audiences[0].cta} <ArrowRight className="w-4 h-4" />
               </a>
               <div className="absolute -bottom-4 -right-4 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white shadow-soft">
@@ -446,7 +468,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 {data.audiences[1].heading}
               </h3>
               <p className="mt-4 text-white/70 max-w-md">{data.audiences[1].desc}</p>
-              <a href={data.audiences[1].href ?? "#audience-2"} className="btn-gold mt-8">
+              <a {...ctaProps(resolveCta(data.audiences[1].cta, data.audiences[1].href))} className="btn-gold mt-8">
                 {data.audiences[1].cta} <ArrowRight className="w-4 h-4" />
               </a>
               <div className="absolute -bottom-4 -right-4 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white/10 shadow-soft">
@@ -463,7 +485,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
       </section>
 
       {/* INDUSTRIES SERVED — NEW */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section id="industries" className="scroll-mt-24 relative py-20 md:py-28 overflow-hidden">
         <DotGrid className="absolute top-16 right-8 w-24 h-24 opacity-60" />
         <div className="container-ozone relative">
           <div className="max-w-2xl mb-12">
@@ -499,7 +521,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
       </section>
 
       {/* PROCESS (Recruitment Process) */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-mist">
+      <section id="process" className="scroll-mt-24 relative py-20 md:py-28 overflow-hidden bg-mist">
         <Blob className="absolute -top-10 -right-16 w-72 h-72 -z-10" style={{ opacity: 0.9 }} />
         <div className="container-ozone relative">
           <div className="max-w-2xl mb-16">
@@ -562,7 +584,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
       </section>
 
       {/* FAQs — NEW */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section id="faqs" className="scroll-mt-24 relative py-20 md:py-28 overflow-hidden">
         <div className="container-ozone relative">
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16">
             <div>
@@ -606,10 +628,10 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 </h2>
                 <p className="mt-4 text-navy/70 text-lg max-w-lg">{data.ctaSubline}</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="#post" className="btn-navy btn-navy-hover">
+                  <a {...ctaProps(resolveCta(data.ctaPrimary))} className="btn-navy btn-navy-hover">
                     {data.ctaPrimary}
                   </a>
-                  <a href="#talk" className="btn-outline-blue btn-outline-blue-hover">
+                  <a {...ctaProps(resolveCta(data.ctaSecondary))} className="btn-outline-blue btn-outline-blue-hover">
                     {data.ctaSecondary}
                   </a>
                 </div>
