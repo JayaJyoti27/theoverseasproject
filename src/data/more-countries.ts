@@ -134,6 +134,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "maldives",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1612847022055-7f85fc0b84bc?auto=format&fit=crop&w=1600&q=80",
     name: "Maldives",
     region: "Resort, hospitality and technical roles.",
     tagline: "Ethical recruitment for resort and island employers in the Maldives.",
@@ -222,6 +224,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "africa",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1762249236589-b97477bb4cf2?auto=format&fit=crop&w=1600&q=80",
     name: "Africa",
     region: "Mining, construction, healthcare and education roles.",
     tagline: "Verified employers and clear contracts for roles across Africa.",
@@ -249,6 +253,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "croatia",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1698011765547-0bbeeda62045?auto=format&fit=crop&w=1600&q=80",
     name: "Croatia",
     region: "Hospitality, construction and healthcare roles.",
     tagline: "Licensed recruitment to Croatia.",
@@ -276,6 +282,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "latvia",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1512904032051-4fc2f4da9ab6?auto=format&fit=crop&w=1600&q=80",
     name: "Latvia",
     region: "Logistics, construction and care roles.",
     tagline: "Transparent recruitment to Latvia.",
@@ -303,6 +311,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "romania",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1610700656266-0ac165f68a26?auto=format&fit=crop&w=1600&q=80",
     name: "Romania",
     region: "Construction, hospitality and manufacturing roles.",
     tagline: "Compliant recruitment to Romania.",
@@ -359,6 +369,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "israel",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1614517453351-6c1522fc7a56?auto=format&fit=crop&w=1600&q=80",
     name: "Israel",
     region: "Caregiving, construction and agriculture roles.",
     tagline: "Government-channel recruitment to Israel, subject to current advisories.",
@@ -384,6 +396,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "iraq",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1686703783766-d5e3181850c3?auto=format&fit=crop&w=1600&q=80",
     name: "Iraq",
     region: "Oil and gas, construction and technical roles.",
     tagline: "Careful, advisory-aware recruitment to Iraq.",
@@ -497,6 +511,8 @@ export const moreCountries: Country[] = [
   }),
   make({
     slug: "hungary",
+    heroImageUrl:
+      "https://images.unsplash.com/photo-1688296597093-e691552c912c?auto=format&fit=crop&w=1600&q=80",
     name: "Hungary",
     region: "Manufacturing, logistics and hospitality roles.",
     tagline: "Compliant recruitment to Hungary.",
